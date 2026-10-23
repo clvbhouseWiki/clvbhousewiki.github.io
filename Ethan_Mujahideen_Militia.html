@@ -1,0 +1,840 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethan Mujahideen Militia - CLVBHOUSE Wiki</title>
+
+<style>
+:root {
+  --link: #0645ad;
+  --border: #a2a9b1;
+  --green: #183c24;
+  --sand: #e8cc86;
+  --sky: #83cfff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: #202122;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: linear-gradient(
+    to bottom,
+    #70c5ff 0%,
+    #b5e5ff 25%,
+    #f5e4b3 62%,
+    #dfbd72 100%
+  );
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#page {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: auto;
+  position: relative;
+  background: rgba(255,255,255,0.95);
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  box-shadow: 0 0 18px #0002;
+  overflow: hidden;
+}
+
+header {
+  min-height: 105px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid #8abbd8;
+  background: linear-gradient(110deg, #dff4ff, #8bd2ff);
+}
+
+header img.logo {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+header p {
+  margin: 5px 0 0;
+  color: #394d5c;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 175px minmax(0, 1fr);
+}
+
+.sidebar {
+  padding: 20px 14px;
+  border-right: 1px solid #c8ccd1;
+  background: rgba(248,249,250,0.94);
+}
+
+.sidebar h3 {
+  color: #54595d;
+  font-size: 12px;
+  font-weight: normal;
+  border-bottom: 1px solid #c8ccd1;
+  padding-bottom: 4px;
+  margin: 18px 0 8px;
+}
+
+.sidebar h3:first-child {
+  margin-top: 0;
+}
+
+.sidebar a {
+  display: block;
+  margin: 8px 0;
+  font-size: 13px;
+}
+
+.content {
+  min-width: 0;
+}
+
+.top-tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 0 22px;
+  min-height: 42px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #a7d7f9;
+}
+
+.tabs-left,
+.tabs-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+.tabs-left a:first-child {
+  color: #202122;
+  font-weight: bold;
+  border-bottom: 2px solid #202122;
+  padding-bottom: 12px;
+  margin-bottom: -13px;
+}
+
+article {
+  position: relative;
+  padding: 24px 30px 40px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.97),
+    rgba(255,252,241,0.96) 65%,
+    rgba(250,229,177,0.88)
+  );
+}
+
+h1.article-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+
+.subtitle {
+  color: #54595d;
+  margin: 0 0 20px;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: normal;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 5px;
+  margin-top: 28px;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: normal;
+}
+
+p {
+  line-height: 1.7;
+}
+
+.infobox {
+  float: right;
+  width: 290px;
+  max-width: 46%;
+  margin: 0 0 18px 24px;
+  padding: 4px;
+  border: 1px solid var(--border);
+  background: #f8f9fa;
+  font-size: 13px;
+}
+
+.infobox-title {
+  background: #d9ecdc;
+  padding: 10px 6px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.infobox .emblem {
+  display: block;
+  width: 165px;
+  height: 165px;
+  object-fit: contain;
+  margin: 10px auto;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox td {
+  padding: 7px 5px;
+  vertical-align: top;
+  border-top: 1px solid #eaecf0;
+}
+
+.infobox td:first-child {
+  font-weight: bold;
+  width: 39%;
+}
+
+.militia-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 14px;
+  margin: 18px 0 24px;
+  color: #fff;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  background: linear-gradient(
+    100deg,
+    #102b19,
+    #285b35,
+    #163a24
+  );
+  border: 2px solid #102719;
+  box-shadow: 0 3px 8px #0003;
+}
+
+.militia-banner img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #d7ffd9);
+}
+
+.militia-banner span {
+  text-shadow: 0 0 8px #b4e6bd66;
+}
+
+.toc {
+  display: table;
+  max-width: 100%;
+  padding: 12px 22px;
+  border: 1px solid var(--border);
+  background: #f8f9fa;
+  margin: 22px 0;
+  font-size: 13px;
+}
+
+.toc-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 24px;
+  line-height: 1.9;
+}
+
+.notice {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 12px;
+  margin: 16px 0;
+}
+
+.desert-note {
+  border: 1px solid #b9a16b;
+  background: linear-gradient(100deg, #fff8df, #f4dfaa);
+  padding: 12px;
+  margin: 16px 0;
+}
+
+.rifle {
+  position: absolute;
+  z-index: 5;
+  pointer-events: none;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 22px;
+  color: #303b31;
+  text-shadow: 1px 1px #ffffff88;
+  animation: rifleIdle 5s ease-in-out infinite;
+}
+
+.rifle.r1 {
+  top: 330px;
+  left: 6%;
+  animation-delay: -1s;
+}
+
+.rifle.r2 {
+  top: 790px;
+  right: 5%;
+  animation-delay: -3s;
+}
+
+.rifle.r3 {
+  top: 1300px;
+  left: 9%;
+  animation-delay: -2s;
+}
+
+.rifle.r4 {
+  top: 1800px;
+  right: 8%;
+  animation-delay: -4s;
+}
+
+@keyframes rifleIdle {
+  0%, 80%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  83% {
+    transform: translateX(5px) rotate(-2deg);
+  }
+  86% {
+    transform: translateX(-3px) rotate(1deg);
+  }
+  90% {
+    transform: translateX(0) rotate(0);
+  }
+}
+
+/* Decorative flag rain */
+.flag-rain {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.flag-drop {
+  position: absolute;
+  top: -100px;
+  width: 43px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.56;
+  filter: drop-shadow(0 2px 2px #0002);
+  animation: flagFall linear infinite;
+}
+
+.flag-drop:nth-child(1) {
+  left: 8%;
+  animation-duration: 13s;
+  animation-delay: -8s;
+  width: 34px;
+}
+
+.flag-drop:nth-child(2) {
+  left: 23%;
+  animation-duration: 17s;
+  animation-delay: -13s;
+  width: 48px;
+}
+
+.flag-drop:nth-child(3) {
+  left: 39%;
+  animation-duration: 15s;
+  animation-delay: -4s;
+  width: 30px;
+}
+
+.flag-drop:nth-child(4) {
+  left: 57%;
+  animation-duration: 19s;
+  animation-delay: -15s;
+  width: 42px;
+}
+
+.flag-drop:nth-child(5) {
+  left: 73%;
+  animation-duration: 14s;
+  animation-delay: -6s;
+  width: 35px;
+}
+
+.flag-drop:nth-child(6) {
+  left: 88%;
+  animation-duration: 18s;
+  animation-delay: -11s;
+  width: 45px;
+}
+
+@keyframes flagFall {
+  0% {
+    transform: translateY(-100px) rotate(-12deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.56; }
+  50% { transform: translateY(700px) rotate(18deg); }
+  90% { opacity: 0.5; }
+  100% {
+    transform: translateY(2000px) rotate(-15deg);
+    opacity: 0;
+  }
+}
+
+/* Silly cartoon shooting effect: quick recoil and a brief flash. */
+.shooting-rifle {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: monospace;
+  font-size: 24px;
+  color: #263c2b;
+  animation: cartoonShot 4.5s ease-in-out infinite;
+}
+
+@keyframes cartoonShot {
+  0%, 72%, 100% {
+    transform: translateX(0);
+    text-shadow: none;
+  }
+  74% {
+    transform: translateX(-7px);
+    text-shadow: 12px 0 8px #ffd34d;
+  }
+  76% {
+    transform: translateX(3px);
+    text-shadow: 18px 0 10px #ff9c30;
+  }
+  79% {
+    transform: translateX(0);
+    text-shadow: none;
+  }
+}
+
+.shot-panel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 15px;
+  margin: 18px 0;
+  border: 1px dashed #b5a16e;
+  background: #fff8e7;
+  overflow: hidden;
+}
+
+.target-flag {
+  width: 58px;
+  height: auto;
+  object-fit: contain;
+  animation: flagWobble 4.5s ease-in-out infinite;
+}
+
+@keyframes flagWobble {
+  0%, 72%, 100% { transform: rotate(0) scale(1); }
+  74% { transform: rotate(-12deg) scale(1.05); }
+  77% { transform: rotate(12deg) scale(0.98); }
+  81% { transform: rotate(0) scale(1); }
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  background: #f8f9fa;
+  padding: 18px 24px;
+  font-size: 12px;
+  color: #54595d;
+}
+
+.categories {
+  margin-top: 28px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  background: #f8f9fa;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #c8ccd1;
+  }
+
+  .sidebar a {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .sidebar h3 { margin-top: 12px; }
+
+  article { padding: 18px 15px 30px; }
+
+  .infobox {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 18px;
+  }
+
+  header { padding: 12px; }
+  header h1 { font-size: 24px; }
+  .top-tabs { padding: 0 12px; }
+
+  .militia-banner { font-size: 18px; }
+
+  .rifle {
+    font-size: 17px;
+    opacity: 0.65;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="page">
+
+  <header>
+    <img class="logo" src="ethanwiki-logo-v2.png" alt="CLVBHOUSE Wiki logo">
+    <div>
+      <h1>CLVBHOUSE Wiki</h1>
+      <p>The totally reliable encyclopedia of absolutely everything.</p>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <h3>Navigation</h3>
+      <a href="index.html">Main page</a>
+      <a href="index.html">Recent changes</a>
+      <a href="index.html">Random article</a>
+      <a href="index.html">Community portal</a>
+
+      <h3>Articles</h3>
+      <a href="By_the_way.html">By the Way</a>
+      <a href="Though.html">Though</a>
+      <a href="Wood.html">Wood</a>
+      <a href="Ethan_Mujahideen_Militia.html">Ethan Mujahideen Militia</a>
+
+      <h3>CLVBHOUSE</h3>
+      <a href="index.html">About the wiki</a>
+      <a href="index.html">Contact</a>
+
+      <div style="margin-top:24px;text-align:center">
+        <img
+          src="ETHAN_MUJAHIDEEN_MILITIA.png"
+          alt="Ethan Mujahideen Militia emblem"
+          style="width:105px;max-width:100%;height:auto"
+        >
+        <p><b>EMM</b></p>
+      </div>
+    </aside>
+
+    <main class="content">
+
+      <nav class="top-tabs">
+        <div class="tabs-left">
+          <a href="Ethan_Mujahideen_Militia.html">Article</a>
+          <a href="#discussion">Discussion</a>
+        </div>
+        <div class="tabs-right">
+          <a href="#history">View history</a>
+          <a href="#references">References</a>
+        </div>
+      </nav>
+
+      <article>
+
+        <div class="militia-banner">
+          <img
+            src="ETHAN_MUJAHIDEEN_MILITIA.png"
+            alt="Ethan Mujahideen Militia emblem"
+          >
+          <span>ALALALA WE WILL FIGHT FOR ETHAN</span>
+          <img
+            src="ETHAN_MUJAHIDEEN_MILITIA.png"
+            alt="Ethan Mujahideen Militia emblem"
+          >
+        </div>
+
+        <h1 class="article-title">Ethan Mujahideen Militia</h1>
+        <p class="subtitle">
+          From CLVBHOUSE Wiki, the free encyclopedia
+        </p>
+
+        <div class="infobox">
+          <div class="infobox-title">Ethan Mujahideen Militia</div>
+
+          <img
+            class="emblem"
+            src="ETHAN_MUJAHIDEEN_MILITIA.png"
+            alt="Ethan Mujahideen Militia emblem"
+          >
+
+          <table>
+            <tr>
+              <td>Name</td>
+              <td>Ethan Mujahideen Militia</td>
+            </tr>
+            <tr>
+              <td>Abbreviation</td>
+              <td>EMM</td>
+            </tr>
+            <tr>
+              <td>Leader</td>
+              <td>Grass the Grass</td>
+            </tr>
+            <tr>
+              <td>Alignment</td>
+              <td>Ethanist</td>
+            </tr>
+            <tr>
+              <td>Religious identity</td>
+              <td>Islamic</td>
+            </tr>
+            <tr>
+              <td>Affiliation</td>
+              <td>Ethanism</td>
+            </tr>
+            <tr>
+              <td>Emblem</td>
+              <td>ETHAN_MUJAHIDEEN_MILITIA.png</td>
+            </tr>
+          </table>
+        </div>
+
+        <p>
+          The <b>Ethan Mujahideen Militia (EMM)</b> is a fictional Islamic
+          militia allied with <b>Ethanism</b>. The group presents itself as
+          a force devoted to the glory of Ethan and the advancement of its
+          ideological cause. Its leadership, identity, and public image are
+          closely associated with its leader, <b>Grass the Grass</b>.
+        </p>
+
+        <p>
+          The militia's visual identity combines a dark-green emblem with
+          desert imagery. Its supporters use slogans, insignia, and
+          exaggerated martial imagery as symbols of loyalty to Ethan.
+        </p>
+
+        <div class="toc">
+          <div class="toc-title">Contents</div>
+          <ol>
+            <li><a href="#history">History and background</a></li>
+            <li><a href="#ideology">Ideology</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#symbolism">Symbols and identity</a></li>
+            <li><a href="#culture">Online presence and culture</a></li>
+            <li><a href="#see-also">See also</a></li>
+          </ol>
+        </div>
+
+        <h2 id="history">History and background</h2>
+
+        <p>
+          Within the CLVBHOUSE fictional setting, the Ethan Mujahideen
+          Militia emerged as a militant ally of Ethanism. Its stated purpose
+          is to defend the movement's interests and promote the standing
+          of Ethan among its supporters.
+        </p>
+
+        <p>
+          The group is depicted as an ideological organization rather than
+          simply a collection of individuals. Its identity revolves around
+          allegiance, religious symbolism, and a shared commitment to
+          Ethanist goals.
+        </p>
+
+        <div class="desert-note">
+          <b>Setting note:</b> The militia and its described history belong
+          to the fictional CLVBHOUSE Wiki setting.
+        </div>
+
+        <h2 id="ideology">Ideology</h2>
+
+        <p>
+          The EMM combines an Islamic identity with support for Ethanism.
+          Its fictional supporters frame their allegiance to Ethan as a
+          central part of the group's purpose. The slogan displayed at the
+          top of this page reflects that exaggerated, in-universe devotion.
+        </p>
+
+        <p>
+          The group's identity is presented through a combination of
+          religious references, Ethanist allegiance, military aesthetics,
+          and online community humour. These elements define its public
+          image within the setting.
+        </p>
+
+        <h2 id="leadership">Leadership</h2>
+
+        <p>
+          The militia is led by <b>Grass the Grass</b>, who serves as its
+          central figure. The leader's name is associated with the group's
+          identity and appears in descriptions of its leadership.
+        </p>
+
+        <p>
+          Beyond the leadership attributed to Grass the Grass, the
+          organization's internal hierarchy is left unspecified in this
+          article.
+        </p>
+
+        <h2 id="symbolism">Symbols and identity</h2>
+
+        <p>
+          The official emblem is represented by the image file
+          <code>ETHAN_MUJAHIDEEN_MILITIA.png</code>. Dark green is used
+          throughout this page to complement the emblem, while the sky
+          and sand colours provide a desert-inspired backdrop.
+        </p>
+
+        <p>
+          The militia's visual identity includes its emblem, the initials
+          EMM, and its Ethanist slogan. These features distinguish it from
+          other fictional organizations on the wiki.
+        </p>
+
+        <div class="notice">
+          <b>EMM emblem:</b>
+          <br><br>
+          <img
+            src="ETHAN_MUJAHIDEEN_MILITIA.png"
+            alt="Ethan Mujahideen Militia emblem"
+            style="display:block;width:115px;height:115px;object-fit:contain;margin:auto"
+          >
+        </div>
+
+        <h2 id="culture">Online presence and culture</h2>
+
+        <p>
+          The militia's presentation on the CLVBHOUSE Wiki mixes
+          encyclopedia-style writing with deliberately exaggerated
+          community humour. Its slogan and recurring text-rifle decorations
+          are part of that stylized presentation.
+        </p>
+
+        <div class="shot-panel">
+          <span class="shooting-rifle">ᡕᠵ╦ᡁ═━╾</span>
+          <span class="shooting-rifle">ᡕᠵ╦ᡁ═━╾</span>
+          <img
+            class="target-flag"
+            src="Sniff_israeli_flag.png"
+            alt="Decorative flag"
+          >
+          <span class="shooting-rifle">ᡕᠵ╦ᡁ═━╾</span>
+        </div>
+
+        <p>
+          The animated rifles and drifting flag images are decorative
+          elements of the page, intended as cartoon-style visual jokes.
+          They do not represent a real event.
+        </p>
+
+        <h2 id="see-also">See also</h2>
+
+        <ul>
+          <li><a href="index.html">CLVBHOUSE Wiki</a></li>
+          <li><a href="Though.html">Though</a></li>
+          <li><a href="By_the_way.html">By the Way</a></li>
+        </ul>
+
+        <div class="categories">
+          <b>Categories:</b>
+          <a href="index.html">Fictional organizations</a> |
+          <a href="index.html">Ethanism</a> |
+          <a href="index.html">CLVBHOUSE Wiki articles</a>
+        </div>
+
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    This page is part of the fictional CLVBHOUSE Wiki.
+  </footer>
+
+  <!-- Decorative text rifles -->
+  <span class="rifle r1">ᡕᠵ╦ᡁ═━╾</span>
+  <span class="rifle r2">ᡕᠵ╦ᡁ═━╾</span>
+  <span class="rifle r3">ᡕᠵ╦ᡁ═━╾</span>
+  <span class="rifle r4">ᡕᠵ╦ᡁ═━╾</span>
+
+  <!-- Falling decorative flags -->
+  <div class="flag-rain" aria-hidden="true">
+    <img class="flag-drop" src="Sniff_israeli_flag.png" alt="">
+    <img class="flag-drop" src="Sniff_israeli_flag.png" alt="">
+    <img class="flag-drop" src="Sniff_israeli_flag.png" alt="">
+    <img class="flag-drop" src="Sniff_israeli_flag.png" alt="">
+    <img class="flag-drop" src="Sniff_israeli_flag.png" alt="">
+    <img class="flag-drop" src="Sniff_israeli_flag.png" alt="">
+  </div>
+
+</div>
+</body>
+</html>
