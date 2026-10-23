@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CLVBHOUSE — The Encyclopedia</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: #f8f9fa;
+    color: #202122;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a { color: #0645ad; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header {
+    background: white;
+    border-bottom: 1px solid #a7d7f9;
+    padding: 18px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 38px;
+    color: #202122;
+}
+
+.brand h1 {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: #54595d;
+}
+
+#search {
+    padding: 10px;
+    border: 1px solid #a2a9b1;
+    width: 240px;
+    max-width: 100%;
+    font-size: 14px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 190px minmax(0, 1fr);
+    gap: 28px;
+    max-width: 1350px;
+    margin: 25px auto;
+    padding: 0 24px;
+}
+
+aside {
+    padding-top: 12px;
+    line-height: 2.2;
+}
+
+aside h3 {
+    font-weight: normal;
+    border-bottom: 1px solid #c8ccd1;
+    padding-bottom: 5px;
+}
+
+main {
+    background: white;
+    border: 1px solid #c8ccd1;
+    padding: 25px;
+    min-width: 0;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 27px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: normal;
+    border-bottom: 1px solid #c8ccd1;
+    padding-bottom: 5px;
+}
+
+.welcome {
+    background: #f8f9fa;
+    border: 1px solid #c8ccd1;
+    padding: 18px;
+    margin-bottom: 24px;
+}
+
+.columns {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.panel {
+    border: 1px solid #c8ccd1;
+    padding: 15px;
+    margin-bottom: 18px;
+    min-width: 0;
+}
+
+.panel h3 { margin-top: 0; }
+
+ul { padding-left: 22px; }
+li { margin: 8px 0; }
+
+#results { margin-top: 12px; }
+
+footer {
+    text-align: center;
+    color: #54595d;
+    padding: 25px;
+    border-top: 1px solid #c8ccd1;
+    margin-top: 30px;
+}
+
+@media (max-width: 700px) {
+    .layout { grid-template-columns: 1fr; }
+    aside { border-bottom: 1px solid #c8ccd1; padding-bottom: 15px; }
+    .columns { grid-template-columns: 1fr; }
+    main { padding: 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <div class="logo">◈</div>
+        <div>
+            <h1>CLVBHOUSE</h1>
+            <p>The Free Encyclopedia</p>
+        </div>
+    </div>
+
+    <div>
+        <input id="search" type="search"
+               placeholder="Search CLVBHOUSE..."
+               aria-label="Search articles">
+        <div id="results"></div>
+    </div>
+</header>
+
+<div class="layout">
+
+<aside>
+    <strong>Navigation</strong><br>
+    <a href="index.html">Main page</a><br>
+    <a href="#featured">Featured articles</a><br>
+    <a href="#categories">Categories</a><br>
+    <a href="#about">About CLVBHOUSE</a>
+
+    <h3>Contents</h3>
+    <a href="#history">History</a><br>
+    <a href="#politics">Politics</a><br>
+    <a href="#geography">Geography</a><br>
+    <a href="#organizations">Organizations</a>
+</aside>
+
+<main>
+
+    <h2>Welcome to CLVBHOUSE</h2>
+
+    <section class="welcome">
+        <strong>Welcome to CLVBHOUSE, the free encyclopedia.</strong>
+        <p>
+            Explore articles about history, geography, politics,
+            organizations, cultures, and other subjects.
+        </p>
+        <p>
+            This is the beginning of the CLVBHOUSE archive.
+            More articles and features will be added over time.
+        </p>
+    </section>
+
+    <div class="columns">
+
+        <section class="panel" id="featured">
+            <h3>Featured articles</h3>
+            <p>Explore the encyclopedia's featured subjects.</p>
+            <ul>
+                <li><a href="#history">History</a></li>
+                <li><a href="#politics">Political systems</a></li>
+                <li><a href="#geography">World geography</a></li>
+            </ul>
+        </section>
+
+        <section class="panel" id="categories">
+            <h3>Browse categories</h3>
+            <ul>
+                <li><a href="#history">History</a></li>
+                <li><a href="#politics">Politics and government</a></li>
+                <li><a href="#geography">Geography</a></li>
+                <li><a href="#organizations">Organizations</a></li>
+            </ul>
+        </section>
+
+        <section class="panel" id="history">
+            <h3>History</h3>
+            <p>
+                Discover historical periods, events, civilizations,
+                and biographies.
+            </p>
+        </section>
+
+        <section class="panel" id="politics">
+            <h3>Politics and government</h3>
+            <p>
+                Explore political systems, ideologies, institutions,
+                and government structures.
+            </p>
+        </section>
+
+        <section class="panel" id="geography">
+            <h3>Geography</h3>
+            <p>
+                Browse countries, regions, cities, and geographical
+                features.
+            </p>
+        </section>
+
+        <section class="panel" id="organizations">
+            <h3>Organizations</h3>
+            <p>
+                Read about organizations, their histories,
+                structures, and activities.
+            </p>
+        </section>
+
+    </div>
+
+    <section id="about">
+        <h3>About CLVBHOUSE</h3>
+        <p>
+            CLVBHOUSE is an independent encyclopedia project.
+            Its articles will be developed as the archive grows.
+        </p>
+    </section>
+
+</main>
+</div>
+
+<footer>
+    CLVBHOUSE — The Free Encyclopedia
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const results = document.getElementById("results");
+
+const articles = [
+    { name: "History", url: "#history" },
+    { name: "Political systems", url: "#politics" },
+    { name: "World geography", url: "#geography" },
+    { name: "Organizations", url: "#organizations" }
+];
+
+search.addEventListener("input", () => {
+    const query = search.value.trim().toLowerCase();
+    results.replaceChildren();
+
+    if (!query) return;
+
+    const matches = articles.filter(article =>
+        article.name.toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+        results.textContent = "No matching articles found.";
+        return;
+    }
+
+    matches.forEach(article => {
+        const link = document.createElement("a");
+        link.href = article.url;
+        link.textContent = article.name;
+        link.style.display = "block";
+        results.appendChild(link);
+    });
+});
+</script>
+
+</body>
+</html>
