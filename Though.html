@@ -1,0 +1,571 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Though - CLVBHOUSE Wiki</title>
+
+<style>
+:root {
+  --bg: #f6f6f6;
+  --paper: #ffffff;
+  --border: #a7d7f9;
+  --link: #0645ad;
+  --text: #202122;
+  --gem: #20dcff;
+  --emerald: #20b95a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg) url("asd1.png") repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+#page {
+  max-width: 1500px;
+  min-height: 100vh;
+  margin: auto;
+  background: var(--paper);
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+  box-shadow: 0 0 18px #0002;
+}
+
+header {
+  min-height: 105px;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  border-bottom: 1px solid #a7d7f9;
+  background: linear-gradient(110deg, #fff, #f1f8ff);
+}
+
+header img.logo {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+header h1 {
+  font-family: Georgia, serif;
+  font-size: 30px;
+  font-weight: normal;
+  margin: 0;
+}
+
+header p { margin: 5px 0 0; color: #54595d; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 175px minmax(0, 1fr);
+}
+
+.sidebar {
+  padding: 20px 14px;
+  border-right: 1px solid #c8ccd1;
+  background: #f8f9fa;
+  min-height: 100%;
+}
+
+.sidebar h3 {
+  color: #54595d;
+  font-size: 12px;
+  font-weight: normal;
+  border-bottom: 1px solid #c8ccd1;
+  padding-bottom: 4px;
+  margin: 18px 0 8px;
+}
+
+.sidebar h3:first-child { margin-top: 0; }
+.sidebar a { display: block; margin: 8px 0; font-size: 13px; }
+
+.content { min-width: 0; }
+
+.top-tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 0 22px;
+  min-height: 42px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #a7d7f9;
+}
+
+.tabs-left, .tabs-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px 0;
+  font-size: 13px;
+}
+
+.tabs-left a:first-child {
+  color: #202122;
+  font-weight: bold;
+  border-bottom: 2px solid #202122;
+  padding-bottom: 12px;
+  margin-bottom: -13px;
+}
+
+article { padding: 24px 30px 40px; }
+
+h1.article-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.subtitle { color: #54595d; margin: 0 0 20px; }
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 22px;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-top: 28px;
+}
+
+h3 { font-size: 17px; font-weight: normal; }
+
+p { line-height: 1.65; }
+
+.infobox {
+  float: right;
+  width: 285px;
+  max-width: 46%;
+  margin: 0 0 18px 24px;
+  padding: 4px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  font-size: 13px;
+}
+
+.infobox-title {
+  background: #dceeff;
+  padding: 10px 6px;
+  text-align: center;
+  font-family: Georgia, serif;
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.infobox img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.infobox td { padding: 6px; vertical-align: top; }
+.infobox td:first-child { font-weight: bold; width: 38%; }
+
+.jak {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin: 0 2px;
+  animation: jakFloat 5s ease-in-out infinite;
+}
+
+.jak.big {
+  width: 76px;
+  height: 76px;
+}
+
+.jak.tiny {
+  width: 17px;
+  height: 17px;
+}
+
+@keyframes jakFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-5px) rotate(3deg); }
+}
+
+.toc {
+  display: table;
+  max-width: 100%;
+  padding: 12px 22px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  margin: 22px 0;
+  font-size: 13px;
+}
+
+.toc-title { font-weight: bold; text-align: center; margin-bottom: 8px; }
+.toc ol { margin: 0; padding-left: 24px; line-height: 1.9; }
+
+.notice {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 12px;
+  margin: 16px 0;
+}
+
+.gemrald {
+  border: 1px solid #168844;
+  background: linear-gradient(110deg, #e4ffe9, #baf5c7, #f2fff4);
+  box-shadow: 0 0 12px #20b95a55;
+  padding: 12px;
+}
+
+.gemrald strong { color: #087c35; }
+
+.gemrald img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.gem {
+  border: 1px solid #00a9d4;
+  background: linear-gradient(110deg, #e1fbff, #a9f3ff, #f5feff);
+  box-shadow: 0 0 14px #20dcff88;
+  padding: 12px;
+}
+
+.gem strong { color: #008bad; }
+
+.gem img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+.jak-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0;
+  padding: 12px;
+  border: 1px solid #a2a9b1;
+  background: linear-gradient(90deg, #e8f4ff, #fff, #e8f4ff);
+  text-align: center;
+}
+
+.jak-banner img { width: 50px; height: 50px; object-fit: contain; }
+
+.shake {
+  display: inline-block;
+  animation: slowShake 7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes slowShake {
+  0%, 80%, 100% { transform: translate(0, 0) rotate(0); }
+  82% { transform: translate(-2px, 1px) rotate(-0.5deg); }
+  85% { transform: translate(2px, -1px) rotate(0.5deg); }
+  88% { transform: translate(-1px, -1px) rotate(-0.3deg); }
+  91% { transform: translate(1px, 1px) rotate(0.3deg); }
+  94% { transform: translate(0, 0) rotate(0); }
+}
+
+/* Sections slowly drift down, then snap back to their original position. */
+.page-drift {
+  animation: driftDown 12s ease-in-out infinite;
+}
+
+.page-drift.later { animation-delay: -6s; }
+
+@keyframes driftDown {
+  0%, 10%, 100% { transform: translateY(0); }
+  52% { transform: translateY(65px); }
+  72% { transform: translateY(65px); }
+  82% { transform: translateY(0); }
+}
+
+footer {
+  border-top: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 18px 24px;
+  font-size: 12px;
+  color: #54595d;
+}
+
+.categories {
+  margin-top: 28px;
+  padding: 12px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .layout { grid-template-columns: 1fr; }
+  .sidebar { border-right: none; border-bottom: 1px solid #c8ccd1; }
+  .sidebar a { display: inline-block; margin-right: 12px; }
+  .sidebar h3 { margin-top: 12px; }
+  article { padding: 18px 15px 30px; }
+  .infobox { float: none; max-width: 100%; width: 100%; margin: 0 0 18px; }
+  header { padding: 12px; }
+  header h1 { font-size: 24px; }
+  .top-tabs { padding: 0 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="page">
+
+<header>
+  <img class="logo" src="ethanwiki-logo-v2.png" alt="CLVBHOUSE Wiki logo">
+  <div>
+    <h1>CLVBHOUSE Wiki</h1>
+    <p>The totally reliable encyclopedia of absolutely everything.</p>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="sidebar">
+    <h3>Navigation</h3>
+    <a href="index.html">Main page</a>
+    <a href="index.html">Recent changes</a>
+    <a href="index.html">Random article</a>
+    <a href="index.html">Community portal</a>
+
+    <h3>Articles</h3>
+    <a href="By_the_way.html">By the Way</a>
+    <a href="Though.html">Though</a>
+    <a href="Wood.html">Wood</a>
+
+    <h3>CLVBHOUSE</h3>
+    <a href="index.html">About the wiki</a>
+    <a href="index.html">Contact</a>
+
+    <div style="margin-top:24px;text-align:center">
+      <img class="jak big" src="Thoughjak.png" alt="Thoughjak">
+      <p><b>THOUGHJAK</b></p>
+    </div>
+  </aside>
+
+  <main class="content">
+    <nav class="top-tabs">
+      <div class="tabs-left">
+        <a href="Though.html">Article</a>
+        <a href="#discussion">Discussion</a>
+      </div>
+      <div class="tabs-right">
+        <a href="#history">View history</a>
+        <a href="#search">Search</a>
+      </div>
+    </nav>
+
+    <article>
+      <h1 class="article-title"><span class="shake">Though</span></h1>
+      <p class="subtitle">From CLVBHOUSE Wiki, the free encyclopedia</p>
+
+      <div class="infobox">
+        <div class="infobox-title">
+          <img class="jak big" src="Thoughjak.png" alt="Thoughjak">
+          <br>Though
+        </div>
+        <div style="text-align:center;padding:8px">
+          <img src="Thoughjak.png" alt="Thoughjak image" style="width:145px;height:145px;object-fit:contain">
+          <p><b>The Thoughjak phenomenon</b></p>
+        </div>
+        <table>
+          <tr><td>Word</td><td>Though</td></tr>
+          <tr><td>Word type</td><td>Conjunction / adverb</td></tr>
+          <tr><td>Known for</td><td>Contradictions, sentence endings, and Thoughjak</td></tr>
+          <tr><td>Associated item</td><td>Thoughjak <img class="jak tiny" src="Thoughjak.png" alt=""></td></tr>
+          <tr><td>Related page</td><td><a href="By_the_way.html">By the Way</a></td></tr>
+          <tr><td>Gem status</td><td>Extremely shiny</td></tr>
+        </table>
+      </div>
+
+      <p>
+        <b>Though</b> is a word in the English language used to introduce a contrast,
+        acknowledge an opposing point, or add a qualification to a statement.
+        In the CLVBHOUSE Wiki, the word is also associated with the mysterious
+        <img class="jak" src="Thoughjak.png" alt="Thoughjak"> <b>Thoughjak</b>,
+        which has appeared throughout the article for reasons that remain unclear.
+      </p>
+
+      <div class="jak-banner">
+        <img src="Thoughjak.png" alt="Thoughjak">
+        <div>
+          <b>THOUGHJAK NOTICE</b><br>
+          Though the article appears normal, Thoughjak has already entered the page.
+        </div>
+        <img src="Thoughjak.png" alt="Thoughjak">
+      </div>
+
+      <div class="toc">
+        <div class="toc-title">Contents</div>
+        <ol>
+          <li><a href="#meaning">Meaning</a></li>
+          <li><a href="#grammar">Grammar and usage</a></li>
+          <li><a href="#examples">Examples</a></li>
+          <li><a href="#thoughjak">Thoughjak</a></li>
+          <li><a href="#gems">GEM and Gemrald</a></li>
+          <li><a href="#see-also">See also</a></li>
+        </ol>
+      </div>
+
+      <section class="page-drift">
+        <h2 id="meaning">Meaning</h2>
+        <p>
+          <i>Though</i> usually means something similar to “although” or “even if”.
+          It introduces information that contrasts with what has already been said.
+          <img class="jak" src="Thoughjak.png" alt="Thoughjak">
+          Though a statement may sound convincing, a contrasting fact can still be true.
+        </p>
+        <p>
+          The word can appear at the beginning, in the middle, or at the end of a sentence.
+          Its meaning depends on how it is used.
+        </p>
+
+        <div class="notice">
+          <img class="jak" src="Thoughjak.png" alt="Thoughjak">
+          <b>Wiki note:</b> Thoughjak is not required by English grammar, though it seems
+          to have been required by whoever edited this page.
+        </div>
+      </section>
+
+      <section class="page-drift later">
+        <h2 id="grammar">Grammar and usage</h2>
+        <p>
+          When used as a conjunction, <i>though</i> connects two ideas that contrast.
+          For example: “Though it was raining, the match continued.”
+          The rain and the continuation of the match form the contrast.
+        </p>
+        <p>
+          At the end of a sentence, <i>though</i> can add a qualification:
+          “That was a good film, though.”
+          <img class="jak" src="Thoughjak.png" alt="Thoughjak">
+        </p>
+        <p>
+          <i>Although</i> is often interchangeable with <i>though</i>, but the two words
+          do not always fit naturally in exactly the same positions.
+        </p>
+      </section>
+
+      <h2 id="examples">Examples</h2>
+      <ul>
+        <li>Though the room was small, it was comfortable. <img class="jak tiny" src="Thoughjak.png" alt=""></li>
+        <li>The task was difficult. It was enjoyable, though. <img class="jak tiny" src="Thoughjak.png" alt=""></li>
+        <li>Though Thoughjak appeared, nobody questioned it.</li>
+        <li>The diamond was cyan, though the emerald remained green.</li>
+      </ul>
+
+      <h2 id="thoughjak">Thoughjak</h2>
+      <p>
+        <img class="jak big" src="Thoughjak.png" alt="Thoughjak">
+        <b>Thoughjak</b> is the unofficial mascot, symbol, and recurring image of this
+        article. It is placed beside headings, inside notices, and throughout the page.
+        No explanation has been found for the number of appearances.
+      </p>
+
+      <div class="notice">
+        <b>Important distinction:</b> Thoughjak is the image used on this page.
+        GEM and Gemrald are separate entries despite sharing a page.
+      </div>
+
+      <h2 id="gems">GEM and Gemrald</h2>
+
+      <div class="gem">
+        <img src="Minecraft-diamond.png" alt="Minecraft diamond">
+        <strong>GEM — Cyan Diamond</strong>
+        <p>
+          GEM is the cyan, diamond-themed entry. Its identifying image is
+          <code>Minecraft-diamond.png</code>. It uses cyan highlights and a bright,
+          shiny diamond appearance.
+        </p>
+        <img src="Minecraft-diamond.png" alt="Minecraft diamond">
+        <img src="Minecraft-diamond.png" alt="Minecraft diamond">
+      </div>
+
+      <br>
+
+      <div class="gemrald">
+        <img src="latest.png" alt="Gemrald banner">
+        <strong>Gemrald — Green Emerald</strong>
+        <p>
+          Gemrald is separate from GEM. It keeps the green emerald appearance and
+          green shine. The two names refer to different things, even though they
+          share this page.
+        </p>
+        <img src="latest.png" alt="Gemrald banner">
+      </div>
+
+      <p>
+        Though GEM is cyan and Gemrald is green, both are shiny.
+        <img class="jak" src="Thoughjak.png" alt="Thoughjak">
+        Though they share this page, they must not be confused.
+      </p>
+
+      <h2 id="see-also">See also</h2>
+      <ul>
+        <li><a href="By_the_way.html">By the Way</a></li>
+        <li><a href="Wood.html">Wood</a></li>
+        <li><a href="index.html">CLVBHOUSE Wiki main page</a></li>
+      </ul>
+
+      <div class="categories">
+        <b>Categories:</b>
+        <a href="index.html">English words</a> |
+        <a href="index.html">CLVBHOUSE Wiki articles</a> |
+        <a href="index.html">Thoughjak-related pages</a>
+      </div>
+    </article>
+  </main>
+</div>
+
+<footer>
+  This page was last edited recently, probably by Thoughjak.
+  <img class="jak tiny" src="Thoughjak.png" alt="Thoughjak">
+  <br><br>
+  Text is available under the CLVBHOUSE Wiki's fictional encyclopedia license.
+</footer>
+
+</div>
+
+<script>
+/* Occasional gentle page shake, without requiring any external libraries. */
+const page = document.getElementById("page");
+
+setInterval(() => {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  page.animate(
+    [
+      { transform: "translateX(0)" },
+      { transform: "translateX(-2px) rotate(-0.08deg)" },
+      { transform: "translateX(2px) rotate(0.08deg)" },
+      { transform: "translateX(0)" }
+    ],
+    { duration: 900, easing: "ease-in-out" }
+  );
+}, 11500);
+</script>
+
+</body>
+</html>
