@@ -2,71 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Clvbhouse Wiki</title>
 
 <style>
-:root {
-    --wiki-blue: #0645ad;
-    --wiki-purple: #663399;
-    --wiki-border: #a2a9b1;
-    --wiki-panel: #d5d9ef;
-    --wiki-panel-light: #edf0ff;
-    --wiki-text: #202122;
-}
-
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
-    color: var(--wiki-text);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    background-color: #d5d9ef;
-    background-image: url("asd1.png");
-    background-repeat: repeat;
-    background-size: 640px 360px;
-    background-attachment: fixed;
+    color: #202122;
+    font: 13px Arial, Helvetica, sans-serif;
+    background: #d5d9ef url("asd1.png") center center / cover no-repeat fixed;
 }
 
-a {
-    color: var(--wiki-blue);
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--wiki-purple);
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-button, input {
-    font-family: inherit;
-    font-size: 13px;
-}
-
-/* HEADER */
+a { color: #0645ad; text-decoration: none; }
+a:visited { color: #663399; }
+a:hover { text-decoration: underline; }
 
 .site-header {
-    height: 36px;
+    height: 35px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 18px;
-    padding: 0 14px;
+    gap: 16px;
+    padding: 0 12px;
     font-size: 12px;
 }
-
-.site-header a {
-    color: #0645ad;
-}
-
-/* LEFT SIDEBAR */
 
 .sidebar {
     position: absolute;
@@ -74,36 +35,33 @@ button, input {
     left: 0;
     width: 162px;
     padding: 5px;
-    z-index: 5;
 }
 
-.site-logo {
-    display: block;
+.logo {
     width: 150px;
     height: 125px;
     object-fit: contain;
+    display: block;
     margin: 0 auto;
 }
 
 .site-name {
-    font-family: Georgia, "Times New Roman", serif;
+    font: 23px Georgia, serif;
     text-align: center;
-    font-size: 23px;
-    margin: -1px 0 15px;
+    margin: 0 0 15px;
     color: #171717;
 }
 
 .side-heading {
-    margin: 10px 0 2px;
+    margin: 10px 0 3px;
     font-size: 12px;
-    font-weight: normal;
 }
 
 .side-box {
-    background: rgba(255,255,255,0.94);
+    background: rgba(255,255,255,.95);
     border: 1px solid #a2a9b1;
     border-radius: 4px;
-    padding: 7px 9px;
+    padding: 6px 9px;
     margin-bottom: 8px;
 }
 
@@ -114,31 +72,30 @@ button, input {
 
 .side-box a::before {
     content: "▪";
-    color: #7595a5;
+    color: #7894a5;
     margin-right: 7px;
-}
-
-.search-box {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
 }
 
 .search-box input {
     width: 100%;
-    min-width: 0;
-    padding: 4px;
+    padding: 5px;
     border: 1px solid #a2a9b1;
 }
 
 .search-box button {
-    padding: 2px 12px;
-    background: #f8f9fa;
-    border: 1px solid #a2a9b1;
+    margin-top: 4px;
     cursor: pointer;
 }
 
-/* TOP TABS */
+#search-results {
+    margin-top: 6px;
+    overflow-wrap: anywhere;
+}
+
+#search-results a {
+    display: block;
+    margin: 5px 0;
+}
 
 .page-area {
     margin-left: 162px;
@@ -148,23 +105,22 @@ button, input {
 .tabs-row {
     height: 36px;
     display: flex;
-    justify-content: space-between;
     align-items: flex-end;
+    justify-content: space-between;
     gap: 8px;
 }
 
 .tabs {
     display: flex;
     gap: 3px;
-    align-items: flex-end;
 }
 
 .tab {
+    padding: 8px 12px 6px;
     background: #edf0ff;
     border: 1px solid #a2a9b1;
     border-bottom: none;
     border-radius: 8px 8px 0 0;
-    padding: 8px 12px 6px;
     white-space: nowrap;
 }
 
@@ -176,43 +132,36 @@ button, input {
 
 .account-tabs {
     display: flex;
-    gap: 13px;
+    gap: 12px;
     padding: 0 8px 8px;
     white-space: nowrap;
     font-size: 12px;
 }
 
-/* ARTICLE */
-
 .article {
-    background: #fff;
+    background: white;
     border: 1px solid #a2a9b1;
-    border-radius: 2px;
+    padding: 18px 14px 35px;
     min-height: 900px;
-    padding: 18px 14px 40px;
     position: relative;
 }
 
 .article-title {
-    font-size: 26px;
-    font-weight: normal;
+    font: normal 26px Georgia, "Times New Roman", serif;
     margin: 0;
-    padding: 0 0 5px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #a2a9b1;
-    color: #111;
 }
 
 .subtitle {
-    font-size: 13px;
-    margin-top: 5px;
-    margin-bottom: 19px;
+    margin: 5px 0 19px;
 }
 
 .lock {
     position: absolute;
-    right: 7px;
+    right: 8px;
     top: 10px;
-    font-size: 20px;
+    font-size: 19px;
 }
 
 .notice {
@@ -226,43 +175,34 @@ button, input {
     box-shadow: inset 0 0 0 3px #f5f5ff;
 }
 
-.notice strong {
-    font-size: 18px;
-}
+.notice strong { font-size: 18px; }
+.notice p { margin: 7px 0 0; }
 
-.notice p {
-    margin: 7px 0 0;
-}
-
-.article p {
-    line-height: 1.6;
-    margin: 8px 0;
-}
-
-/* RIGHT INFOBOX */
+.article p { line-height: 1.6; }
 
 .infobox {
     float: right;
     width: 288px;
     max-width: 42%;
+    margin: 0 0 15px 18px;
+    padding: 4px;
     background: #edf0ff;
     border: 1px solid #a2a9b1;
-    padding: 4px;
-    margin: 0 0 15px 18px;
 }
 
 .infobox-title {
-    background: #d5d9ef;
     padding: 8px;
+    background: #d5d9ef;
     text-align: center;
-    font-size: 14px;
     font-weight: bold;
+    font-size: 14px;
 }
 
-.infobox-subtitle {
+.infobox-title small {
+    display: block;
+    margin-top: 5px;
     font-style: italic;
     font-weight: normal;
-    margin-top: 5px;
 }
 
 .infobox-tabs {
@@ -274,7 +214,6 @@ button, input {
     display: inline-block;
     padding: 5px 10px;
     background: #f8f9fa;
-    border: 1px solid #e0e0e0;
 }
 
 .infobox-logo {
@@ -287,11 +226,10 @@ button, input {
 }
 
 .infobox-brand {
-    font-family: Georgia, "Times New Roman", serif;
+    font: 30px Georgia, serif;
     text-align: center;
-    font-size: 30px;
-    margin: 2px 0 8px;
     overflow-wrap: anywhere;
+    margin: 2px 0 8px;
 }
 
 .infobox-section {
@@ -304,19 +242,14 @@ button, input {
 .info-row {
     padding: 6px;
     border: 1px solid #d4d9ef;
-    overflow-wrap: anywhere;
     line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
-.info-row strong {
-    display: block;
-}
-
-/* CONTENTS */
+.info-row strong { display: block; }
 
 .toc {
     display: table;
-    min-width: 220px;
     max-width: 100%;
     border: 1px solid #a2a9b1;
     background: #f8f9fa;
@@ -325,8 +258,8 @@ button, input {
 }
 
 .toc-title {
-    font-weight: bold;
     text-align: center;
+    font-weight: bold;
     margin-bottom: 8px;
 }
 
@@ -335,24 +268,17 @@ button, input {
     padding-left: 23px;
 }
 
-.toc li {
-    padding: 3px 0;
-}
+.toc li { padding: 3px 0; }
 
 .section-title {
-    font-size: 20px;
-    font-weight: normal;
+    font: normal 20px Georgia, serif;
     border-bottom: 1px solid #a2a9b1;
     margin: 24px 0 10px;
     padding-bottom: 3px;
 }
 
-.section-title a {
-    color: inherit;
-}
-
 .category-box {
-    margin-top: 45px;
+    margin-top: 40px;
     padding: 8px;
     background: #f8f9fa;
     border: 1px solid #a2a9b1;
@@ -370,46 +296,28 @@ button, input {
     clear: both;
 }
 
-/* MOBILE */
-
 @media (max-width: 800px) {
     .sidebar {
         position: static;
         width: 100%;
-        background: rgba(213,217,239,0.95);
+        background: rgba(213,217,239,.95);
     }
 
-    .site-logo {
-        width: 100px;
-        height: 85px;
-    }
+    .logo { width: 100px; height: 85px; }
 
-    .site-name {
-        font-size: 22px;
-        margin-bottom: 8px;
-    }
+    .site-name { font-size: 22px; margin-bottom: 8px; }
 
     .sidebar-navigation {
         display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0,1fr));
         gap: 0 8px;
     }
 
-    .page-area {
-        margin: 0 5px;
-    }
+    .page-area { margin: 0 5px; }
 
-    .tabs-row {
-        overflow-x: auto;
-    }
+    .account-tabs { display: none; }
 
-    .account-tabs {
-        display: none;
-    }
-
-    .article {
-        padding: 15px 10px;
-    }
+    .tabs-row { overflow-x: auto; }
 
     .infobox {
         width: 45%;
@@ -417,13 +325,7 @@ button, input {
         margin-left: 10px;
     }
 
-    .infobox-brand {
-        font-size: 20px;
-    }
-
-    .notice strong {
-        font-size: 15px;
-    }
+    .infobox-brand { font-size: 20px; }
 }
 
 @media (max-width: 480px) {
@@ -439,12 +341,10 @@ button, input {
 
 <body>
 
-<!-- LEFT SIDEBAR -->
-
 <aside class="sidebar">
 
     <a href="index.html">
-        <img class="site-logo"
+        <img class="logo"
              src="ethanwiki-logo-v2.png"
              alt="Clvbhouse Wiki logo">
     </a>
@@ -459,10 +359,10 @@ button, input {
                 <a href="index.html">Main page</a>
                 <a href="#recent-changes">Recent changes</a>
                 <a href="#random">Random gem</a>
-                <a href="#guides">Guides, Policies &amp; Rules</a>
-                <a href="#contact">Administrator contact</a>
-                <a href="#notices">Community notices</a>
-                <a href="#special">Special pages</a>
+                <a href="#rules">Guides, Policies &amp; Rules</a>
+                <a href="#staff">Administrator contact</a>
+                <a href="#community">Community notices</a>
+                <a href="#special-pages">Special pages</a>
             </div>
 
             <div class="side-heading">search</div>
@@ -470,10 +370,9 @@ button, input {
                 <form class="search-box" id="wiki-search">
                     <input id="search-input"
                            type="search"
-                           placeholder="Search Clvbhouse Wiki"
-                           aria-label="Search Clvbhouse Wiki">
+                           placeholder="Search Clvbhouse Wiki">
                     <button type="submit">Go</button>
-                    <button type="button" id="search-find">Search</button>
+                    <button type="button" id="search-button">Search</button>
                 </form>
                 <div id="search-results"></div>
             </div>
@@ -483,9 +382,10 @@ button, input {
             <div class="side-heading">community</div>
             <div class="side-box">
                 <a href="#about">About the Wiki</a>
-                <a href="#happenings">Happenings</a>
-                <a href="#contributions">Contribution scores</a>
-                <a href="#staff">List of Wiki Staff</a>
+                <a href="#ethanism">Ethanism</a>
+                <a href="#operations">Operations</a>
+                <a href="#nethanists">Nethanists</a>
+                <a href="#boycott">Nethanite boycott</a>
             </div>
 
             <div class="side-heading">official sites</div>
@@ -493,7 +393,6 @@ button, input {
                 <a href="https://github.com/clvbhouseWiki">
                     GitHub
                 </a>
-                <a href="#about">Clvbhouse Wiki</a>
             </div>
 
             <div class="side-heading">tools</div>
@@ -503,19 +402,15 @@ button, input {
                 <a href="javascript:window.print()">Printable version</a>
                 <a href="#permalink">Permanent link</a>
                 <a href="#page-information">Page information</a>
-                <a href="#cite">Cite this page</a>
             </div>
         </div>
 
     </div>
 </aside>
 
-<!-- MAIN PAGE -->
-
 <div class="page-area">
 
     <div class="tabs-row">
-
         <nav class="tabs">
             <a class="tab active" href="index.html">article</a>
             <a class="tab" href="#discussion">discussion</a>
@@ -528,7 +423,6 @@ button, input {
             <a href="#login">log in</a>
             <a href="#sandbox">sandbox</a>
         </div>
-
     </div>
 
     <main class="article">
@@ -544,21 +438,19 @@ button, input {
         <div class="notice">
             <strong>This page is literally about this very wiki.</strong>
             <p>
-                Here be <a href="#edit-wars">edit wars</a>,
-                <a href="#censorship">censorship</a> and
-                <a href="#template-spam">template spam</a>.
+                Here be <a href="#operations">operations</a>,
+                <a href="#ethanism">ideological glazing</a> and
+                <a href="#nethanists">Nethanist propaganda</a>.
             </p>
         </div>
 
         <div class="clearfix">
 
-            <!-- RIGHT-HAND INFOBOX -->
-
             <aside class="infobox">
 
                 <div class="infobox-title">
                     Clvbhouse Wiki
-                    <div class="infobox-subtitle">'ki</div>
+                    <small>'ki</small>
                 </div>
 
                 <div class="infobox-tabs">
@@ -568,17 +460,15 @@ button, input {
 
                 <img class="infobox-logo"
                      src="ethanwiki-logo-v2.png"
-                     alt="The Clvbhouse Wiki globe">
+                     alt="Clvbhouse Wiki globe">
 
-                <div class="infobox-brand">
-                    Clvbhouse Wiki
-                </div>
+                <div class="infobox-brand">Clvbhouse Wiki</div>
 
                 <div class="infobox-section">Wiki</div>
 
                 <div class="info-row">
                     <strong>Founded</strong>
-                    March 29, 2021; approximately 5 years ago
+                    Wiki creation date unknown
                 </div>
 
                 <div class="info-row">
@@ -587,13 +477,23 @@ button, input {
                 </div>
 
                 <div class="info-row">
-                    <strong>Owner</strong>
-                    Nobody, apparently
+                    <strong>Subject</strong>
+                    Ethan, Ethanism and Clvbhouse culture
                 </div>
 
                 <div class="info-row">
                     <strong>Administrator</strong>
                     No one i guess
+                </div>
+
+                <div class="info-row">
+                    <strong>Ideology</strong>
+                    Ethanism
+                </div>
+
+                <div class="info-row">
+                    <strong>Opponents</strong>
+                    Nethanists
                 </div>
 
                 <div class="info-row">
@@ -606,228 +506,315 @@ button, input {
                 <div class="infobox-section">Statistics</div>
 
                 <div class="info-row">
-                    <strong>Articles</strong>
-                    An academically questionable number
+                    <strong>Official status</strong>
+                    Questionably operational
                 </div>
 
                 <div class="info-row">
-                    <strong>Official status</strong>
-                    Unfortunately real
+                    <strong>Quality control</strong>
+                    Source: trust me bro
                 </div>
 
             </aside>
 
-            <!-- ARTICLE TEXT -->
-
             <p>
                 <strong>Clvbhouse Wiki</strong>, also known as
                 <strong>Bieshi Wiki</strong> or
-                <strong>Biwisi Wiki</strong> by detractors, is an
-                English-language
-                <a href="#mediawiki">MediaWiki</a>-based
-                community-driven online encyclopedia featuring
-                independently <a href="#fact-checking">fact-checked</a>
-                and <a href="#peer-review">peer-reviewed</a>
-                information about Ethan and the Clvbhouse,
-                imageboard culture, and many other topics.
-                Clvbhouse Wiki was created by Saar Sparky on
-                March 29, 2021, and is currently administered by
-                no one i guess.
+                <strong>Biwisi Wiki</strong> by its detractors,
+                is an English-language community-driven online
+                encyclopedia documenting Ethan, the Clvbhouse
+                community, imageboard culture, and the various
+                events, personalities, and ideologies associated
+                with them. Its editorial standards are best
+                described as ambitious, questionable, and
+                occasionally conducted through sheer glazing.
             </p>
 
             <p>
-                Clvbhouse Wiki began as a way to document the
-                mysterious activities of Ethan, the Clvbhouse
-                population, and whatever was happening in the
-                group chat that week. It later expanded to include
-                historical records, questionable biographies,
-                community lore, and things that probably should
-                have stayed in the group chat.
+                The wiki's principal ideological subject is
+                <strong>Ethanism</strong>, a community-created
+                ideology originating from the repeated glorification
+                of an individual known as Ethan. What began as
+                an ongoing joke about Ethan developed into its own
+                collection of terminology, beliefs, operations,
+                supporters, opponents, and increasingly elaborate
+                claims about his supposed significance.
             </p>
 
             <p>
-                To get started, see
-                <a href="#portals">Clvbhouse Wiki:Portals</a>.
-                If you are lost, that is considered a normal user
-                experience.
+                Ethanism is closely associated with Clvbhouse
+                culture. Its supporters discuss Ethan with a degree
+                of enthusiasm that has occasionally raised the
+                question of whether the community is joking,
+                serious, or simply incapable of changing the topic.
             </p>
 
-            <!-- TABLE OF CONTENTS -->
+            <p>
+                Clvbhouse Wiki exists to document Ethanism,
+                preserve community lore, and catalogue the people,
+                activities, and disputes that have emerged from
+                the Clvbhouse community.
+            </p>
 
             <div class="toc">
-                <div class="toc-title">Contents [<a href="#contents">hide</a>]</div>
+                <div class="toc-title">
+                    Contents [<a href="#contents">hide</a>]
+                </div>
                 <ol>
                     <li><a href="#influence">Influence</a></li>
+                    <li><a href="#ethanism">Ethanism</a></li>
+                    <li><a href="#operations">Operations</a></li>
+                    <li><a href="#nethanists">Nethanists</a></li>
+                    <li><a href="#boycott">Nethanite boycott</a></li>
                     <li><a href="#community">Community</a></li>
                     <li><a href="#staff">Administration</a></li>
-                    <li><a href="#articles">Articles</a></li>
                     <li><a href="#see-also">See also</a></li>
-                    <li><a href="#notes">Notes</a></li>
-                    <li><a href="#snopes">Snopes</a></li>
                 </ol>
             </div>
 
             <h2 class="section-title" id="influence">Influence</h2>
 
             <p>
-                Clvbhouse Wiki has occasionally been used as a source
-                by people who were too lazy to ask Ethan directly.
-                Its articles have been cited in arguments, group
-                chats, and at least one conversation that should
-                probably have ended much earlier.
+                Ethanism developed within the Clvbhouse community
+                through the repeated praise, discussion, and
+                exaggerated celebration of Ethan. Over time,
+                the joke acquired its own terminology and
+                ideological identity.
             </p>
 
             <p>
-                The encyclopedia is popular among individuals with
-                too much free time and access to a keyboard. Readers
-                frequently stumble across an article while searching
-                for something completely unrelated, then spend the
-                next forty minutes learning information that has
-                absolutely no practical application.
+                Its culture includes community operations,
+                discussions about recruiting new supporters,
+                attempts to encourage Ethan to upload content,
+                and efforts to increase the size of the server.
+                The importance assigned to these activities
+                varies according to the enthusiasm of the
+                participants involved.
+            </p>
+
+            <h2 class="section-title" id="ethanism">Ethanism</h2>
+
+            <p>
+                <strong>Ethanism</strong> is an ideology created
+                within the Clvbhouse community around the
+                glorification of Ethan. Its defining characteristic
+                is the exaggerated importance assigned to Ethan
+                and the community's attempts to turn an ongoing
+                joke into a broader ideological identity.
             </p>
 
             <p>
-                It is occasionally used as a source on absolutely
-                nothing, and by Google's AI on terms that nobody
-                remembers searching.
+                Ethanism has developed its own terminology,
+                supporters, perceived opponents, and community
+                objectives. Whether individual participants
+                genuinely subscribe to its principles or are
+                simply continuing the joke remains unclear.
+            </p>
+
+            <p>
+                In practice, Ethanism combines community identity,
+                humorous ideological claims, online promotion,
+                and an unusual degree of attention devoted to
+                one individual.
+            </p>
+
+            <h2 class="section-title" id="operations">Operations</h2>
+
+            <p>
+                The Ethanist community has described several
+                operations intended to increase the ideology's
+                reach and encourage greater participation.
+                The stated objectives include the following:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Conversion of the Ethan Clubhouse
+                    comment section:</strong> Attempts to persuade
+                    commenters to take an interest in Ethanism
+                    and the Clvbhouse community.
+                </li>
+                <li>
+                    <strong>Encouraging Ethan to upload:</strong>
+                    Convincing Ethan to publish more content.
+                </li>
+                <li>
+                    <strong>Server growth:</strong> Increasing
+                    membership and participation within the
+                    Clvbhouse community.
+                </li>
+            </ul>
+
+            <p>
+                These objectives reflect the community's stated
+                ambitions rather than independently verified
+                results. Their ultimate success remains a matter
+                for future historians, or whoever is unfortunate
+                enough to maintain the archive.
+            </p>
+
+            <h2 class="section-title" id="nethanists">Nethanists</h2>
+
+            <p>
+                A <strong>Nethanist</strong> is a person described
+                by the Ethanist community as opposing Ethan,
+                Ethanism, or the culture associated with Clvbhouse.
+                The term is used as a label for perceived
+                ideological opponents.
+            </p>
+
+            <p>
+                According to the community's own descriptions,
+                individuals who may be classified as Nethanists
+                include:
+            </p>
+
+            <ul>
+                <li>Fans of <em>The Amazing Digital Circus</em>
+                (TADC).</li>
+                <li>Fans of Jak Does Snacks.</li>
+                <li>People who dislike Ethan.</li>
+            </ul>
+
+            <p>
+                These categories represent the community's
+                characterization of its opponents. Membership
+                in any of these groups does not, by itself,
+                establish that a person opposes Ethanism.
+            </p>
+
+            <h2 class="section-title" id="boycott">
+                Nethanite boycott
+            </h2>
+
+            <p>
+                The <strong>Nethanite boycott</strong> is a list
+                circulated within the Ethanist community of
+                businesses, media, and other subjects that
+                supporters are encouraged to boycott. The
+                community's stated list includes:
+            </p>
+
+            <ul>
+                <li>McDonald's.</li>
+                <li>
+                    Mickey's Clubhouse, alleged by the community
+                    to have copied Ethan.
+                </li>
+                <li>Adult sexual content.</li>
+                <li>Israel, as specified in the community's
+                boycott list.</li>
+                <li>Individuals accused by the community of
+                betraying Ethanism.</li>
+            </ul>
+
+            <p>
+                The list reflects the community's own positions
+                and grievances. Inclusion does not establish
+                that any allegation is true or that every
+                supporter follows the boycott.
             </p>
 
             <h2 class="section-title" id="community">Community</h2>
 
             <p>
-                The Clvbhouse Wiki community consists of readers,
-                editors, alleged experts, professional arguers,
-                and individuals who have mistaken the edit button
-                for a legally binding instrument.
+                The Clvbhouse community consists of Ethanists,
+                casual participants, observers, critics, and
+                individuals whose level of commitment to the
+                ideology is difficult to determine.
             </p>
 
             <p>
-                Disagreements are generally resolved through
-                discussion, increasingly long paragraphs, and
-                the timeless academic method of saying
-                "source: trust me bro".
+                Community activity includes discussions of
+                Ethanism, promotion of the server, attempts
+                to increase participation, and arguments over
+                who qualifies as a supporter or opponent.
             </p>
 
             <h2 class="section-title" id="staff">Administration</h2>
 
             <p>
-                At present, the wiki is administered by no one i guess.
-                This arrangement has been described as both
-                democratic freedom and an administrative emergency.
+                The wiki's administrative situation is currently
+                recorded as "no one i guess". This description
+                is humorous rather than a verified statement
+                about the actual management of the website.
             </p>
-
-            <h2 class="section-title" id="articles">Articles</h2>
-
-            <p>
-                The encyclopedia aims to document notable people,
-                places, events, organizations, and other subjects
-                relevant to the Clvbhouse community.
-            </p>
-
-            <ul>
-                <li><a href="#ethan">Ethan</a></li>
-                <li><a href="#clvbhouse">Clvbhouse</a></li>
-                <li><a href="#bieshi">Bieshi</a></li>
-                <li><a href="#biwisi">Biwisi</a></li>
-            </ul>
 
             <h2 class="section-title" id="see-also">See also</h2>
 
             <ul>
-                <li><a href="#ethan">Ethan</a></li>
-                <li><a href="#clvbhouse">Clvbhouse</a></li>
-                <li><a href="#group-chat">The group chat</a></li>
+                <li><a href="#ethanism">Ethanism</a></li>
+                <li><a href="#operations">Ethanist operations</a></li>
+                <li><a href="#nethanists">Nethanists</a></li>
+                <li><a href="#boycott">Nethanite boycott</a></li>
             </ul>
-
-            <h2 class="section-title" id="notes">Notes</h2>
-
-            <p>
-                This page is an unofficial, humorous introduction
-                to the Clvbhouse Wiki project.
-            </p>
-
-            <h2 class="section-title" id="snopes">Snopes</h2>
-
-            <p>
-                The factual accuracy of this page has been reviewed
-                by absolutely nobody.
-            </p>
 
             <div class="category-box">
                 <strong>Categories:</strong>
-                <a href="#community">Clvbhouse</a> |
-                <a href="#articles">Encyclopedias</a> |
-                <a href="#snopes">Internet culture</a>
+                <a href="#ethanism">Ethanism</a> |
+                <a href="#community">Clvbhouse culture</a> |
+                <a href="#nethanists">Internet culture</a>
             </div>
 
         </div>
     </main>
 
     <footer class="footer">
-        This page was last edited at some point.
-        · Clvbhouse Wiki
+        Clvbhouse Wiki — The Free Encyclopedia.
+        Last edited by absolutely nobody.
     </footer>
 
 </div>
 
 <script>
-const searchInput = document.getElementById("search-input");
-const searchResults = document.getElementById("search-results");
-
-const articleSections = [
-    { name: "Clvbhouse Wiki", id: "top" },
+const sections = [
+    { name: "Clvbhouse Wiki", id: "" },
     { name: "Influence", id: "influence" },
+    { name: "Ethanism", id: "ethanism" },
+    { name: "Operations", id: "operations" },
+    { name: "Nethanists", id: "nethanists" },
+    { name: "Nethanite boycott", id: "boycott" },
     { name: "Community", id: "community" },
     { name: "Administration", id: "staff" },
-    { name: "Articles", id: "articles" },
-    { name: "See also", id: "see-also" },
-    { name: "Notes", id: "notes" },
-    { name: "Snopes", id: "snopes" }
+    { name: "See also", id: "see-also" }
 ];
 
-function searchWiki() {
-    const query = searchInput.value.trim().toLowerCase();
+const input = document.getElementById("search-input");
+const results = document.getElementById("search-results");
 
-    searchResults.replaceChildren();
+function searchWiki(event) {
+    if (event) event.preventDefault();
+
+    const query = input.value.trim().toLowerCase();
+    results.replaceChildren();
 
     if (!query) {
-        searchInput.focus();
+        input.focus();
         return;
     }
 
-    const matches = articleSections.filter(section =>
+    const matches = sections.filter(section =>
         section.name.toLowerCase().includes(query)
     );
 
-    if (matches.length === 0) {
-        searchResults.textContent = "No matching pages found.";
+    if (!matches.length) {
+        results.textContent = "No matching sections found.";
         return;
     }
 
     matches.forEach(section => {
         const link = document.createElement("a");
-        link.href = section.id === "top"
-            ? "index.html"
-            : "#" + section.id;
+        link.href = section.id ? "#" + section.id : "index.html";
         link.textContent = section.name;
-        link.style.display = "block";
-        link.style.marginTop = "5px";
-        searchResults.appendChild(link);
+        results.appendChild(link);
     });
 }
 
-document.getElementById("wiki-search").addEventListener(
-    "submit",
-    function(event) {
-        event.preventDefault();
-        searchWiki();
-    }
-);
+document.getElementById("wiki-search")
+    .addEventListener("submit", searchWiki);
 
-document.getElementById("search-find").addEventListener(
-    "click",
-    searchWiki
-);
+document.getElementById("search-button")
+    .addEventListener("click", searchWiki);
 </script>
 
 </body>
