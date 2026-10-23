@@ -3,18 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Soyspeak - Clvbhouse Wiki</title>
+<title>Saar Sparky - Clvbhouse Wiki</title>
 
 <style>
 * { box-sizing: border-box; }
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   color: #202122;
-  background: #f6f6f6 url("asd1.png") center/cover fixed no-repeat;
+  background: #f6f6f6 url("asd1.png") center center / cover no-repeat fixed;
 }
+
 a { color: #0645ad; text-decoration: none; }
 a:hover { text-decoration: underline; }
+
 header {
   display: flex;
   align-items: center;
@@ -23,9 +26,11 @@ header {
   background: rgba(255,255,255,.96);
   border-bottom: 1px solid #a2a9b1;
 }
+
 .logo { width: 72px; height: 72px; object-fit: contain; }
-.site-title { font: 30px Georgia,serif; margin: 0; }
+.site-title { font: 30px Georgia, serif; margin: 0; }
 .subtitle { color: #54595d; font-size: 13px; margin-top: 5px; }
+
 .layout {
   display: grid;
   grid-template-columns: 200px minmax(0,1fr);
@@ -34,21 +39,74 @@ header {
   margin: 20px auto;
   padding: 0 18px;
 }
+
 .sidebar, main {
   background: rgba(255,255,255,.97);
   border: 1px solid #a2a9b1;
 }
+
 .sidebar { padding: 16px; align-self: start; }
 .sidebar h3 {
-  font: 18px Georgia,serif;
+  font: 18px Georgia, serif;
   border-bottom: 1px solid #a2a9b1;
   padding-bottom: 6px;
 }
 .sidebar a { display: block; padding: 7px 0; }
+
 main { padding: 24px; min-width: 0; }
-h1 { font: normal 32px Georgia,serif; border-bottom: 1px solid #a2a9b1; padding-bottom: 8px; }
-h2 { font: normal 24px Georgia,serif; border-bottom: 1px solid #a2a9b1; padding-bottom: 5px; margin-top: 28px; }
+
+h1 {
+  font: normal 32px Georgia, serif;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font: normal 24px Georgia, serif;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-top: 28px;
+}
+
 .notice { color: #54595d; font-size: 13px; }
+
+.infobox {
+  float: right;
+  width: 310px;
+  max-width: 100%;
+  margin: 0 0 20px 22px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.infobox-title {
+  background: #d5d9ef;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.infobox-image { text-align: center; padding: 12px; }
+
+.infobox-image img {
+  max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+.infobox table { width: 100%; border-collapse: collapse; }
+
+.infobox th, .infobox td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  border-top: 1px solid #eaecf0;
+}
+
+.infobox th { width: 38%; background: #eaecf0; }
+
 .contents {
   display: inline-block;
   padding: 12px 22px;
@@ -57,11 +115,25 @@ h2 { font: normal 24px Georgia,serif; border-bottom: 1px solid #a2a9b1; padding-
   margin: 12px 0 20px;
   font-size: 14px;
 }
+
 .contents ol { margin-bottom: 0; padding-left: 22px; }
-.contents li { padding: 3px 0; }
-table { border-collapse: collapse; width: 100%; margin: 14px 0; }
-th, td { border: 1px solid #a2a9b1; padding: 9px; text-align: left; }
-th { background: #eaecf0; }
+.contents li { padding: 4px 0; }
+
+.alias {
+  display: inline-block;
+  background: #000;
+  color: #000;
+  padding: 0 5px;
+  border-radius: 2px;
+  user-select: none;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 .footer {
   border-top: 1px solid #a2a9b1;
   margin-top: 35px;
@@ -69,18 +141,26 @@ th { background: #eaecf0; }
   color: #54595d;
   font-size: 12px;
 }
+
 @media(max-width:760px) {
   .layout { grid-template-columns: 1fr; }
   main { padding: 16px; }
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <header>
   <a href="index.html">
     <img class="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo">
   </a>
+
   <div>
     <h1 class="site-title">Clvbhouse Wiki</h1>
     <div class="subtitle">The community encyclopedia</div>
@@ -88,6 +168,7 @@ th { background: #eaecf0; }
 </header>
 
 <div class="layout">
+
   <aside class="sidebar">
     <h3>Navigation</h3>
     <a href="index.html">Main page</a>
@@ -102,73 +183,144 @@ th { background: #eaecf0; }
   </aside>
 
   <main>
-    <h1>Soyspeak</h1>
+    <h1>Saar Sparky</h1>
     <div class="notice">From Clvbhouse Wiki, the community encyclopedia.</div>
 
-    <p><b>Soyspeak</b>, also called <b>Jakspeak</b>, is an internet slang and constructed-language style used in parts of online soyjak communities. It is based primarily on English and is known for unusual spellings, abbreviations, apostrophes, word transformations, and community-specific expressions.</p>
+    <div class="clearfix">
 
-    <p>Soyspeak is used for humour, shared identity, and references to the history and culture of the communities where it developed. Some spaces using it also contain offensive or discriminatory language, so examples and meanings depend on context.</p>
+      <aside class="infobox">
+        <div class="infobox-title">Saar Sparky</div>
 
-    <div class="contents">
-      <b>Contents</b>
-      <ol>
-        <li><a href="#history">History</a></li>
-        <li><a href="#writing">Writing system</a></li>
-        <li><a href="#grammar">Grammar and spelling</a></li>
-        <li><a href="#vocabulary">Vocabulary</a></li>
-        <li><a href="#dialects">Dialects</a></li>
-        <li><a href="#see-also">See also</a></li>
-      </ol>
+        <div class="infobox-image">
+          <img src="attacdhment.gif" alt="Saar Sparky profile image">
+        </div>
+
+        <table>
+          <tr>
+            <th>Aliases</th>
+            <td>Saar Sparky, AUS, Topaki</td>
+          </tr>
+          <tr>
+            <th>Formal aliases</th>
+            <td>AUS Productions, Topakien</td>
+          </tr>
+          <tr>
+            <th>Other alias</th>
+            <td><span class="alias">Mr ███████</span></td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>Male</td>
+          </tr>
+          <tr>
+            <th>Age</th>
+            <td>14</td>
+          </tr>
+          <tr>
+            <th>Nationality</th>
+            <td>German</td>
+          </tr>
+          <tr>
+            <th>Languages</th>
+            <td>German, English</td>
+          </tr>
+          <tr>
+            <th>Learning</th>
+            <td><a href="soyspeak.html">Soyspeak</a></td>
+          </tr>
+          <tr>
+            <th>Position</th>
+            <td>Chairman of Ethanism</td>
+          </tr>
+        </table>
+      </aside>
+
+      <p>
+        <b>Saar Sparky</b>, also known as <b>AUS</b> and <b>Topaki</b>,
+        is a member of the Clvbhouse community and a chairman of
+        <a href="ethanism.html">Ethanism</a>.
+      </p>
+
+      <p>
+        He also uses the formal aliases <b>AUS Productions</b> and
+        <b>Topakien</b>. An additional alias is censored on this page.
+      </p>
+
+      <p>
+        Saar Sparky speaks German and English fluently and is currently
+        learning <a href="soyspeak.html">Soyspeak</a>, a partially
+        constructed language associated with online communities.
+      </p>
+
+      <div class="contents">
+        <b>Contents</b>
+        <ol>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#aliases">Aliases</a></li>
+          <li><a href="#ethanism">Ethanism</a></li>
+          <li><a href="#languages">Languages</a></li>
+          <li><a href="#see-also">See also</a></li>
+        </ol>
+      </div>
+
     </div>
 
-    <h2 id="history">History</h2>
-    <p>Soyspeak developed within online imageboard communities and evolved over time through repeated phrases, in-jokes, and informal conventions. Its use spread through posts, memes, and other community-created material. The Soyjak Wiki describes it as a partially constructed auxiliary language rather than simply ordinary English slang. <Cite refs={["turn614684search0","turn614684search2"]}/></p>
+    <h2 id="overview">Overview</h2>
 
-    <h2 id="writing">Writing system</h2>
-    <p>Soyspeak is commonly written using the Latin alphabet. A Greek-letter rendering is also associated with it, including specially adapted letter combinations for sounds that do not map neatly to individual Greek letters.</p>
+    <p>
+      Saar Sparky is known within the Clvbhouse community by several
+      aliases. His community activities include participation in the
+      organisation and development of Ethanism.
+    </p>
 
-    <table>
-      <tr><th>Feature</th><th>Description</th></tr>
-      <tr><td>Base language</td><td>Primarily English</td></tr>
-      <tr><td>Writing</td><td>Latin letters; Greek-letter variants also exist</td></tr>
-      <tr><td>Common techniques</td><td>Apostrophisation, abbreviations, spelling mutations</td></tr>
-      <tr><td>Usage</td><td>Internet slang, memes, community expressions</td></tr>
-    </table>
+    <h2 id="aliases">Aliases</h2>
 
-    <h2 id="grammar">Grammar and spelling</h2>
+    <ul>
+      <li><b>Saar Sparky</b> — primary name used on this wiki.</li>
+      <li><b>AUS</b> — alternative alias.</li>
+      <li><b>AUS Productions</b> — formal version of AUS.</li>
+      <li><b>Topaki</b> — alternative alias.</li>
+      <li><b>Topakien</b> — formal version of Topaki.</li>
+      <li><b>Mr <span class="alias">███████</span></b> — partially censored alias.</li>
+    </ul>
 
-    <h3>Apostrophisation</h3>
-    <p>Apostrophisation is the shortening of words by removing an initial syllable and replacing it with an apostrophe. The exact form depends on the word and the speaker's dialect. Short words are often left unchanged for readability.</p>
+    <h2 id="ethanism">Ethanism</h2>
 
-    <h3>Pronoun changes</h3>
-    <p>Some Soyspeak conventions alter pronouns by replacing an initial consonant with an “x”. These forms are informal and are not used consistently by every speaker.</p>
+    <p>
+      Saar Sparky holds the position of chairman in Ethanism.
+      The movement is centred on Ethan and the community surrounding him.
+      Further information is available in the
+      <a href="ethanism.html">Ethanism article</a>.
+    </p>
 
-    <h3>Mutation</h3>
-    <p>Mutation refers to changes in spelling or pronunciation triggered by a neighbouring word or by community conventions. These changes may affect consonants, vowels, or common names and terms.</p>
+    <h2 id="languages">Languages</h2>
 
-    <h3>Abbreviations</h3>
-    <p>Longer phrases may be shortened to their initial letters. Some abbreviations become widely recognised within a community, while others are understood only in a particular thread or context.</p>
+    <ul>
+      <li><b>German</b> — fluent.</li>
+      <li><b>English</b> — fluent.</li>
+      <li><b>Soyspeak</b> — currently learning.</li>
+    </ul>
 
-    <h2 id="vocabulary">Vocabulary</h2>
-    <p>Soyspeak vocabulary combines ordinary English words with community-specific slang, deliberately altered spellings, and expressions that have acquired special meanings through repeated use. Common examples include “gem” as a positive term and “coal” as a negative or low-rated term in some community contexts.</p>
-
-    <p>Because vocabulary changes over time, a phrase may have different meanings in different communities or dialects.</p>
-
-    <h2 id="dialects">Dialects</h2>
-    <p>There is no single form used identically by every speaker. The Soyjak Wiki describes several variants, including forms associated with particular websites and video communities. Differences may include vocabulary, spelling, grammar, and how closely a speaker follows conventions regarded as standard. <Cite refs={["turn614684search0","turn614684search3"]}/></p>
+    <p>
+      For details about Soyspeak's alphabet, vocabulary, and grammar,
+      see the dedicated <a href="soyspeak.html">Soyspeak article</a>.
+    </p>
 
     <h2 id="see-also">See also</h2>
+
     <ul>
       <li><a href="ethan.html">Ethan</a></li>
       <li><a href="ethanism.html">Ethanism</a></li>
-      <li><a href="https://soyjakwiki.org/Soy_speak" target="_blank" rel="noopener noreferrer">Soyspeak on Soyjak Wiki</a></li>
-      <li><a href="https://soyjakwiki.org/List_of_soyspeak_translations" target="_blank" rel="noopener noreferrer">List of Soyspeak translations</a></li>
+      <li><a href="soyspeak.html">Soyspeak</a></li>
+      <li><a href="camemac.html">Camemac</a></li>
+      <li><a href="arb.html">ARB</a></li>
     </ul>
 
     <div class="footer">
-      This article summarises an internet language and its community usage. See the linked reference for further details.
+      This article documents aliases, language interests, and community roles.
     </div>
   </main>
+
 </div>
 </body>
 </html>
