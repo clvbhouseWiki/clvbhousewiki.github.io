@@ -1,181 +1,564 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gem - Clvbhouse Wiki</title>
+<title>GEM - CLVBHOUSE Wiki</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#202122;background:#f6f6f6 url("asd1.png") center/cover fixed}
-a{color:#0645ad;text-decoration:none}a:hover{text-decoration:underline}
-#header{background:#ffff;border-bottom:1px solid #a7a7a7;padding:12px 24px;display:flex;align-items:center;gap:16px}
-#logo{width:64px;height:64px;object-fit:contain}
-#site-title{font:27px Georgia,"Times New Roman",serif;color:#202122}
-#site-subtitle{font-size:12px;color:#54595d;margin-top:4px}
-#layout{display:flex;max-width:1450px;margin:auto;gap:20px;padding:20px;align-items:flex-start}
-#sidebar{width:180px;flex-shrink:0;background:#ffff;border:1px solid #a2a9b1;padding:14px;font-size:13px}
-#sidebar h3{font-size:13px;border-bottom:1px solid #a2a9b1;padding-bottom:6px}
-#sidebar a{display:block;padding:5px 0}
-#content{flex:1;min-width:0;background:#ffff;border:1px solid #a2a9b1;padding:24px;box-shadow:0 1px 4px #0002}
-h1{font:normal 32px Georgia,"Times New Roman",serif;border-bottom:1px solid #a2a9b1;padding-bottom:8px;margin:0 0 8px}
-h2{font:normal 24px Georgia,"Times New Roman",serif;border-bottom:1px solid #a2a9b1;padding-bottom:5px;margin-top:32px}
-h3{font:normal 19px Georgia,"Times New Roman",serif}
-.subtitle{font-size:13px;color:#54595d;margin-bottom:20px}
-.gem-banner{display:flex;align-items:center;justify-content:center;gap:10px;padding:12px;margin:12px 0 22px;background:linear-gradient(90deg,#e7fbff,#fff,#e7fbff);border:1px solid #9eeaff}
-.gem-banner img{width:35px;height:35px;object-fit:contain;filter:drop-shadow(0 0 5px #00d9ff)}
-.gem-banner a{font-weight:900;font-size:21px;letter-spacing:2px;color:#00bfe9;text-shadow:0 0 3px #00eaff,0 0 8px #70f4ff,0 0 13px #00bfff}
-.infobox{float:right;width:280px;max-width:100%;border:1px solid #a2a9b1;background:#f8f9fa;margin:0 0 20px 22px;padding:10px;text-align:center;font-size:13px}
-.infobox-title{font-weight:bold;font-size:20px;background:#dff8ff;padding:8px;margin-bottom:8px}
-.infobox img{display:block;width:100%;max-height:220px;object-fit:contain}
-.bump-title{font-weight:bold;font-size:17px;color:#087bb5;margin:5px 0 10px}
-.bump-image{width:100%;height:auto;max-height:260px;object-fit:contain}
-.infobox p{margin:8px 0}
-.toc{display:table;background:#f8f9fa;border:1px solid #a2a9b1;padding:12px 22px;margin:20px 0;font-size:13px}
-.toc-title{text-align:center;font-weight:bold;margin-bottom:8px}
-.toc ol{margin:0;padding-left:22px}.toc li{padding:3px 0}
-.note{border-left:4px solid #20bfe8;background:#f0fbff;padding:10px 14px;margin:15px 0;font-size:13px}
-.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:15px 0}
-.gallery-item{border:1px solid #a2a9b1;background:#f8f9fa;padding:8px;text-align:center}
-.gallery-item img{display:block;width:100%;height:140px;object-fit:contain;background:#fff}
-.gallery-item p{font-size:13px;margin:8px 0 2px}
-#footer{max-width:1450px;margin:auto;padding:0 20px 25px;font-size:12px;color:#54595d}
-@media(max-width:800px){#layout{padding:10px;gap:10px}#sidebar{width:145px}#content{padding:15px}.infobox{float:none;width:100%;margin:0 0 20px}}
-@media(max-width:560px){#layout{display:block}#sidebar{width:100%;margin-bottom:12px}#sidebar a{display:inline-block;margin-right:10px}h1{font-size:27px}.gem-banner a{font-size:16px;letter-spacing:1px}}
+:root {
+    --border: #a7d7f9;
+    --link: #0645ad;
+    --text: #202122;
+    --muted: #54595d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    background: #f8f9fa url("asd1.png") center / cover fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#layout {
+    display: flex;
+    max-width: 1500px;
+    min-height: 100vh;
+    margin: auto;
+    background: rgba(255,255,255,.96);
+    border-left: 1px solid #c8ccd1;
+    border-right: 1px solid #c8ccd1;
+}
+
+/* CLASSIC WIKI SIDEBAR */
+
+#sidebar {
+    flex: 0 0 165px;
+    padding: 18px 12px;
+    background: #f8f9fa;
+    border-right: 1px solid #a7d7f9;
+}
+
+.logo {
+    display: block;
+    width: 115px;
+    max-height: 100px;
+    object-fit: contain;
+    margin: 0 auto 25px;
+}
+
+.side-heading {
+    margin: 18px 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 1px solid #c8ccd1;
+    font-size: 12px;
+    color: #54595d;
+}
+
+.side-links a {
+    display: block;
+    margin: 8px 0;
+    font-size: 12px;
+}
+
+/* ARTICLE */
+
+#main {
+    min-width: 0;
+    flex: 1;
+    padding: 20px 28px 35px;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #a7d7f9;
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    color: #54595d;
+    font-size: 12px;
+}
+
+.tabs a {
+    margin-right: 12px;
+}
+
+h1 {
+    font-family: "Linux Libertine", Georgia, serif;
+    font-size: 2em;
+    font-weight: normal;
+    margin: 0 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #a2a9b1;
+}
+
+.subtitle {
+    font-size: 12px;
+    color: #54595d;
+    margin-bottom: 22px;
+}
+
+p {
+    line-height: 1.65;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.55em;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+h3 {
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+/* SHINY GEMSTONE TEXT */
+
+.gem {
+    color: #00bcd4;
+    font-weight: 900;
+    background: linear-gradient(
+        110deg,
+        #007c91 0%,
+        #00d9f5 20%,
+        #e6ffff 35%,
+        #00bcd4 48%,
+        #008da8 60%,
+        #bfffff 75%,
+        #00bcd4 90%
+    );
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 3px rgba(0,220,255,.75));
+    animation: cyan-shine 3s linear infinite;
+}
+
+.gemuby,
+.ruby {
+    color: #e32636;
+    font-weight: 900;
+    background: linear-gradient(
+        110deg,
+        #8c0016 0%,
+        #ff253f 22%,
+        #fff0f2 36%,
+        #e32636 48%,
+        #a00020 65%,
+        #ff9aa8 78%,
+        #e32636 100%
+    );
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 3px rgba(255,35,65,.7));
+    animation: red-shine 3.5s linear infinite;
+}
+
+.gemrald {
+    color: #159447;
+    font-weight: 900;
+    background: linear-gradient(
+        110deg,
+        #075b2b 0%,
+        #19b957 20%,
+        #e2ffec 35%,
+        #21a852 48%,
+        #087332 65%,
+        #9affba 78%,
+        #159447 100%
+    );
+    background-size: 250% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 3px rgba(30,220,100,.65));
+    animation: green-shine 3.2s linear infinite;
+}
+
+@keyframes cyan-shine {
+    to { background-position: 250% center; }
+}
+
+@keyframes red-shine {
+    to { background-position: 250% center; }
+}
+
+@keyframes green-shine {
+    to { background-position: 250% center; }
+}
+
+/* WIKI INFOBOX */
+
+.infobox {
+    float: right;
+    width: 270px;
+    max-width: 45%;
+    margin: 0 0 18px 22px;
+    padding: 4px;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    border-spacing: 3px;
+    font-size: 12px;
+}
+
+.infobox-title {
+    text-align: center;
+    padding: 10px 4px;
+    background: #dbeafe;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.infobox img {
+    display: block;
+    max-width: 100%;
+    max-height: 190px;
+    object-fit: contain;
+    margin: 8px auto;
+}
+
+.infobox td {
+    padding: 6px;
+    vertical-align: top;
+}
+
+.infobox td:first-child {
+    font-weight: bold;
+    width: 38%;
+}
+
+/* TABLE OF CONTENTS */
+
+#toc {
+    display: table;
+    min-width: 210px;
+    max-width: 100%;
+    margin: 22px 0;
+    padding: 12px 22px;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+}
+
+#toc .toc-title {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#toc ol {
+    margin: 0;
+    padding-left: 22px;
+}
+
+#toc li {
+    margin: 5px 0;
+}
+
+/* GEM TYPE LIST */
+
+.gem-list {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15px 0;
+}
+
+.gem-list th,
+.gem-list td {
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    text-align: left;
+}
+
+.gem-list th {
+    background: #eaecf0;
+}
+
+.gem-list tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.notice {
+    padding: 10px 12px;
+    margin: 18px 0;
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+}
+
+.categories {
+    margin-top: 35px;
+    padding: 12px;
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+    font-size: 12px;
+}
+
+.footer {
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid #a2a9b1;
+    color: #54595d;
+    font-size: 11px;
+}
+
+@media (max-width: 700px) {
+    #sidebar {
+        display: none;
+    }
+
+    #main {
+        padding: 16px;
+    }
+
+    .infobox {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 12px 0 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gem,
+    .gemuby,
+    .ruby,
+    .gemrald {
+        animation: none;
+    }
+}
 </style>
 </head>
+
 <body>
-
-<header id="header">
-<a href="index.html"><img id="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo"></a>
-<div><div id="site-title">Clvbhouse Wiki</div><div id="site-subtitle">The encyclopedia of the Clvbhouse community</div></div>
-</header>
-
 <div id="layout">
+
 <aside id="sidebar">
-<h3>Navigation</h3>
-<a href="index.html">Main page</a>
-<a href="ethan.html">Ethan</a>
-<a href="ethanism.html">Ethanism</a>
-<a href="saar-sparky.html">Saar Sparky</a>
-<a href="camemac.html">Camemac</a>
-<a href="arb.html">ARB</a>
-<a href="soyspeak.html">Soyspeak</a>
-<a href="gem.html">Gem</a>
+    <a href="index.html">
+        <img class="logo"
+             src="ethanwiki-logo-v2.png"
+             alt="CLVBHOUSE Wiki">
+    </a>
+
+    <div class="side-heading">Navigation</div>
+    <nav class="side-links">
+        <a href="index.html">Main page</a>
+        <a href="Special_Random.html">Random article</a>
+        <a href="recent-changes.html">Recent changes</a>
+    </nav>
+
+    <div class="side-heading">CLVBHOUSE</div>
+    <nav class="side-links">
+        <a href="By_the_way.html">By the Way</a>
+        <a href="Though.html">Though</a>
+        <a href="Wood.html">Wood</a>
+        <a href="Ethan_Mujahideen_Militia.html">Ethan Mujahideen Militia</a>
+    </nav>
+
+    <div class="side-heading">Gemstones</div>
+    <nav class="side-links">
+        <a href="#gem">GEM</a>
+        <a href="#gemuby">GEMUBY</a>
+        <a href="#ruby">RUBY</a>
+        <a href="#gemrald">GEMRALD</a>
+    </nav>
 </aside>
 
-<main id="content">
-<h1>Gem</h1>
-<div class="subtitle">From Clvbhouse Wiki, the community encyclopedia</div>
+<main id="main">
 
-<div class="gem-banner">
-<a href="gem.html">
-<img src="Minecraft-diamond.png" alt="Minecraft diamond">
-</a>
-<a href="gem.html">THIS PAGE IS A GEM</a>
+<div class="tabs">
+    <div>
+        <a href="index.html">Main page</a>
+        <a href="#article">Article</a>
+        <a href="#discussion">Discussion</a>
+    </div>
+    <div>
+        <a href="#history">View history</a>
+        <a href="#tools">Tools</a>
+    </div>
 </div>
 
-<aside class="infobox">
-<div class="infobox-title">Gem</div>
-<div class="bump-title">FOUND A GEM?<br>BUMP IT!</div>
-<a href="Bumping-This-Gem.gif" target="_blank">
-<img class="bump-image" src="Bumping-This-Gem.gif" alt="Bumping This Gem animation">
-</a>
-<p><i>Found a gem? Give it recognition!</i></p>
-</aside>
-
-<p>A <b>gem</b> is a term used in the Clvbhouse Wiki to describe an article, creation, image, or other piece of community content considered especially good, memorable, or valuable.</p>
-
-<p>The label is a mark of appreciation. Gem-worthy content can include notable community figures, exceptional artwork, memorable edits, and articles that deserve extra attention.</p>
-
-<p>The familiar blue diamond is used as a visual symbol for gems. On this wiki, a page marked as a gem receives a shiny cyan banner near the top of the article.</p>
-
-<div style="clear:both"></div>
-
-<nav class="toc">
-<div class="toc-title">Contents</div>
-<ol>
-<li><a href="#etymology">Etymology</a></li>
-<li><a href="#variants">Variants</a>
-<ol>
-<li><a href="#gemeralds">Gemeralds</a></li>
-<li><a href="#tanzanite">Tanzanite</a></li>
-<li><a href="#ruby">Ruby</a></li>
-<li><a href="#gemuby">Gemuby</a></li>
-<li><a href="#seetherald">Seetherald</a></li>
-<li><a href="#topaz">Topaz</a></li>
-</ol>
-</li>
-<li><a href="#peak-gems">Peak gems</a></li>
-<li><a href="#gallery-of-gems">Gallery of gems</a></li>
-<li><a href="#see-also">See also</a></li>
-</ol>
-</nav>
-
-<section id="etymology">
-<h2>Etymology</h2>
-<p>The word <i>gem</i> comes from the idea of a precious or valuable object. In online community slang, it can be used figuratively for something considered exceptionally good, entertaining, or worthy of recognition.</p>
-<p>On Clvbhouse Wiki, the diamond icon and cyan lettering distinguish gem-marked articles from ordinary pages.</p>
-</section>
-
-<section id="variants">
-<h2>Variants</h2>
-<p>The following names are possible gem-themed labels and categories for community use.</p>
-
-<h3 id="gemeralds">Gemeralds</h3>
-<p>A green-themed gem variant, inspired by emeralds.</p>
-
-<h3 id="tanzanite">Tanzanite</h3>
-<p>A blue-violet gem variant inspired by the mineral tanzanite.</p>
-
-<h3 id="ruby">Ruby</h3>
-<p>A red-themed gem variant inspired by rubies.</p>
-
-<h3 id="gemuby">Gemuby</h3>
-<p>A playful name combining the idea of a gem with ruby.</p>
-
-<h3 id="seetherald">Seetherald</h3>
-<p>A community-style gem name inspired by emerald-themed wordplay.</p>
-
-<h3 id="topaz">Topaz</h3>
-<p>A golden or yellow gem variant inspired by topaz.</p>
-</section>
-
-<section id="peak-gems">
-<h2>Peak gems</h2>
-<p><b>Peak gems</b> are pieces of content considered especially deserving of recognition. A gem badge may be used on articles that stand out within the community.</p>
-<div class="note"><b>Found a gem?</b> Add the diamond banner to the relevant article and link it to this page.</div>
-</section>
-
-<section id="gallery-of-gems">
-<h2>Gallery of gems</h2>
-<p>Examples of gem-related artwork used on the wiki.</p>
-<div class="gallery-grid">
-<div class="gallery-item">
-<a href="Minecraft-diamond.png" target="_blank">
-<img src="Minecraft-diamond.png" alt="Minecraft diamond">
-</a>
-<p>Blue diamond</p>
+<h1><span class="gem">GEM</span></h1>
+<div class="subtitle">
+    From CLVBHOUSE Wiki, the community encyclopedia
 </div>
-<div class="gallery-item">
-<a href="Bumping-This-Gem.gif" target="_blank">
-<img src="Bumping-This-Gem.gif" alt="Bumping This Gem animation">
-</a>
-<p>Bumping This Gem</p>
-</div>
-</div>
-</section>
 
-<section id="see-also">
-<h2>See also</h2>
+<table class="infobox">
+    <tr>
+        <td colspan="2" class="infobox-title">
+            <span class="gem">GEM</span>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div style="text-align:center;padding:8px">
+                <span class="gem" style="font-size:34px">◆ GEM ◆</span>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>Subject</td>
+        <td>Gemstones and related terms</td>
+    </tr>
+    <tr>
+        <td>Related terms</td>
+        <td>
+            <span class="gemuby">GEMUBY</span>,
+            <span class="ruby">RUBY</span>,
+            <span class="gemrald">GEMRALD</span>
+        </td>
+    </tr>
+    <tr>
+        <td>Wiki</td>
+        <td>CLVBHOUSE Wiki</td>
+    </tr>
+</table>
+
+<p>
+    <b><span class="gem">GEM</span></b> is a term used within the
+    CLVBHOUSE Wiki's gemstone collection. Its name is represented by
+    a bright cyan appearance, with a glossy surface and a luminous glow.
+    This article documents GEM and several related gemstone names.
+</p>
+
+<div id="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#gem">GEM</a></li>
+        <li><a href="#gemuby">GEMUBY</a></li>
+        <li><a href="#ruby">RUBY</a></li>
+        <li><a href="#gemrald">GEMRALD</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#see-also">See also</a></li>
+    </ol>
+</div>
+
+<h2 id="overview">Overview</h2>
+
+<p>
+    The gemstone names below have separate colors and visual identities.
+    Their animated highlights are decorative effects applied to the text;
+    the rest of the article retains a conventional encyclopedia layout.
+</p>
+
+<h2 id="gem"><span class="gem">GEM</span></h2>
+
+<p>
+    <span class="gem">GEM</span> is represented in bright cyan and
+    ice-blue tones. A moving highlight travels across the letters,
+    creating the appearance of a polished, reflective crystal.
+</p>
+
+<p>
+    The cyan color distinguishes GEM from the red appearance of GEMUBY
+    and RUBY, as well as the green appearance of GEMRALD.
+</p>
+
+<h2 id="gemuby"><span class="gemuby">GEMUBY</span></h2>
+
+<p>
+    <span class="gemuby">GEMUBY</span> uses a ruby-red color scheme.
+    Its glossy red surface, pale reflective highlight, and red glow
+    give it a distinct appearance from the cyan GEM lettering.
+</p>
+
+<h2 id="ruby"><span class="ruby">RUBY</span></h2>
+
+<p>
+    <span class="ruby">RUBY</span> is presented in vivid crimson and
+    scarlet tones. Its text effect uses a moving highlight and a
+    soft red glow to suggest a polished red gemstone.
+</p>
+
+<h2 id="gemrald"><span class="gemrald">GEMRALD</span></h2>
+
+<p>
+    <span class="gemrald">GEMRALD</span> is represented by emerald-green
+    lettering. Its highlights use lighter green and near-white tones,
+    while the surrounding glow remains green.
+</p>
+
+<h2 id="gallery">Gallery</h2>
+
+<table class="gem-list">
+    <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Appearance</th>
+    </tr>
+    <tr>
+        <td><span class="gem">GEM</span></td>
+        <td>Cyan</td>
+        <td>Ice-blue shine and cyan glow</td>
+    </tr>
+    <tr>
+        <td><span class="gemuby">GEMUBY</span></td>
+        <td>Ruby red</td>
+        <td>Crimson shine and red glow</td>
+    </tr>
+    <tr>
+        <td><span class="ruby">RUBY</span></td>
+        <td>Scarlet</td>
+        <td>Glossy red highlight</td>
+    </tr>
+    <tr>
+        <td><span class="gemrald">GEMRALD</span></td>
+        <td>Emerald green</td>
+        <td>Green shine and emerald glow</td>
+    </tr>
+</table>
+
+<div class="notice">
+    <b>Editor's note:</b>
+    This page uses animated text effects for presentation.
+    The animations are created entirely with CSS.
+</div>
+
+<h2 id="see-also">See also</h2>
+
 <ul>
-<li><a href="ethan.html">Ethan</a></li>
-<li><a href="ethanism.html">Ethanism</a></li>
-<li><a href="index.html">Clvbhouse Wiki main page</a></li>
+    <li><a href="Though.html">Though</a></li>
+    <li><a href="By_the_way.html">By the Way</a></li>
+    <li><a href="Wood.html">Wood</a></li>
 </ul>
-</section>
+
+<div class="categories">
+    <b>Categories:</b>
+    <a href="#gem">CLVBHOUSE Wiki</a> |
+    <a href="#gem">Gemstones</a> |
+    <a href="#gem">Articles</a>
+</div>
+
+<div class="footer">
+    This page was last edited on 23 October 2026.
+    <br>
+    Text is available under the CLVBHOUSE Wiki community's terms.
+</div>
+
 </main>
 </div>
-
-<footer id="footer">This page is part of Clvbhouse Wiki.</footer>
 </body>
 </html>
