@@ -1,0 +1,410 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Troons - Clvbhouse Wiki</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f6f6 url("asd1.png") center center / cover no-repeat fixed;
+    color: #202122;
+    font-size: 14px;
+}
+
+a {
+    color: #0645ad;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#header {
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #a7d7f9;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#logo {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+#site-title {
+    font-size: 27px;
+    font-family: Georgia, serif;
+}
+
+#site-subtitle {
+    color: #54595d;
+    font-size: 12px;
+}
+
+#layout {
+    display: flex;
+    gap: 22px;
+    max-width: 1450px;
+    margin: auto;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+#sidebar {
+    width: 175px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.94);
+    padding: 15px;
+    border: 1px solid #c8ccd1;
+}
+
+#sidebar h3 {
+    font-size: 13px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 0;
+}
+
+#sidebar a {
+    display: block;
+    margin: 9px 0;
+}
+
+#content {
+    flex: 1;
+    min-width: 0;
+    background: rgba(255,255,255,0.97);
+    border: 1px solid #a7d7f9;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+h1 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 32px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    font-weight: normal;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.small {
+    color: #54595d;
+    font-size: 12px;
+}
+
+.infobox {
+    float: right;
+    width: 285px;
+    margin: 0 0 20px 25px;
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+    padding: 5px;
+    font-size: 13px;
+}
+
+.infobox-title {
+    background: #b7d6ee;
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.infobox-flag {
+    width: 100%;
+    display: block;
+    margin: 5px auto;
+}
+
+.representative {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    display: block;
+    margin: 5px auto;
+}
+
+.infobox table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.infobox td {
+    padding: 7px;
+    border-top: 1px solid #eaecf0;
+    vertical-align: top;
+}
+
+.infobox td:first-child {
+    width: 38%;
+    font-weight: bold;
+}
+
+/* Gemrald banner */
+.gemrald-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto 20px;
+    padding: 12px;
+    max-width: 430px;
+    border: 2px solid #16803c;
+    border-radius: 8px;
+    background: linear-gradient(
+        135deg,
+        #d8ffd9,
+        #72e69a,
+        #eaffb8,
+        #39b967,
+        #d8ffd9
+    );
+    background-size: 300% 300%;
+    animation: gemrald-shine 4s ease infinite;
+    box-shadow:
+        0 0 7px rgba(32,190,91,0.6),
+        inset 0 0 12px rgba(255,255,255,0.8);
+    font-weight: bold;
+    text-align: center;
+}
+
+.gemrald-banner img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px #fff);
+    transition: transform 0.25s;
+}
+
+.gemrald-banner img:hover {
+    transform: rotate(12deg) scale(1.15);
+}
+
+.gemrald-banner a:last-child {
+    color: #075b25;
+    font-size: 19px;
+    text-shadow: 0 1px 2px white;
+}
+
+@keyframes gemrald-shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gallery-item {
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+    padding: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-height: 230px;
+    object-fit: contain;
+}
+
+.gallery-caption {
+    margin-top: 6px;
+    font-size: 12px;
+}
+
+footer {
+    border-top: 1px solid #a2a9b1;
+    color: #54595d;
+    font-size: 12px;
+    margin-top: 35px;
+    padding-top: 12px;
+}
+
+@media (max-width: 850px) {
+    #layout {
+        padding: 8px;
+        gap: 8px;
+    }
+
+    #sidebar {
+        width: 135px;
+        padding: 10px;
+    }
+
+    #content {
+        padding: 14px;
+    }
+
+    .infobox {
+        float: none;
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+    #site-title {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 550px) {
+    #layout {
+        display: block;
+    }
+
+    #sidebar {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    #sidebar a {
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+    <img id="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo">
+    <div>
+        <div id="site-title">Clvbhouse Wiki</div>
+        <div id="site-subtitle">From Clvbhouse Wiki</div>
+    </div>
+</header>
+
+<div id="layout">
+
+<aside id="sidebar">
+    <h3>Navigation</h3>
+    <a href="index.html">Main Page</a>
+    <a href="ethan.html">Ethan</a>
+    <a href="ethanism.html">Ethanism</a>
+    <a href="saar-sparky.html">Saar Sparky</a>
+    <a href="camemac.html">Camemac</a>
+    <a href="arb.html">ARB</a>
+    <a href="soyspeak.html">Soyspeak</a>
+    <a href="gem.html">Gem</a>
+    <a href="yehudyakim.html">Yehudyakim</a>
+    <a href="Troons.html">Troons</a>
+</aside>
+
+<main id="content">
+
+<div class="gemrald-banner">
+    <a href="gem.html">
+        <img src="latest.png" alt="Gemrald">
+    </a>
+    <a href="gem.html">THIS PAGE IS A GEMRALD</a>
+</div>
+
+<h1>Troons</h1>
+
+<p class="small">From Clvbhouse Wiki</p>
+
+<div class="infobox">
+    <div class="infobox-title">Troons</div>
+
+    <img class="representative"
+         src="Troonjak2.png"
+         alt="Troonjak representative">
+
+    <img class="infobox-flag"
+         src="troonflag.png"
+         alt="Troon flag">
+
+    <table>
+        <tr>
+            <td>Type</td>
+            <td>Imageboard slang</td>
+        </tr>
+        <tr>
+            <td>Associated with</td>
+            <td>Internet meme culture</td>
+        </tr>
+        <tr>
+            <td>Known for</td>
+            <td>Shitposting and online arguments</td>
+        </tr>
+        <tr>
+            <td>Page rating</td>
+            <td>Gemrald</td>
+        </tr>
+    </table>
+</div>
+
+<p>
+<b>Troons</b> is a derogatory slang term used in some imageboard communities
+when discussing mentally ill people.
+</p>
+
+<p>
+troons are people that think they are men when in rea lity they are women or vice versa.
+other notable people are non binary people or "enbies" or "enbyniggers". they are
+subhumans that dont claim any gender
+</p>
+
+<h2 id="culture">Imageboard culture</h2>
+
+<p>
+Fuck trannies
+Fuck enbies
+Fuck Troonslop
+</p>
+
+<p>
+The term is derogatory, and its use can contribute to harassment of transgender
+people.
+</p>
+
+<h2 id="gallery">Gallery</h2>
+
+<div class="gallery">
+    <div class="gallery-item">
+        <img src="Troonjak2.png" alt="Troonjak 2">
+        <div class="gallery-caption">Troonjak2</div>
+    </div>
+</div>
+
+<footer>
+    Clvbhouse Wiki
+</footer>
+
+</main>
+</div>
+
+</body>
+</html>
+```
