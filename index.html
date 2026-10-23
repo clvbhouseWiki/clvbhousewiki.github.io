@@ -1,1432 +1,665 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>CLVBHOUSE Wiki</title>
-<meta name="description" content="The CLVBHOUSE Wiki — an archive of articles, people, terminology, and internet culture.">
 
 <style>
-:root {
-    --green: #48ff83;
-    --light-green: #b5ff75;
-    --dark-green: #143c25;
-    --panel: rgba(13, 20, 15, 0.96);
-    --border: #31583b;
-    --text: #e8eee9;
-    --muted: #a1b1a4;
-}
-
 * {
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     margin: 0;
-    color: var(--text);
+    color: #202122;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: #080b09;
-    background-image:
-        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.80)),
-        url("asd1.png");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    overflow-x: hidden;
+    font-size: 14px;
+    background: #dce5ec url("asd1.png") repeat;
 }
 
 a {
-    color: var(--light-green);
+    color: #0645ad;
     text-decoration: none;
 }
 
 a:hover {
-    color: white;
-    text-shadow: 0 0 8px var(--green);
+    text-decoration: underline;
 }
 
-button,
-input {
-    font: inherit;
+#page {
+    max-width: 1450px;
+    margin: 18px auto;
+    padding: 12px;
+    background: rgba(255,255,255,0.96);
+    border: 1px solid #a7b4c0;
+    min-height: 95vh;
 }
 
-button {
-    cursor: pointer;
-}
-
-.page {
-    width: min(1250px, 96%);
-    margin: auto;
-    position: relative;
-}
-
-/* =====================================
-   HEADER
-===================================== */
-
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 25px;
-    padding: 20px 10px;
-    border-bottom: 1px solid var(--border);
-}
-
-.logo-area {
+#topbar {
     display: flex;
     align-items: center;
     gap: 15px;
-    min-width: 0;
+    padding: 8px 12px 15px;
+    border-bottom: 1px solid #a7b4c0;
+    background: rgba(232,239,245,0.9);
 }
 
-.logo-link {
-    display: inline-block;
+#logo {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
     cursor: pointer;
-    flex-shrink: 0;
-    transform-origin: center;
+    transition: transform 0.25s;
 }
 
-.logo-link img {
-    width: 75px;
-    height: 75px;
-    object-fit: contain;
-    transition: filter .25s, transform .25s;
-    filter: drop-shadow(0 0 5px #48ff8340);
+#logo:hover {
+    transform: rotate(-5deg);
 }
 
-.logo-link:hover img {
-    transform: scale(1.08) rotate(-3deg);
-    filter: drop-shadow(0 0 14px var(--green));
+#site-name {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 31px;
+    font-weight: normal;
 }
 
-.logo-link.logo-launch img {
-    animation: logoLaunch .72s cubic-bezier(.2,.8,.2,1) forwards;
-}
-
-@keyframes logoLaunch {
-    0% {
-        transform: rotate(0deg) scale(1);
-        filter: brightness(1);
-    }
-    25% {
-        transform: rotate(-15deg) scale(1.18);
-        filter: brightness(1.8) drop-shadow(0 0 15px var(--green));
-    }
-    60% {
-        transform: rotate(370deg) scale(.85);
-        filter: brightness(1.8) drop-shadow(0 0 25px var(--green));
-    }
-    100% {
-        transform: rotate(720deg) scale(.05);
-        opacity: .1;
-        filter: brightness(2);
-    }
-}
-
-.site-title {
-    margin: 0;
-    font-size: clamp(19px, 3vw, 29px);
-    font-weight: 900;
-    letter-spacing: 2px;
-    color: var(--green);
-    text-shadow: 0 0 12px #48ff8350;
-}
-
-.site-subtitle {
-    margin: 3px 0 0;
-    color: var(--muted);
-    font-size: 12px;
-    letter-spacing: 1px;
-}
-
-.header-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 17px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-/* =====================================
-   MAIN NAVIGATION
-===================================== */
-
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    padding: 10px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.navbar a {
-    padding: 8px 13px;
-    color: #dce8df;
-    border-radius: 5px;
-    font-size: 13px;
-    transition: background .2s, color .2s;
-}
-
-.navbar a:hover {
-    background: #193b25;
-    color: var(--green);
-}
-
-/* =====================================
-   GEMRALD BANNER
-===================================== */
-
-.gemrald-banner {
-    margin: 15px 0;
-    padding: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border: 1px solid #8bff70;
-    border-radius: 8px;
-    background: linear-gradient(110deg, #0b351a, #35a746, #0c3218);
-    background-size: 200% 200%;
-    animation: gemraldGlow 5s ease infinite;
-    box-shadow: 0 0 16px #4dff6d35;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    text-align: center;
-}
-
-.gemrald-banner img {
-    width: 42px;
-    height: 42px;
-    object-fit: contain;
-    vertical-align: middle;
-    transition: transform .3s;
-}
-
-.gemrald-banner:hover img {
-    transform: rotate(12deg) scale(1.12);
-}
-
-.gemrald-banner a {
-    color: white;
-}
-
-@keyframes gemraldGlow {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-}
-
-/* =====================================
-   SEARCH
-===================================== */
-
-.search-panel {
-    margin: 22px 0;
-    padding: 24px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--panel);
-    box-shadow: 0 8px 30px #0006;
-}
-
-.search-heading {
-    margin: 0 0 5px;
-    font-size: 24px;
-    color: var(--green);
-}
-
-.search-description {
-    margin: 0 0 16px;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.search-row {
-    display: flex;
-    gap: 9px;
-}
-
-.search-input {
-    flex: 1;
-    min-width: 0;
-    padding: 13px 15px;
-    border: 1px solid #42694b;
-    border-radius: 6px;
-    outline: none;
-    color: white;
-    background: #080d09;
-}
-
-.search-input:focus {
-    border-color: var(--green);
-    box-shadow: 0 0 12px #48ff8330;
-}
-
-.button {
-    border: 1px solid #3b9c59;
-    border-radius: 6px;
-    padding: 11px 15px;
-    color: #07150b;
-    background: var(--green);
-    font-weight: 900;
-    transition: transform .2s, box-shadow .2s;
-}
-
-.button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 14px #48ff8355;
-}
-
-.button.secondary {
-    color: var(--green);
-    background: #112519;
-}
-
-.search-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    margin-top: 12px;
-}
-
-.search-results {
-    display: none;
-    margin-top: 18px;
-    border-top: 1px solid var(--border);
-    padding-top: 12px;
-}
-
-.search-results.visible {
+#site-name small {
     display: block;
-}
-
-.results-heading {
-    color: var(--green);
-    font-size: 13px;
-    margin-bottom: 9px;
-}
-
-.result-item {
-    display: block;
-    padding: 12px;
-    margin: 7px 0;
-    background: #101a12;
-    border: 1px solid #263e2b;
-    border-radius: 6px;
-}
-
-.result-item:hover {
-    border-color: var(--green);
-    background: #14261a;
-}
-
-.result-title {
-    font-weight: bold;
-    color: var(--light-green);
-}
-
-.result-description {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 3px;
-}
-
-.no-results {
-    color: #c4cfc7;
-    padding: 12px 0;
-    font-size: 13px;
-}
-
-/* =====================================
-   PAGE LAYOUT
-===================================== */
-
-.content-layout {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 285px;
-    gap: 22px;
-    align-items: start;
-}
-
-.main-column,
-.sidebar {
-    min-width: 0;
-}
-
-.panel {
-    margin-bottom: 22px;
-    padding: 22px;
-    border: 1px solid var(--border);
-    border-radius: 9px;
-    background: var(--panel);
-    box-shadow: 0 8px 28px #0005;
-}
-
-.panel h2 {
-    margin: 0 0 15px;
-    padding-bottom: 9px;
-    border-bottom: 1px solid var(--border);
-    color: var(--green);
-    font-size: 20px;
-}
-
-.panel h3 {
-    color: var(--light-green);
-}
-
-.panel p {
-    color: #d4ded6;
-}
-
-.welcome-title {
-    font-size: clamp(26px, 4vw, 38px);
-    margin: 0;
-    line-height: 1.2;
-    color: white;
-}
-
-.welcome-title span {
-    color: var(--green);
-    text-shadow: 0 0 14px #48ff8350;
-}
-
-.welcome-lead {
-    color: var(--muted);
-    font-size: 14px;
-}
-
-/* =====================================
-   ARTICLE CARDS
-===================================== */
-
-.article-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-}
-
-.article-card {
-    display: block;
-    padding: 16px;
-    min-width: 0;
-    border: 1px solid #2b4932;
-    border-radius: 7px;
-    background: linear-gradient(135deg, #101b12, #0a100c);
-    transition: transform .2s, border-color .2s, box-shadow .2s;
-}
-
-.article-card:hover {
-    transform: translateY(-3px);
-    border-color: var(--green);
-    box-shadow: 0 0 15px #48ff8315;
-}
-
-.article-card h3 {
-    margin: 0 0 5px;
-    color: var(--light-green);
     font-size: 16px;
 }
 
-.article-card p {
-    margin: 0;
-    color: var(--muted);
-    font-size: 12px;
+#top-search {
+    margin-left: auto;
 }
 
-.article-tag {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 3px 7px;
-    border: 1px solid #345c3d;
-    border-radius: 4px;
-    color: #9bffaa;
-    font-size: 10px;
-    text-transform: uppercase;
-    letter-spacing: .6px;
+#top-search input {
+    width: 230px;
+    padding: 7px;
+    border: 1px solid #a2a9b1;
 }
 
-/* =====================================
-   RANDOM ARTICLE PANEL
-===================================== */
-
-.random-panel {
-    text-align: center;
-    background:
-        radial-gradient(ellipse at top, #194729, transparent 75%),
-        var(--panel);
+button {
+    padding: 6px 11px;
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+    cursor: pointer;
 }
 
-.random-symbol {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 68px;
-    height: 68px;
-    margin: 2px 0 12px;
-    border: 1px solid #4d9c60;
-    border-radius: 50%;
-    color: var(--green);
-    font-size: 30px;
-    box-shadow: 0 0 22px #48ff8320;
-    animation: symbolFloat 4s ease-in-out infinite;
+button:hover {
+    background: #eaecf0;
 }
 
-@keyframes symbolFloat {
-    50% { transform: translateY(-5px) rotate(8deg); }
-}
-
-/* =====================================
-   SIDEBAR
-===================================== */
-
-.sidebar .panel {
-    padding: 18px;
-}
-
-.sidebar-link {
-    display: block;
-    padding: 10px 0;
-    border-bottom: 1px solid #263b2b;
-    color: #dce8df;
-    font-size: 13px;
-}
-
-.sidebar-link:last-child {
-    border-bottom: 0;
-}
-
-.sidebar-link span {
-    display: block;
-    color: var(--muted);
-    font-size: 11px;
-}
-
-.status-line {
+#tabs {
     display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    padding: 8px 0;
-    border-bottom: 1px solid #263b2b;
-    font-size: 12px;
+    gap: 0;
+    border-bottom: 1px solid #a7b4c0;
+    background: #eaecf0;
 }
 
-.status-line:last-child {
-    border-bottom: 0;
+#tabs a {
+    padding: 10px 15px;
+    border-right: 1px solid #c8ccd1;
 }
 
-.status-value {
-    color: var(--green);
+#tabs a:first-child {
+    background: white;
     font-weight: bold;
 }
 
-/* =====================================
-   DIRECTORY
-===================================== */
+#layout {
+    display: grid;
+    grid-template-columns: 205px minmax(0, 1fr) 245px;
+    gap: 15px;
+    padding-top: 15px;
+}
 
-.directory-list {
+.sidebar {
+    border: 1px solid #a7b4c0;
+    background: #f8f9fa;
+    padding: 10px;
+    align-self: start;
+}
+
+.side-heading {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    border-bottom: 1px solid #a7b4c0;
+    margin: 8px 0;
+    padding-bottom: 4px;
+}
+
+.sidebar ul {
+    padding-left: 20px;
+    margin: 7px 0 15px;
+    line-height: 1.8;
+}
+
+.sidebar input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #a2a9b1;
+}
+
+#content {
+    min-width: 0;
+    padding: 0 8px;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: 30px;
+    margin: 3px 0 6px;
+}
+
+h2 {
+    font-size: 23px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 4px;
+    margin-top: 27px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+.subtitle {
+    color: #54595d;
+    border-bottom: 1px solid #a7b4c0;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.notice {
+    border: 1px solid #a7b4c0;
+    background: #eaf3fa;
+    padding: 12px;
+    margin: 14px 0;
+}
+
+.intro {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    line-height: 1.7;
+}
+
+.intro img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.contents {
+    display: table;
+    min-width: 230px;
+    max-width: 100%;
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+    padding: 10px 18px;
+    margin: 18px 0;
+}
+
+.contents ul {
+    line-height: 1.8;
+    padding-left: 22px;
+}
+
+.wiki-box {
+    border: 1px solid #a7b4c0;
+    background: #f8f9fa;
+    padding: 12px;
+    margin: 12px 0;
+}
+
+.box-heading {
+    background: #dce6ef;
+    border: 1px solid #a7b4c0;
+    padding: 7px;
+    margin: -12px -12px 10px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+}
+
+.columns {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 8px;
+    gap: 12px;
 }
 
-.directory-list a {
-    display: block;
-    padding: 10px;
-    border: 1px solid #263e2b;
-    border-radius: 5px;
-    background: #0b120d;
-    font-size: 12px;
-    overflow-wrap: anywhere;
-}
-
-.directory-list a:hover {
-    border-color: var(--green);
-}
-
-.directory-letter {
-    color: var(--green);
-    font-weight: 900;
-    margin-right: 5px;
-}
-
-/* =====================================
-   FOOTER
-===================================== */
-
-.footer {
-    margin-top: 30px;
-    padding: 24px 10px;
-    border-top: 1px solid var(--border);
+.gemrald-banner {
+    border: 1px solid #a7b4c0;
+    background: #eaf3fa;
+    padding: 8px;
     text-align: center;
-    color: var(--muted);
+    margin-bottom: 15px;
+}
+
+.gemrald-banner img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 6px;
+}
+
+.gemrald-banner a:last-child {
+    font-weight: bold;
+}
+
+#search-results {
+    display: none;
+    border: 1px solid #a7b4c0;
+    background: #f8f9fa;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.search-result {
+    padding: 8px 3px;
+    border-bottom: 1px solid #eaecf0;
+}
+
+.search-result:last-child {
+    border-bottom: none;
+}
+
+#right-sidebar img {
+    max-width: 100%;
+}
+
+#right-sidebar table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#right-sidebar td {
+    border-top: 1px solid #c8ccd1;
+    padding: 7px 3px;
+    vertical-align: top;
+}
+
+#right-sidebar td:first-child {
+    font-weight: bold;
+    width: 38%;
+}
+
+footer {
+    border-top: 1px solid #a7b4c0;
+    margin-top: 30px;
+    padding: 12px;
+    color: #54595d;
     font-size: 12px;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 10px;
-}
+@media (max-width: 1000px) {
+    #layout {
+        grid-template-columns: 185px minmax(0, 1fr);
+    }
 
-/* =====================================
-   DECORATIVE BACKGROUND
-===================================== */
+    #right-sidebar {
+        display: none;
+    }
 
-.background-word {
-    position: fixed;
-    z-index: -1;
-    pointer-events: none;
-    color: var(--green);
-    opacity: .075;
-    font-size: clamp(25px, 5vw, 65px);
-    font-weight: 900;
-    white-space: nowrap;
-    animation: backgroundDrift 16s ease-in-out infinite;
-}
-
-.background-word.one {
-    top: 25%;
-    left: -70px;
-}
-
-.background-word.two {
-    right: -80px;
-    top: 70%;
-    animation-delay: -8s;
-}
-
-@keyframes backgroundDrift {
-    0%, 100% { transform: translateY(0) rotate(-7deg); }
-    50% { transform: translateY(-30px) rotate(5deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        scroll-behavior: auto !important;
+    .columns {
+        grid-template-columns: 1fr;
     }
 }
 
-/* =====================================
-   MOBILE
-===================================== */
+@media (max-width: 650px) {
+    #page {
+        margin: 0;
+        padding: 7px;
+    }
 
-@media (max-width: 850px) {
-    .content-layout {
+    #layout {
         grid-template-columns: 1fr;
     }
 
-    .sidebar {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 15px;
+    #left-sidebar {
+        order: 2;
     }
 
-    .sidebar .panel {
-        margin-bottom: 0;
-    }
-}
-
-@media (max-width: 600px) {
-    .page {
-        width: 94%;
+    #content {
+        order: 1;
+        padding: 0 3px;
     }
 
-    .header {
-        align-items: flex-start;
-        flex-direction: column;
+    #topbar {
+        flex-wrap: wrap;
     }
 
-    .header-links {
-        gap: 12px;
+    #site-name {
+        font-size: 24px;
     }
 
-    .search-row {
-        flex-direction: column;
-    }
-
-    .search-row .button {
+    #top-search {
         width: 100%;
+        margin-left: 0;
     }
 
-    .article-grid {
-        grid-template-columns: 1fr;
+    #top-search input {
+        width: 65%;
     }
 
-    .directory-list {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .sidebar {
-        grid-template-columns: 1fr;
-    }
-
-    .panel {
-        padding: 17px;
-    }
-
-    .gemrald-banner {
-        font-size: 12px;
-        letter-spacing: 1px;
+    #tabs {
+        overflow-x: auto;
     }
 }
 </style>
 </head>
 
 <body>
+<div id="page">
 
-<div class="background-word one">CLVBHOUSE</div>
-<div class="background-word two">WIKI ARCHIVE</div>
+<header id="topbar">
+    <img id="logo" src="ethanwiki-logo-v2.png" alt="CLVBHOUSE Wiki logo" title="Click for a random article">
 
-<div class="page">
-
-<!-- HEADER -->
-<header class="header">
-
-    <div class="logo-area">
-
-        <a href="index.html"
-           class="logo-link"
-           id="randomLogo"
-           title="Click for a random article!"
-           aria-label="Click to open a random article">
-
-            <img src="ethanwiki-logo-v2.png"
-                 alt="CLVBHOUSE Wiki logo">
-
-        </a>
-
-        <div>
-            <h1 class="site-title">CLVBHOUSE WIKI</h1>
-            <p class="site-subtitle">THE INTERNET ARCHIVE</p>
-        </div>
-
+    <div id="site-name">
+        CLVBHOUSE
+        <small>Wiki</small>
     </div>
 
-    <div class="header-links">
-        <a href="#featured">Featured</a>
-        <a href="#recent">Recent</a>
-        <a href="#directory">All Articles</a>
-    </div>
-
+    <form id="top-search">
+        <input id="search-input" type="search" placeholder="Search CLVBHOUSE Wiki..." aria-label="Search articles">
+        <button type="submit">Search</button>
+    </form>
 </header>
 
-<!-- NAVIGATION -->
-<nav class="navbar">
-    <a href="index.html">Main Page</a>
-    <a href="#search">Search</a>
-    <a href="#featured">Featured Articles</a>
-    <a href="#recent">Recent Additions</a>
-    <a href="#directory">Article Directory</a>
+<nav id="tabs">
+    <a href="index.html">Main page</a>
+    <a href="#featured">Featured articles</a>
+    <a href="#articles">All articles</a>
+    <a href="#community">Community</a>
 </nav>
 
-<!-- GEMRALD BANNER -->
-<div class="gemrald-banner">
-    <a href="gem.html">
-        <img src="latest.png" alt="Gemrald">
-    </a>
-    <a href="gem.html">THIS PAGE IS A GEMRALD</a>
-</div>
+<div id="layout">
 
-<!-- SEARCH -->
-<section class="search-panel" id="search">
+<aside class="sidebar" id="left-sidebar">
+    <div class="side-heading">Navigation</div>
+    <ul>
+        <li><a href="index.html">Main page</a></li>
+        <li><a href="#articles">All articles</a></li>
+        <li><a href="#" id="sidebar-random">Random article</a></li>
+        <li><a href="#featured">Featured articles</a></li>
+    </ul>
 
-    <h2 class="search-heading">Search the CLVBHOUSE Wiki</h2>
-
-    <p class="search-description">
-        Find articles, terminology, people, and other entries in the archive.
-        Click the logo above if you want a random article instead.
-    </p>
-
-    <form id="searchForm">
-
-        <div class="search-row">
-
-            <input
-                class="search-input"
-                type="search"
-                id="searchInput"
-                placeholder="Search articles... e.g. BTW, Wood, DNB"
-                autocomplete="off"
-                aria-label="Search articles">
-
-            <button class="button" type="submit">
-                Search
-            </button>
-
-        </div>
-
-        <div class="search-actions">
-
-            <button class="button secondary"
-                    type="button"
-                    id="randomButton">
-                🎲 Random Article
-            </button>
-
-            <button class="button secondary"
-                    type="button"
-                    id="clearSearch">
-                Clear Search
-            </button>
-
-        </div>
-
+    <div class="side-heading">Search</div>
+    <form id="side-search">
+        <input id="side-search-input" type="search" placeholder="Search articles...">
+        <p><button type="submit">Search</button></p>
     </form>
 
-    <div class="search-results" id="searchResults" aria-live="polite">
-        <div class="results-heading" id="resultsHeading"></div>
-        <div id="resultsList"></div>
+    <div id="search-results"></div>
+
+    <div class="side-heading">Community</div>
+    <ul>
+        <li><a href="#about">About the Wiki</a></li>
+        <li><a href="#community">Community</a></li>
+    </ul>
+
+    <div class="side-heading">Official sites</div>
+    <ul>
+        <li><a href="https://clvbhousewiki.github.io/">CLVBHOUSE Wiki</a></li>
+    </ul>
+
+    <div class="side-heading">Tools</div>
+    <ul>
+        <li><a href="#" id="random-tool">Random page</a></li>
+        <li><a href="#articles">Article directory</a></li>
+    </ul>
+</aside>
+
+<main id="content">
+    <h1>CLVBHOUSE Wiki</h1>
+    <div class="subtitle">From CLVBHOUSE Wiki, the free encyclopedia</div>
+
+    <div class="notice">
+        <strong>This page is literally about this very wiki.</strong><br>
+        Here be edit wars, censorship and template spam.
     </div>
 
-</section>
+    <div class="intro">
+        <img src="ethanwiki-logo-v2.png" alt="">
+        <p>
+            CLVBHOUSE Wiki is an English-language community encyclopedia
+            documenting Ethan, CLVBHOUSE, imageboard culture, internet
+            terminology, people, and other subjects. Browse the articles
+            below or use the search box to find a page.
+        </p>
+    </div>
 
-<!-- MAIN CONTENT -->
-<div class="content-layout">
+    <div class="contents">
+        <strong>Contents</strong> <a href="#" id="contents-toggle">[hide]</a>
+        <ul id="contents-list">
+            <li><a href="#about">1 About CLVBHOUSE Wiki</a></li>
+            <li><a href="#featured">2 Featured articles</a></li>
+            <li><a href="#articles">3 Article directory</a></li>
+            <li><a href="#community">4 Community</a></li>
+            <li><a href="#external">5 External links</a></li>
+        </ul>
+    </div>
 
-    <main class="main-column">
+    <section id="about">
+        <h2>About CLVBHOUSE Wiki</h2>
+        <p>
+            CLVBHOUSE Wiki is an independent archive of articles about its
+            subjects and community. This page serves as the main directory
+            for browsing the available entries.
+        </p>
+    </section>
 
-        <!-- WELCOME -->
-        <section class="panel">
+    <section id="featured">
+        <h2>Featured articles</h2>
 
-            <h2>Welcome to the CLVBHOUSE Wiki</h2>
-
-            <h3 class="welcome-title">
-                Explore the <span>archive.</span>
-            </h3>
-
-            <p class="welcome-lead">
-                A growing collection of articles, terminology, internet
-                culture, fictional concepts, and other entries.
-            </p>
-
-            <p>
-                Use the search bar to locate a specific page, browse the
-                featured articles below, or explore the complete directory.
-                New entries can be added to the archive as it grows.
-            </p>
-
-        </section>
-
-        <!-- FEATURED -->
-        <section class="panel" id="featured">
-
-            <h2>Featured Articles</h2>
-
-            <div class="article-grid" id="featuredGrid"></div>
-
-        </section>
-
-        <!-- RECENT -->
-        <section class="panel" id="recent">
-
-            <h2>Recent Additions</h2>
-
-            <div class="article-grid" id="recentGrid"></div>
-
-        </section>
-
-        <!-- DIRECTORY -->
-        <section class="panel" id="directory">
-
-            <h2>Article Directory</h2>
-
-            <p class="welcome-lead">
-                Every article currently indexed on the main page.
-                Select an entry to open it.
-            </p>
-
-            <div class="directory-list" id="directoryList"></div>
-
-        </section>
-
-    </main>
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-        <section class="panel random-panel">
-
-            <div class="random-symbol">↗</div>
-
-            <h2>Feeling Random?</h2>
-
-            <p>
-                Take a trip through the archive and let the wiki choose
-                your next destination.
-            </p>
-
-            <button class="button" type="button" id="sidebarRandom">
-                Open Random Article
-            </button>
-
-        </section>
-
-        <section class="panel">
-
-            <h2>Quick Navigation</h2>
-
-            <a class="sidebar-link" href="By_the_way.html">
-                By the Way
-                <span>Meaning and usage of BTW</span>
+        <div class="gemrald-banner">
+            <a href="gem.html">
+                <img src="latest.png" alt="Gemrald">
             </a>
+            <a href="gem.html">THIS PAGE IS A GEMRALD</a>
+        </div>
 
-            <a class="sidebar-link" href="Though.html">
-                Though
-                <span>Definition, grammar, and usage</span>
-            </a>
-
-            <a class="sidebar-link" href="Wood.html">
-                Wood
-                <span>The literal definition of wood</span>
-            </a>
-
-            <a class="sidebar-link" href="gem.html">
-                Gemrald
-                <span>The Gemrald entry</span>
-            </a>
-
-            <a class="sidebar-link" href="yehudyakim.html">
-                Yehudyakim
-                <span>An entry in the archive</span>
-            </a>
-
-        </section>
-
-        <section class="panel">
-
-            <h2>Archive Statistics</h2>
-
-            <div class="status-line">
-                <span>Indexed articles</span>
-                <span class="status-value" id="articleCount">0</span>
+        <div class="columns">
+            <div class="wiki-box">
+                <div class="box-heading">Notable articles</div>
+                <ul>
+                    <li><a href="ethan.html">Ethan</a></li>
+                    <li><a href="ethanism.html">Ethanism</a></li>
+                    <li><a href="saar-sparky.html">Saar Sparky</a></li>
+                    <li><a href="camemac.html">Camemac</a></li>
+                </ul>
             </div>
 
-            <div class="status-line">
-                <span>Search</span>
-                <span class="status-value">ONLINE</span>
+            <div class="wiki-box">
+                <div class="box-heading">Terminology</div>
+                <ul>
+                    <li><a href="soyspeak.html">SoySpeak</a></li>
+                    <li><a href="Troons.html">Troons</a></li>
+                    <li><a href="By_the_way.html">By the Way</a></li>
+                    <li><a href="Though.html">Though</a></li>
+                </ul>
             </div>
 
-            <div class="status-line">
-                <span>Random article</span>
-                <span class="status-value">READY</span>
+            <div class="wiki-box">
+                <div class="box-heading">Other entries</div>
+                <ul>
+                    <li><a href="arb.html">ARB</a></li>
+                    <li><a href="yehudyakim.html">Yehudyakim</a></li>
+                    <li><a href="Wood.html">Wood</a></li>
+                    <li><a href="gem.html">Gemrald</a></li>
+                </ul>
             </div>
+        </div>
+    </section>
 
-        </section>
+    <section id="articles">
+        <h2>Article directory</h2>
+        <p>Browse all currently listed articles.</p>
+        <div class="wiki-box">
+            <ul id="article-directory"></ul>
+        </div>
+    </section>
 
-        <section class="panel">
+    <section id="community">
+        <h2>Community</h2>
+        <p>
+            The archive collects articles about the community, its history,
+            terminology, and related topics.
+        </p>
+    </section>
 
-            <h2>Search Suggestions</h2>
+    <section id="external">
+        <h2>External links</h2>
+        <ul>
+            <li><a href="https://clvbhousewiki.github.io/">CLVBHOUSE Wiki homepage</a></li>
+        </ul>
+    </section>
+</main>
 
-            <p class="welcome-lead">
-                Try searching for:
-            </p>
-
-            <a class="sidebar-link search-suggestion" href="#search" data-query="BTW">
-                BTW
-            </a>
-
-            <a class="sidebar-link search-suggestion" href="#search" data-query="Though">
-                Though
-            </a>
-
-            <a class="sidebar-link search-suggestion" href="#search" data-query="Wood">
-                Wood
-            </a>
-
-            <a class="sidebar-link search-suggestion" href="#search" data-query="DNB">
-                DNB
-            </a>
-
-            <a class="sidebar-link search-suggestion" href="#search" data-query="Agartha">
-                Agartha
-            </a>
-
-        </section>
-
-    </aside>
+<aside class="sidebar" id="right-sidebar">
+    <div class="box-heading">CLVBHOUSE Wiki</div>
+    <img src="ethanwiki-logo-v2.png" alt="CLVBHOUSE Wiki logo">
+    <table>
+        <tr><td>Type</td><td>Community encyclopedia</td></tr>
+        <tr><td>Language</td><td>English</td></tr>
+        <tr><td>Format</td><td>Independent wiki</td></tr>
+        <tr><td>Pages</td><td id="article-count">12 listed</td></tr>
+    </table>
+</aside>
 
 </div>
 
-<!-- FOOTER -->
-<footer class="footer">
-
-    <div class="footer-links">
-        <a href="index.html">Main Page</a>
-        <a href="#search">Search</a>
-        <a href="#featured">Featured</a>
-        <a href="#directory">Directory</a>
-    </div>
-
-    <p>
-        CLVBHOUSE Wiki — The Internet Archive
-    </p>
-
-    <p>
-        This website is an independently maintained collection of articles.
-    </p>
-
+<footer>
+    CLVBHOUSE Wiki · Independent community archive
 </footer>
 
 </div>
 
 <script>
-/* =====================================
-   ARTICLE DATABASE
-
-   When adding an article, add it here.
-   Make sure the filename matches the actual
-   GitHub repository filename exactly.
-===================================== */
-
 const articles = [
-
-    {
-        title: "Ethan",
-        file: "ethan.html",
-        description: "An article about Ethan.",
-        category: "People",
-        aliases: ["ethan"]
-    },
-
-    {
-        title: "Ethanism",
-        file: "ethanism.html",
-        description: "An entry about Ethanism.",
-        category: "Concepts",
-        aliases: ["ethanism"]
-    },
-
-    {
-        title: "Saar Sparky",
-        file: "saar-sparky.html",
-        description: "An article about Saar Sparky.",
-        category: "People",
-        aliases: ["saar", "sparky"]
-    },
-
-    {
-        title: "Camemac",
-        file: "camemac.html",
-        description: "An entry about Camemac.",
-        category: "People",
-        aliases: ["came mac"]
-    },
-
-    {
-        title: "ARB",
-        file: "arb.html",
-        description: "The ARB article.",
-        category: "Articles",
-        aliases: ["arb"]
-    },
-
-    {
-        title: "SoySpeak",
-        file: "soyspeak.html",
-        description: "An entry about SoySpeak and its terminology.",
-        category: "Terminology",
-        aliases: ["soy speak", "soy"]
-    },
-
-    {
-        title: "Gemrald",
-        file: "gem.html",
-        description: "The Gemrald entry.",
-        category: "Featured",
-        aliases: ["gem", "gemrald", "gemrald page"]
-    },
-
-    {
-        title: "Yehudyakim",
-        file: "yehudyakim.html",
-        description: "An article about Yehudyakim, also known as DNB.",
-        category: "Places",
-        aliases: ["dnb", "agartha", "yehudiakim"]
-    },
-
-    {
-        title: "Troons",
-        file: "Troons.html",
-        description: "An entry discussing the term and its online usage.",
-        category: "Terminology",
-        aliases: ["troon", "troons"]
-    },
-
-    {
-        title: "By the Way",
-        file: "By_the_way.html",
-        description: "The literal meaning, usage, and examples of “by the way” and BTW.",
-        category: "Terminology",
-        aliases: ["btw", "by the way", "by_the_way", "incidentally"]
-    },
-
-    {
-        title: "Though",
-        file: "Though.html",
-        description: "The definition, grammar, and online usage of the word “though.”",
-        category: "Terminology",
-        aliases: ["tho", "although", "even though", "however"]
-    },
-
-    {
-        title: "Wood",
-        file: "Wood.html",
-        description: "The literal definition, composition, categories, and uses of wood.",
-        category: "Science",
-        aliases: ["wood", "tree", "trees", "cellulose", "lignin", "lumber"]
-    }
-
+    {title:"Ethan",file:"ethan.html",aliases:["ethan"]},
+    {title:"Ethanism",file:"ethanism.html",aliases:["ethanism"]},
+    {title:"Saar Sparky",file:"saar-sparky.html",aliases:["saar","sparky"]},
+    {title:"Camemac",file:"camemac.html",aliases:["came mac"]},
+    {title:"ARB",file:"arb.html",aliases:["arb"]},
+    {title:"SoySpeak",file:"soyspeak.html",aliases:["soy speak","soy"]},
+    {title:"Gemrald",file:"gem.html",aliases:["gem","gemrald"]},
+    {title:"Yehudyakim",file:"yehudyakim.html",aliases:["dnb","agartha","yehudiakim"]},
+    {title:"Troons",file:"Troons.html",aliases:["troon","troons"]},
+    {title:"By the Way",file:"By_the_way.html",aliases:["btw","by the way","incidentally"]},
+    {title:"Though",file:"Though.html",aliases:["tho","although","even though"]},
+    {title:"Wood",file:"Wood.html",aliases:["tree","trees","cellulose","lumber"]}
 ];
 
+const searchResults = document.getElementById("search-results");
+const searchInput = document.getElementById("search-input");
+const sideInput = document.getElementById("side-search-input");
 
-/* =====================================
-   ARTICLE CARD BUILDER
-===================================== */
-
-function createArticleCard(article) {
-
-    return `
-        <a class="article-card" href="${article.file}">
-            <h3>${article.title}</h3>
-            <p>${article.description}</p>
-            <span class="article-tag">${article.category}</span>
-        </a>
-    `;
+function normalize(text) {
+    return text.toLowerCase().replace(/[_-]/g, " ").trim();
 }
 
+function searchArticles(query) {
+    const q = normalize(query);
 
-/* =====================================
-   FEATURED ARTICLES
-===================================== */
-
-const featuredTitles = [
-    "By the Way",
-    "Though",
-    "Wood",
-    "Gemrald",
-    "Yehudyakim",
-    "Ethanism"
-];
-
-const featuredGrid = document.getElementById("featuredGrid");
-
-featuredGrid.innerHTML = featuredTitles
-    .map(title => articles.find(article => article.title === title))
-    .filter(Boolean)
-    .map(createArticleCard)
-    .join("");
-
-
-/* =====================================
-   RECENT ADDITIONS
-===================================== */
-
-const recentTitles = [
-    "By the Way",
-    "Though",
-    "Wood",
-    "Troons",
-    "Yehudyakim"
-];
-
-const recentGrid = document.getElementById("recentGrid");
-
-recentGrid.innerHTML = recentTitles
-    .map(title => articles.find(article => article.title === title))
-    .filter(Boolean)
-    .map(createArticleCard)
-    .join("");
-
-
-/* =====================================
-   ARTICLE DIRECTORY
-===================================== */
-
-const directoryList = document.getElementById("directoryList");
-
-const sortedArticles = [...articles].sort((a, b) =>
-    a.title.localeCompare(b.title)
-);
-
-directoryList.innerHTML = sortedArticles.map(article => {
-
-    const firstLetter = article.title.charAt(0).toUpperCase();
-
-    return `
-        <a href="${article.file}">
-            <span class="directory-letter">${firstLetter}</span>
-            ${article.title}
-        </a>
-    `;
-
-}).join("");
-
-document.getElementById("articleCount").textContent = articles.length;
-
-
-/* =====================================
-   SEARCH ENGINE
-===================================== */
-
-const searchForm = document.getElementById("searchForm");
-const searchInput = document.getElementById("searchInput");
-const searchResults = document.getElementById("searchResults");
-const resultsHeading = document.getElementById("resultsHeading");
-const resultsList = document.getElementById("resultsList");
-
-function normalizeText(value) {
-
-    return value
-        .toLowerCase()
-        .replace(/[_-]/g, " ")
-        .replace(/[^\p{L}\p{N}\s]/gu, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-
-}
-
-function findMatchingArticles(query) {
-
-    const normalizedQuery = normalizeText(query);
-
-    if (!normalizedQuery) {
-        return [];
-    }
-
-    return articles
-        .map(article => {
-
-            const title = normalizeText(article.title);
-            const description = normalizeText(article.description);
-            const category = normalizeText(article.category);
-
-            const aliases = article.aliases
-                .map(normalizeText);
-
-            let score = 0;
-
-            if (title === normalizedQuery) {
-                score = 100;
-            } else if (aliases.includes(normalizedQuery)) {
-                score = 95;
-            } else if (title.startsWith(normalizedQuery)) {
-                score = 80;
-            } else if (title.includes(normalizedQuery)) {
-                score = 70;
-            } else if (aliases.some(alias => alias.includes(normalizedQuery))) {
-                score = 60;
-            } else if (description.includes(normalizedQuery)) {
-                score = 40;
-            } else if (category.includes(normalizedQuery)) {
-                score = 20;
-            }
-
-            return {
-                article,
-                score
-            };
-
-        })
-        .filter(result => result.score > 0)
-        .sort((a, b) => b.score - a.score)
-        .map(result => result.article);
-
-}
-
-function performSearch(query, openExactMatch = false) {
-
-    const cleanQuery = query.trim();
-
-    if (!cleanQuery) {
-
-        searchResults.classList.remove("visible");
-        resultsList.innerHTML = "";
-        resultsHeading.textContent = "";
-
+    if (!q) {
+        searchResults.style.display = "none";
+        searchResults.innerHTML = "";
         return;
     }
 
-    const matches = findMatchingArticles(cleanQuery);
-
-    searchResults.classList.add("visible");
-
-    const normalizedQuery = normalizeText(cleanQuery);
-
-    const exactMatch = articles.find(article =>
-        normalizeText(article.title) === normalizedQuery ||
-        article.aliases.some(alias =>
-            normalizeText(alias) === normalizedQuery
-        )
+    const matches = articles.filter(article =>
+        normalize(article.title).includes(q) ||
+        article.aliases.some(alias => normalize(alias).includes(q))
     );
 
-    if (openExactMatch && exactMatch) {
-        window.location.href = exactMatch.file;
-        return;
-    }
-
-    resultsHeading.textContent =
-        matches.length === 1
-            ? "1 matching article"
-            : `${matches.length} matching articles`;
+    searchResults.style.display = "block";
 
     if (matches.length === 0) {
-
-        resultsList.innerHTML = `
-            <div class="no-results">
-                No matching articles found for
-                <strong>${escapeHTML(cleanQuery)}</strong>.
-                Try another search term.
-            </div>
-        `;
-
+        searchResults.innerHTML = "<p>No matching articles found.</p>";
         return;
     }
 
-    resultsList.innerHTML = matches.map(article => `
-        <a class="result-item" href="${article.file}">
-            <div class="result-title">${escapeHTML(article.title)}</div>
-            <div class="result-description">
-                ${escapeHTML(article.description)}
-            </div>
-        </a>
-    `).join("");
-
+    searchResults.innerHTML = matches.map(article =>
+        `<div class="search-result"><a href="${article.file}">${article.title}</a></div>`
+    ).join("");
 }
 
-function escapeHTML(value) {
+function submitSearch(query) {
+    const q = normalize(query);
+    if (!q) return;
 
-    return value.replace(/[&<>"']/g, character => {
-
-        const entities = {
-            "&": "&amp;",
-            "<": "&lt;",
-            ">": "&gt;",
-            '"': "&quot;",
-            "'": "&#039;"
-        };
-
-        return entities[character];
-
-    });
-
-}
-
-searchInput.addEventListener("input", () => {
-    performSearch(searchInput.value);
-});
-
-searchForm.addEventListener("submit", event => {
-
-    event.preventDefault();
-
-    performSearch(searchInput.value, true);
-
-});
-
-
-/* =====================================
-   CLEAR SEARCH
-===================================== */
-
-document.getElementById("clearSearch").addEventListener("click", () => {
-
-    searchInput.value = "";
-    searchResults.classList.remove("visible");
-    resultsList.innerHTML = "";
-    resultsHeading.textContent = "";
-    searchInput.focus();
-
-});
-
-
-/* =====================================
-   RANDOM ARTICLE
-===================================== */
-
-function openRandomArticle() {
-
-    const currentPage = (
-        window.location.pathname.split("/").pop() || "index.html"
-    ).toLowerCase();
-
-    let choices = articles.filter(article =>
-        article.file.toLowerCase() !== currentPage
+    const exact = articles.find(article =>
+        normalize(article.title) === q ||
+        article.aliases.some(alias => normalize(alias) === q)
     );
 
-    if (choices.length === 0) {
-        choices = articles;
+    if (exact) {
+        window.location.href = exact.file;
+    } else {
+        searchArticles(query);
     }
-
-    const randomArticle =
-        choices[Math.floor(Math.random() * choices.length)];
-
-    if (randomArticle) {
-        window.location.href = randomArticle.file;
-    }
-
 }
 
-document.getElementById("randomButton")
-    .addEventListener("click", openRandomArticle);
+document.getElementById("top-search").addEventListener("submit", event => {
+    event.preventDefault();
+    submitSearch(searchInput.value);
+});
 
-document.getElementById("sidebarRandom")
-    .addEventListener("click", openRandomArticle);
+document.getElementById("side-search").addEventListener("submit", event => {
+    event.preventDefault();
+    submitSearch(sideInput.value);
+});
 
+searchInput.addEventListener("input", () => {
+    sideInput.value = searchInput.value;
+    searchArticles(searchInput.value);
+});
 
-/* =====================================
-   LOGO SPIN + RANDOM ARTICLE
-===================================== */
+sideInput.addEventListener("input", () => {
+    searchInput.value = sideInput.value;
+    searchArticles(sideInput.value);
+});
 
-const randomLogo = document.getElementById("randomLogo");
+function openRandomArticle() {
+    const current = window.location.pathname.split("/").pop();
+    let options = articles.filter(article => article.file !== current);
 
-randomLogo.addEventListener("click", event => {
+    if (options.length === 0) options = articles;
 
+    const article = options[Math.floor(Math.random() * options.length)];
+    window.location.href = article.file;
+}
+
+document.getElementById("logo").addEventListener("click", openRandomArticle);
+document.getElementById("sidebar-random").addEventListener("click", event => {
+    event.preventDefault();
+    openRandomArticle();
+});
+document.getElementById("random-tool").addEventListener("click", event => {
+    event.preventDefault();
+    openRandomArticle();
+});
+
+document.getElementById("contents-toggle").addEventListener("click", event => {
     event.preventDefault();
 
-    if (randomLogo.classList.contains("logo-launch")) {
-        return;
-    }
+    const list = document.getElementById("contents-list");
+    const hidden = list.style.display === "none";
 
-    randomLogo.classList.add("logo-launch");
-
-    window.setTimeout(() => {
-        openRandomArticle();
-    }, 650);
-
+    list.style.display = hidden ? "block" : "none";
+    event.target.textContent = hidden ? "[hide]" : "[show]";
 });
 
+document.getElementById("article-directory").innerHTML = articles
+    .map(article => `<li><a href="${article.file}">${article.title}</a></li>`)
+    .join("");
 
-/* =====================================
-   SEARCH SUGGESTIONS
-===================================== */
-
-document.querySelectorAll(".search-suggestion").forEach(link => {
-
-    link.addEventListener("click", () => {
-
-        const query = link.dataset.query;
-
-        searchInput.value = query;
-
-        performSearch(query);
-
-    });
-
-});
-
+document.getElementById("article-count").textContent =
+    articles.length + " listed";
 </script>
-
 </body>
 </html>
