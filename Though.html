@@ -13,8 +13,6 @@
   --border: #a7d7f9;
   --link: #0645ad;
   --text: #202122;
-  --gem: #20dcff;
-  --emerald: #20b95a;
 }
 
 * { box-sizing: border-box; }
@@ -142,7 +140,6 @@ h2 {
 }
 
 h3 { font-size: 17px; font-weight: normal; }
-
 p { line-height: 1.65; }
 
 .infobox {
@@ -219,6 +216,60 @@ p { line-height: 1.65; }
   margin: 16px 0;
 }
 
+/* This page is a gem banner */
+.gem-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  text-align: center;
+  margin: 18px 0 24px;
+  padding: 14px;
+  border: 1px solid #168844;
+  border-radius: 2px;
+  background: linear-gradient(
+    110deg,
+    #e6ffeb 0%,
+    #9cf0b0 25%,
+    #e0ffe7 50%,
+    #81e99a 75%,
+    #f2fff4 100%
+  );
+  box-shadow:
+    0 0 7px #20b95a88,
+    inset 0 0 12px #ffffffcc;
+  color: #075d2b;
+  text-shadow: 0 0 5px #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+  animation: emeraldShine 4s ease-in-out infinite;
+}
+
+.gem-banner img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px #18c95b);
+  animation: emeraldFloat 3s ease-in-out infinite;
+}
+
+@keyframes emeraldShine {
+  0%, 100% {
+    box-shadow: 0 0 7px #20b95a88, inset 0 0 12px #ffffffcc;
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 20px #20e86eaa, inset 0 0 18px #ffffff;
+    filter: brightness(1.08);
+  }
+}
+
+@keyframes emeraldFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-4px) rotate(3deg); }
+}
+
 .gemrald {
   border: 1px solid #168844;
   background: linear-gradient(110deg, #e4ffe9, #baf5c7, #f2fff4);
@@ -226,27 +277,9 @@ p { line-height: 1.65; }
   padding: 12px;
 }
 
-.gemrald strong { color: #087c35; }
-
 .gemrald img {
   width: 28px;
   height: 28px;
-  object-fit: contain;
-  vertical-align: middle;
-}
-
-.gem {
-  border: 1px solid #00a9d4;
-  background: linear-gradient(110deg, #e1fbff, #a9f3ff, #f5feff);
-  box-shadow: 0 0 14px #20dcff88;
-  padding: 12px;
-}
-
-.gem strong { color: #008bad; }
-
-.gem img {
-  width: 30px;
-  height: 30px;
   object-fit: contain;
   vertical-align: middle;
 }
@@ -281,7 +314,6 @@ p { line-height: 1.65; }
   94% { transform: translate(0, 0) rotate(0); }
 }
 
-/* Sections slowly drift down, then snap back to their original position. */
 .page-drift {
   animation: driftDown 12s ease-in-out infinite;
 }
@@ -290,8 +322,7 @@ p { line-height: 1.65; }
 
 @keyframes driftDown {
   0%, 10%, 100% { transform: translateY(0); }
-  52% { transform: translateY(65px); }
-  72% { transform: translateY(65px); }
+  52%, 72% { transform: translateY(65px); }
   82% { transform: translateY(0); }
 }
 
@@ -313,11 +344,19 @@ footer {
 
 @media (max-width: 760px) {
   .layout { grid-template-columns: 1fr; }
-  .sidebar { border-right: none; border-bottom: 1px solid #c8ccd1; }
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid #c8ccd1;
+  }
   .sidebar a { display: inline-block; margin-right: 12px; }
   .sidebar h3 { margin-top: 12px; }
   article { padding: 18px 15px 30px; }
-  .infobox { float: none; max-width: 100%; width: 100%; margin: 0 0 18px; }
+  .infobox {
+    float: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 0 18px;
+  }
   header { padding: 12px; }
   header h1 { font-size: 24px; }
   .top-tabs { padding: 0 12px; }
@@ -383,6 +422,12 @@ footer {
       <h1 class="article-title"><span class="shake">Though</span></h1>
       <p class="subtitle">From CLVBHOUSE Wiki, the free encyclopedia</p>
 
+      <div class="gem-banner">
+        <img src="latest.png" alt="Shiny green emerald">
+        <span>THIS PAGE IS A GEM</span>
+        <img src="latest.png" alt="Shiny green emerald">
+      </div>
+
       <div class="infobox">
         <div class="infobox-title">
           <img class="jak big" src="Thoughjak.png" alt="Thoughjak">
@@ -396,9 +441,8 @@ footer {
           <tr><td>Word</td><td>Though</td></tr>
           <tr><td>Word type</td><td>Conjunction / adverb</td></tr>
           <tr><td>Known for</td><td>Contradictions, sentence endings, and Thoughjak</td></tr>
-          <tr><td>Associated item</td><td>Thoughjak <img class="jak tiny" src="Thoughjak.png" alt=""></td></tr>
+          <tr><td>Associated image</td><td>Thoughjak <img class="jak tiny" src="Thoughjak.png" alt=""></td></tr>
           <tr><td>Related page</td><td><a href="By_the_way.html">By the Way</a></td></tr>
-          <tr><td>Gem status</td><td>Extremely shiny</td></tr>
         </table>
       </div>
 
@@ -406,8 +450,8 @@ footer {
         <b>Though</b> is a word in the English language used to introduce a contrast,
         acknowledge an opposing point, or add a qualification to a statement.
         In the CLVBHOUSE Wiki, the word is also associated with the mysterious
-        <img class="jak" src="Thoughjak.png" alt="Thoughjak"> <b>Thoughjak</b>,
-        which has appeared throughout the article for reasons that remain unclear.
+        <img class="jak" src="Thoughjak.png" alt="Thoughjak">
+        <b>Thoughjak</b>, which has appeared throughout the article for reasons that remain unclear.
       </p>
 
       <div class="jak-banner">
@@ -426,7 +470,6 @@ footer {
           <li><a href="#grammar">Grammar and usage</a></li>
           <li><a href="#examples">Examples</a></li>
           <li><a href="#thoughjak">Thoughjak</a></li>
-          <li><a href="#gems">GEM and Gemrald</a></li>
           <li><a href="#see-also">See also</a></li>
         </ol>
       </div>
@@ -474,7 +517,6 @@ footer {
         <li>Though the room was small, it was comfortable. <img class="jak tiny" src="Thoughjak.png" alt=""></li>
         <li>The task was difficult. It was enjoyable, though. <img class="jak tiny" src="Thoughjak.png" alt=""></li>
         <li>Though Thoughjak appeared, nobody questioned it.</li>
-        <li>The diamond was cyan, though the emerald remained green.</li>
       </ul>
 
       <h2 id="thoughjak">Thoughjak</h2>
@@ -483,44 +525,6 @@ footer {
         <b>Thoughjak</b> is the unofficial mascot, symbol, and recurring image of this
         article. It is placed beside headings, inside notices, and throughout the page.
         No explanation has been found for the number of appearances.
-      </p>
-
-      <div class="notice">
-        <b>Important distinction:</b> Thoughjak is the image used on this page.
-        GEM and Gemrald are separate entries despite sharing a page.
-      </div>
-
-      <h2 id="gems">GEM and Gemrald</h2>
-
-      <div class="gem">
-        <img src="Minecraft-diamond.png" alt="Minecraft diamond">
-        <strong>GEM — Cyan Diamond</strong>
-        <p>
-          GEM is the cyan, diamond-themed entry. Its identifying image is
-          <code>Minecraft-diamond.png</code>. It uses cyan highlights and a bright,
-          shiny diamond appearance.
-        </p>
-        <img src="Minecraft-diamond.png" alt="Minecraft diamond">
-        <img src="Minecraft-diamond.png" alt="Minecraft diamond">
-      </div>
-
-      <br>
-
-      <div class="gemrald">
-        <img src="latest.png" alt="Gemrald banner">
-        <strong>Gemrald — Green Emerald</strong>
-        <p>
-          Gemrald is separate from GEM. It keeps the green emerald appearance and
-          green shine. The two names refer to different things, even though they
-          share this page.
-        </p>
-        <img src="latest.png" alt="Gemrald banner">
-      </div>
-
-      <p>
-        Though GEM is cyan and Gemrald is green, both are shiny.
-        <img class="jak" src="Thoughjak.png" alt="Thoughjak">
-        Though they share this page, they must not be confused.
       </p>
 
       <h2 id="see-also">See also</h2>
@@ -548,24 +552,5 @@ footer {
 </footer>
 
 </div>
-
-<script>
-/* Occasional gentle page shake, without requiring any external libraries. */
-const page = document.getElementById("page");
-
-setInterval(() => {
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  page.animate(
-    [
-      { transform: "translateX(0)" },
-      { transform: "translateX(-2px) rotate(-0.08deg)" },
-      { transform: "translateX(2px) rotate(0.08deg)" },
-      { transform: "translateX(0)" }
-    ],
-    { duration: 900, easing: "ease-in-out" }
-  );
-}, 11500);
-</script>
-
 </body>
 </html>
