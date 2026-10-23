@@ -1,0 +1,782 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>By the Way — Clvbhouse Wiki</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    color: #202122;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background: #d5d9ef url("asd1.png") center / cover fixed;
+    overflow-x: hidden;
+}
+
+a { color: #0645ad; text-decoration: none; }
+a:visited { color: #663399; }
+a:hover { text-decoration: underline; }
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 162px;
+    padding: 7px;
+}
+
+.logo {
+    display: block;
+    width: 145px;
+    height: 115px;
+    object-fit: contain;
+    margin: auto;
+}
+
+.site-name {
+    text-align: center;
+    font: 24px Georgia, serif;
+    margin-bottom: 15px;
+}
+
+.side-heading {
+    font-weight: bold;
+    margin: 12px 0 4px;
+}
+
+.side-box {
+    background: #fff;
+    border: 1px solid #a2a9b1;
+    border-radius: 3px;
+    padding: 7px;
+    margin-bottom: 8px;
+}
+
+.side-box a {
+    display: block;
+    padding: 4px 0;
+}
+
+.side-box a::before {
+    content: "▪ ";
+    color: #72777d;
+}
+
+.page-area {
+    margin-left: 162px;
+    padding-right: 8px;
+}
+
+.tabs {
+    display: flex;
+    gap: 3px;
+    padding-top: 6px;
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 9px 12px 7px;
+    background: #edf0ff;
+    border: 1px solid #a2a9b1;
+    border-bottom: none;
+    border-radius: 7px 7px 0 0;
+    white-space: nowrap;
+}
+
+.tab.active {
+    background: white;
+    border-top: 2px solid #e5a600;
+}
+
+.article {
+    position: relative;
+    min-height: 1100px;
+    background: white;
+    border: 1px solid #a2a9b1;
+    padding: 18px 15px 40px;
+}
+
+h1 {
+    font: normal 28px Georgia, "Times New Roman", serif;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 7px;
+    margin: 0;
+}
+
+.subtitle {
+    color: #54595d;
+    margin: 7px 0 20px;
+}
+
+p { line-height: 1.65; }
+
+h2 {
+    font: normal 21px Georgia, "Times New Roman", serif;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 4px;
+    margin-top: 28px;
+}
+
+.infobox {
+    float: right;
+    width: 285px;
+    max-width: 45%;
+    background: #edf0ff;
+    border: 1px solid #a2a9b1;
+    padding: 4px;
+    margin: 0 0 16px 18px;
+}
+
+.infobox-title {
+    text-align: center;
+    background: #d5d9ef;
+    padding: 9px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.infobox img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+}
+
+.info-row {
+    padding: 7px;
+    border-top: 1px solid #c8cddd;
+    line-height: 1.5;
+}
+
+.toc {
+    display: table;
+    max-width: 100%;
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 10px 20px;
+    margin: 18px 0;
+}
+
+.toc-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.toc ol { padding-left: 22px; }
+.toc li { margin: 5px 0; }
+
+.notice {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    padding: 10px;
+    margin: 15px 0;
+}
+
+.category-box {
+    clear: both;
+    margin-top: 45px;
+    padding: 9px;
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+}
+
+.footer {
+    color: #54595d;
+    padding: 18px;
+    font-size: 12px;
+}
+
+/* =========================================
+   THE INTERNET HAS LEFT THE BUILDING
+   ========================================= */
+
+/* Random text shakes so violently it becomes
+   difficult to read. */
+.shake {
+    display: inline-block;
+    animation: earthquake 0.075s infinite;
+    transform-origin: center;
+}
+
+.shake2 {
+    display: inline-block;
+    animation: earthquake2 0.12s infinite;
+}
+
+@keyframes earthquake {
+    0%   { transform: translate(0,0) rotate(0); }
+    15%  { transform: translate(-5px,3px) rotate(-8deg); }
+    30%  { transform: translate(6px,-4px) rotate(9deg); }
+    45%  { transform: translate(-4px,-5px) rotate(-12deg); }
+    60%  { transform: translate(5px,5px) rotate(11deg); }
+    75%  { transform: translate(-7px,1px) rotate(-6deg); }
+    100% { transform: translate(3px,-3px) rotate(7deg); }
+}
+
+@keyframes earthquake2 {
+    0%   { transform: translate(0,0) skew(0); }
+    20%  { transform: translate(9px,-5px) skew(15deg); }
+    40%  { transform: translate(-8px,6px) skew(-20deg); }
+    60%  { transform: translate(6px,8px) skew(25deg); }
+    80%  { transform: translate(-10px,-4px) skew(-15deg); }
+    100% { transform: translate(0,0) skew(0); }
+}
+
+/* Some words spin at absurd speed. */
+.spin {
+    display: inline-block;
+    animation: absoluteNonsense 0.22s linear infinite;
+}
+
+.spin-fast {
+    display: inline-block;
+    animation: absoluteNonsense 0.07s linear infinite;
+}
+
+@keyframes absoluteNonsense {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+/* Occasional horizontal distortion. */
+.glitch {
+    display: inline-block;
+    animation: glitching 0.19s steps(2,end) infinite;
+}
+
+@keyframes glitching {
+    0%   { transform: translate(0); text-shadow: 0 0 0 red; }
+    25%  { transform: translate(-4px,2px); text-shadow: 4px 0 red; }
+    50%  { transform: translate(4px,-2px); text-shadow: -4px 0 blue; }
+    75%  { transform: translate(-2px,-3px); text-shadow: 3px 0 lime; }
+    100% { transform: translate(0); }
+}
+
+/* The occasional absolutely unnecessary
+   spinning paragraph. */
+.spinning-paragraph {
+    animation: paragraphSpin 1.4s linear infinite;
+    transform-origin: center;
+}
+
+@keyframes paragraphSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Text slowly changes scale and orientation. */
+.wobble {
+    display: inline-block;
+    animation: wobbleText 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes wobbleText {
+    from { transform: scale(0.7) rotate(-8deg); }
+    to { transform: scale(1.3) rotate(8deg); }
+}
+
+/* Random article title corruption. */
+.title-chaos {
+    animation: titleChaos 0.35s steps(2,end) infinite;
+}
+
+@keyframes titleChaos {
+    0% { letter-spacing: 0; transform: skew(0); }
+    25% { letter-spacing: 3px; transform: skew(8deg); }
+    50% { letter-spacing: -2px; transform: skew(-9deg); }
+    75% { letter-spacing: 5px; transform: skew(4deg); }
+    100% { letter-spacing: 0; transform: skew(0); }
+}
+
+/* Chaotic borders, but still wiki-shaped. */
+.chaos-box {
+    border: 2px dashed #a2a9b1;
+    animation: borderMayhem 0.8s steps(2,end) infinite;
+}
+
+@keyframes borderMayhem {
+    0% { border-color: #a2a9b1; }
+    25% { border-color: red; }
+    50% { border-color: blue; }
+    75% { border-color: lime; }
+    100% { border-color: #a2a9b1; }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        background: rgba(213,217,239,.95);
+    }
+
+    .logo { width: 90px; height: 75px; }
+
+    .page-area {
+        margin: 0 5px;
+        padding: 0;
+    }
+
+    .infobox {
+        width: 44%;
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 450px) {
+    .infobox {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        margin: 12px 0;
+    }
+}
+
+/* Respect users who have reduced motion enabled. */
+@media (prefers-reduced-motion: reduce) {
+    .shake, .shake2, .spin, .spin-fast, .glitch,
+    .spinning-paragraph, .wobble, .title-chaos,
+    .chaos-box {
+        animation: none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<aside class="sidebar">
+    <a href="index.html">
+        <img class="logo" src="ethanwiki-logo-v2.png"
+             alt="Clvbhouse Wiki logo">
+    </a>
+
+    <div class="site-name">Clvbhouse Wiki</div>
+
+    <div class="side-heading">navigation</div>
+    <div class="side-box">
+        <a href="index.html">Main page</a>
+        <a href="ethan.html">Ethan</a>
+        <a href="ethanism.html">Ethanism</a>
+        <a href="saar-sparky.html">Saar Sparky</a>
+        <a href="camemac.html">Camemac</a>
+        <a href="arb.html">ARB</a>
+        <a href="By_the_way.html">By the Way</a>
+        <a href="Though.html">Though</a>
+        <a href="Wood.html">Wood</a>
+    </div>
+
+    <div class="side-heading">search</div>
+    <div class="side-box">
+        <form onsubmit="event.preventDefault(); searchWiki();">
+            <input id="wikiSearch" placeholder="Search wiki..."
+                   style="width:100%;padding:5px">
+            <button type="submit">Go</button>
+        </form>
+        <div id="searchResults"></div>
+    </div>
+
+    <div class="side-heading">community</div>
+    <div class="side-box">
+        <a href="index.html">About the wiki</a>
+        <a href="index.html">Community portal</a>
+        <a href="index.html">Recent changes</a>
+    </div>
+
+    <div class="side-heading">tools</div>
+    <div class="side-box">
+        <a href="javascript:window.print()">Printable version</a>
+        <a href="#top">Back to top</a>
+    </div>
+</aside>
+
+<div class="page-area">
+    <nav class="tabs">
+        <a class="tab active" href="bytheway.html">Article</a>
+        <a class="tab" href="#discussion">Discussion</a>
+        <a class="tab" href="#source">View source</a>
+        <a class="tab" href="#history">History</a>
+    </nav>
+
+    <main class="article" id="top">
+
+        <h1 class="title-chaos">By the Way</h1>
+        <div class="subtitle">
+            From Clvbhouse Wiki, the free encyclopedia
+        </div>
+
+        <aside class="infobox">
+            <div class="infobox-title">
+                <span class="shake">BY THE WAY</span>
+                <br>
+                <span class="spin-fast">BTW</span>
+            </div>
+
+            <img src="Btwer.png" alt="By the Way article image"
+                 onerror="this.style.display='none'">
+
+            <div class="info-row">
+                <b>Full phrase:</b>
+                <span class="glitch">By the way</span>
+            </div>
+            <div class="info-row">
+                <b>Abbreviation:</b>
+                <span class="spin">BTW</span>
+            </div>
+            <div class="info-row">
+                <b>Language:</b>
+                English
+            </div>
+            <div class="info-row">
+                <b>Category:</b>
+                <span class="shake2">Expression</span>
+            </div>
+            <div class="info-row">
+                <b>Threat level:</b>
+                <span class="spin-fast">3600 RPM</span>
+            </div>
+        </aside>
+
+        <div class="notice chaos-box">
+            <b>Notice:</b>
+            This article contains <span class="glitch">excessive movement</span>,
+            <span class="spin">rotation</span>, and
+            <span class="shake">unnecessary grammatical violence</span>.
+            The information is still mostly normal.
+            <span class="spin-fast">MOSTLY.</span>
+        </div>
+
+        <p>
+            <b>By the way</b> is an English expression used to introduce
+            additional information, change the subject, or mention something
+            that was not the main topic of a conversation.
+            It is commonly abbreviated as
+            <span class="spin-fast">BTW</span> in informal online communication.
+        </p>
+
+        <p>
+            <span class="shake">By the way</span>, this article is completely
+            normal and there is absolutely nothing wrong with the text.
+            Everything is <span class="spin">fine</span>.
+            Please continue reading the
+            <span class="glitch">encyclopedia</span.
+        </p>
+
+        <div class="toc">
+            <div class="toc-title">
+                Contents
+                [<a href="#" onclick="
+                    const list=this.closest('.toc').querySelector('ol');
+                    list.hidden=!list.hidden;
+                    this.textContent=list.hidden?'show':'hide';
+                    return false;
+                ">hide</a>]
+            </div>
+            <ol>
+                <li><a href="#meaning">Meaning</a></li>
+                <li><a href="#usage">Usage</a></li>
+                <li><a href="#abbreviation">Abbreviation</a></li>
+                <li><a href="#examples">Examples</a></li>
+                <li><a href="#chaos">Unnecessary Information</a></li>
+                <li><a href="#references">References</a></li>
+            </ol>
+        </div>
+
+        <h2 id="meaning">Meaning</h2>
+
+        <p>
+            The expression introduces a new point or adds information to an
+            existing discussion. It can introduce a reminder, a correction,
+            an observation, or a completely unrelated question.
+        </p>
+
+        <p>
+            <span class="shake">BY THE WAY</span>
+            <span class="spin">BY THE WAY</span>
+            <span class="glitch">BY THE WAY</span>
+            The words have not changed meaning.
+            Your browser is just having a
+            <span class="wobble">wonderful time.</span>
+        </p>
+
+        <h2 id="usage">Usage</h2>
+
+        <p>
+            The phrase is commonly placed at the beginning of a sentence
+            and is usually followed by a comma. It can also appear near
+            the end of a sentence.
+        </p>
+
+        <ul>
+            <li>
+                <span class="shake">By the way,</span> the meeting starts
+                at six.
+            </li>
+            <li>
+                I found your notebook,
+                <span class="spin">by the way.</span>
+            </li>
+            <li>
+                <span class="glitch">By the way,</span> why is this
+                sentence vibrating?
+            </li>
+        </ul>
+
+        <p class="spinning-paragraph">
+            This paragraph is technically still a paragraph.
+            It has simply decided that gravity is optional and that
+            reading should require a pilot's licence.
+        </p>
+
+        <h2 id="abbreviation">Abbreviation</h2>
+
+        <p>
+            <span class="spin-fast">BTW</span> is a widely used abbreviation
+            for <i>by the way</i>. It appears in text messages, online
+            comments, chat rooms, and forums.
+        </p>
+
+        <p>
+            BTW BTW BTW BTW BTW BTW BTW BTW
+            <span class="shake">BTW BTW BTW</span>
+            <span class="spin-fast">BTW BTW BTW</span>
+            <span class="glitch">BTW BTW BTW</span>
+        </p>
+
+        <div class="notice">
+            <b>Dictionary entry:</b>
+            <br><br>
+            <span class="shake">BTW</span>
+            <i>abbreviation</i>
+            <br>
+            1. By the way.
+            <br>
+            2. A phrase that introduces additional information.
+            <br>
+            3. <span class="spin-fast">ROTATION.</span>
+        </div>
+
+        <h2 id="examples">Examples</h2>
+
+        <table style="border-collapse:collapse;width:100%;background:#f8f9fa">
+            <tr>
+                <th style="border:1px solid #a2a9b1;padding:8px;text-align:left">
+                    Example
+                </th>
+                <th style="border:1px solid #a2a9b1;padding:8px;text-align:left">
+                    Function
+                </th>
+            </tr>
+            <tr>
+                <td style="border:1px solid #a2a9b1;padding:8px">
+                    By the way, I found your keys.
+                </td>
+                <td style="border:1px solid #a2a9b1;padding:8px">
+                    Additional information
+                </td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #a2a9b1;padding:8px">
+                    <span class="shake">BTW, that was funny.</span>
+                </td>
+                <td style="border:1px solid #a2a9b1;padding:8px">
+                    Informal communication
+                </td>
+            </tr>
+            <tr>
+                <td style="border:1px solid #a2a9b1;padding:8px">
+                    <span class="spin-fast">BY THE WAY BY THE WAY</span>
+                </td>
+                <td style="border:1px solid #a2a9b1;padding:8px">
+                    <span class="glitch">Unclear.</span>
+                </td>
+            </tr>
+        </table>
+
+        <h2 id="chaos">Unnecessary Information</h2>
+
+        <p>
+            <span class="shake">This section serves no meaningful purpose.</span>
+            It exists to demonstrate that a standard encyclopedia article
+            can retain its traditional layout while its text behaves like
+            a malfunctioning computer.
+        </p>
+
+        <p>
+            <span class="spin-fast">ROTATE.</span>
+            <span class="shake2">SHAKE.</span>
+            <span class="glitch">DISTORT.</span>
+            <span class="wobble">WOBBLE.</span>
+            Return to the beginning of this sentence and try to pretend
+            that this is a serious reference work.
+        </p>
+
+        <div class="notice chaos-box">
+            <h3>
+                <span class="spin-fast">IMPORTANT NOTICE</span>
+            </h3>
+            <p>
+                The contents of this box are
+                <span class="shake">not important</span>.
+                Please consult no one before continuing.
+            </p>
+            <p>
+                <span class="glitch">THIS IS STILL A WIKI ARTICLE.</span>
+            </p>
+        </div>
+
+        <h2 id="references">References</h2>
+
+        <ol>
+            <li>
+                <a href="https://dictionary.cambridge.org/">
+                    Cambridge Dictionary
+                </a>
+                — English word and phrase definitions.
+            </li>
+            <li>
+                <a href="https://www.merriam-webster.com/">
+                    Merriam-Webster
+                </a>
+                — English usage and definitions.
+            </li>
+        </ol>
+
+        <div class="category-box">
+            <b>Categories:</b>
+            <a href="index.html">English expressions</a> |
+            <a href="index.html">Internet culture</a> |
+            <span class="shake">Articles that should not be moving</span>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        Clvbhouse Wiki — The Free Encyclopedia.
+        <span class="glitch">Nothing is under control.</span>
+    </footer>
+</div>
+
+<script>
+const wikiPages = [
+    ["Main page", "index.html"],
+    ["Ethan", "ethan.html"],
+    ["Ethanism", "ethanism.html"],
+    ["Saar Sparky", "saar-sparky.html"],
+    ["Camemac", "camemac.html"],
+    ["ARB", "arb.html"],
+    ["By the Way", "bytheway.html"],
+    ["Though", "Though.html"],
+    ["Wood", "Wood.html"]
+];
+
+function searchWiki() {
+    const query = document.getElementById("wikiSearch")
+        .value.trim().toLowerCase();
+
+    const results = document.getElementById("searchResults");
+    results.replaceChildren();
+
+    if (!query) return;
+
+    const matches = wikiPages.filter(page =>
+        page[0].toLowerCase().includes(query)
+    );
+
+    if (matches.length === 0) {
+        results.textContent = "No matching pages found.";
+        return;
+    }
+
+    matches.forEach(page => {
+        const link = document.createElement("a");
+        link.href = page[1];
+        link.textContent = page[0];
+        link.style.display = "block";
+        link.style.padding = "4px 0";
+        results.appendChild(link);
+    });
+}
+
+/* Randomly corrupt a selection of ordinary words.
+   It leaves the underlying article text intact. */
+const chaosClasses = ["shake", "shake2", "spin", "spin-fast", "glitch", "wobble"];
+
+function infectRandomWords() {
+    const paragraphs = document.querySelectorAll(
+        ".article p, .article li"
+    );
+
+    paragraphs.forEach(paragraph => {
+        if (Math.random() > 0.65) return;
+
+        const walker = document.createTreeWalker(
+            paragraph,
+            NodeFilter.SHOW_TEXT
+        );
+
+        const nodes = [];
+        while (walker.nextNode()) {
+            if (walker.currentNode.nodeValue.trim().length > 8) {
+                nodes.push(walker.currentNode);
+            }
+        }
+
+        if (!nodes.length) return;
+
+        const node = nodes[Math.floor(Math.random() * nodes.length)];
+        const words = node.nodeValue.split(/(\s+)/);
+
+        const wordIndexes = words
+            .map((word, index) => /^[a-zA-Z]{4,}$/.test(word) ? index : -1)
+            .filter(index => index !== -1);
+
+        if (!wordIndexes.length) return;
+
+        const index = wordIndexes[Math.floor(Math.random() * wordIndexes.length)];
+        const span = document.createElement("span");
+
+        span.className = chaosClasses[
+            Math.floor(Math.random() * chaosClasses.length)
+        ];
+
+        span.textContent = words[index];
+        words[index] = span.outerHTML;
+
+        const replacement = document.createElement("span");
+        replacement.innerHTML = words.join("");
+        node.parentNode.replaceChild(replacement, node);
+    });
+}
+
+/* A little extra chaos every few seconds, without
+   rebuilding the page or deleting its text. */
+setInterval(() => {
+    const elements = document.querySelectorAll(
+        ".article p, .article li, .info-row"
+    );
+
+    if (!elements.length) return;
+
+    const target = elements[Math.floor(Math.random() * elements.length)];
+
+    if (target.dataset.chaosActive) return;
+
+    target.dataset.chaosActive = "true";
+    target.classList.add(
+        chaosClasses[Math.floor(Math.random() * chaosClasses.length)]
+    );
+
+    setTimeout(() => {
+        target.classList.remove(...chaosClasses);
+        delete target.dataset.chaosActive;
+    }, 1300);
+}, 1800);
+</script>
+
+</body>
+</html>
