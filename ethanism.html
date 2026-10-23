@@ -1,39 +1,797 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ethanism — Clvbhouse Wiki</title><style>
-*{box-sizing:border-box}body{margin:0;color:#202122;font:13px Arial,Helvetica,sans-serif;background:#d5d9ef url("asd1.png") center center/cover no-repeat fixed}
-a{color:#0645ad;text-decoration:none}a:visited{color:#663399}a:hover{text-decoration:underline}
-.sidebar{position:absolute;top:0;left:0;width:162px;padding:5px}.logo{width:150px;height:125px;object-fit:contain;display:block;margin:0 auto}
-.site-name{font:23px Georgia,serif;text-align:center;margin:0 0 15px;color:#171717}.side-heading{margin:10px 0 3px;font-size:12px}
-.side-box{background:rgba(255,255,255,.95);border:1px solid #a2a9b1;border-radius:4px;padding:6px 9px;margin-bottom:8px}.side-box a{display:block;padding:3px 0}.side-box a:before{content:"▪";color:#7894a5;margin-right:7px}
-.search-box input{width:100%;padding:5px;border:1px solid #a2a9b1}.search-box button{margin-top:4px;cursor:pointer}#search-results{margin-top:6px;overflow-wrap:anywhere}#search-results a{display:block;margin:5px 0}
-.page-area{margin-left:162px;margin-right:8px}.tabs-row{height:36px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}.tabs{display:flex;gap:3px}
-.tab{padding:8px 12px 6px;background:#edf0ff;border:1px solid #a2a9b1;border-bottom:none;border-radius:8px 8px 0 0;white-space:nowrap}.tab.active{background:white;border-top:2px solid #e5a600;padding-top:7px}
-.account-tabs{display:flex;gap:12px;padding:0 8px 8px;white-space:nowrap;font-size:12px}.article{background:white;border:1px solid #a2a9b1;padding:18px 14px 35px;min-height:900px;position:relative}
-.article-title{font:normal 26px Georgia,"Times New Roman",serif;margin:0;padding-bottom:5px;border-bottom:1px solid #a2a9b1}.subtitle{margin:5px 0 19px}.lock{position:absolute;right:8px;top:10px;font-size:19px}
-.notice{width:fit-content;max-width:100%;margin:0 auto 12px;padding:12px 18px;text-align:center;background:#e6e9ff;border:1px solid #8888ff;box-shadow:inset 0 0 0 3px #f5f5ff}.notice strong{font-size:18px}.notice p{margin:7px 0 0}.article p{line-height:1.6}
-.infobox{float:right;width:288px;max-width:42%;margin:0 0 15px 18px;padding:4px;background:#edf0ff;border:1px solid #a2a9b1}.infobox-title{padding:8px;background:#d5d9ef;text-align:center;font-weight:bold;font-size:14px}.infobox-title small{display:block;margin-top:5px;font-style:italic;font-weight:normal}
-.infobox-tabs{text-align:center;padding:5px}.infobox-tabs span{display:inline-block;padding:5px 10px;background:#f8f9fa}.infobox-logo{display:block;width:100%;height:auto;max-height:280px;object-fit:contain;margin:4px auto}
-.infobox-brand{font:30px Georgia,serif;text-align:center;overflow-wrap:anywhere;margin:2px 0 8px}.infobox-section{background:#d5d9ef;padding:5px;text-align:center;font-weight:bold}
-.info-row{padding:6px;border:1px solid #d4d9ef;line-height:1.5;overflow-wrap:anywhere}.info-row strong{display:block}.toc{display:table;max-width:100%;border:1px solid #a2a9b1;background:#f8f9fa;padding:10px;margin:15px 0 18px}
-.toc-title{text-align:center;font-weight:bold;margin-bottom:8px}.toc ol{margin:0;padding-left:23px}.toc li{padding:3px 0}.section-title{font:normal 20px Georgia,serif;border-bottom:1px solid #a2a9b1;margin:24px 0 10px;padding-bottom:3px}
-.category-box{margin-top:40px;padding:8px;background:#f8f9fa;border:1px solid #a2a9b1}.footer{padding:20px 10px;color:#54595d;font-size:12px}.clearfix:after{content:"";display:block;clear:both}
-.ethan-banner{margin:0 0 12px;min-height:100px;background:#d5d9ef url("pattern.png") center center/cover repeat;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.ethan-banner span{font-size:clamp(24px,4vw,48px);font-weight:900;letter-spacing:2px;text-align:center;color:#ff0000;text-shadow:2px 3px 2px #111,0 0 8px #111;animation:rainbow 3s linear infinite}
-@keyframes rainbow{0%{color:#ff2020}16%{color:#ff9a20}33%{color:#ffff35}50%{color:#25df58}66%{color:#279bff}83%{color:#c53cff}100%{color:#ff2020}}
-@media(max-width:800px){.sidebar{position:static;width:100%;background:rgba(213,217,239,.95)}.logo{width:100px;height:85px}.site-name{font-size:22px;margin-bottom:8px}.sidebar-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 8px}.page-area{margin:0 5px}.account-tabs{display:none}.tabs-row{overflow-x:auto}.infobox{width:45%;max-width:45%;margin-left:10px}.infobox-brand{font-size:20px}}
-@media(max-width:480px){.infobox{float:none;width:100%;max-width:100%;margin:12px 0}}
-</style></head><body>
-<aside class="sidebar"><a href="index.html"><img class="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo"></a><div class="site-name">Clvbhouse Wiki</div><div class="sidebar-navigation">
-<div><div class="side-heading">navigation</div><div class="side-box"><a href="index.html">Main page</a><a href="ethan.html">Ethan</a><a href="ethanism.html">Ethanism</a><a href="saar-sparky.html">Saar Sparky</a><a href="camemac.html">Camemac</a><a href="arb.html">ARB</a><a href="#recent-changes">Recent changes</a><a href="#random">Random gem</a></div>
-<div class="side-heading">search</div><div class="side-box"><form class="search-box" id="wiki-search"><input id="search-input" type="search" placeholder="Search Clvbhouse Wiki"><button type="submit">Go</button> <button type="button" id="search-button">Search</button></form><div id="search-results"></div></div></div>
-<div><div class="side-heading">community</div><div class="side-box"><a href="ethanism.html">Ethanism</a><a href="ethan.html">Ethan</a><a href="index.html#operations">Operations</a><a href="index.html#nethanists">Nethanists</a></div><div class="side-heading">official sites</div><div class="side-box"><a href="https://github.com/clvbhouseWiki">GitHub</a><a href="https://www.youtube.com/@Ethanclubhouse-2026">Ethan's YouTube channel</a></div><div class="side-heading">tools</div><div class="side-box"><a href="javascript:window.print()">Printable version</a><a href="#page-information">Page information</a></div></div></div></aside>
-<div class="page-area"><div class="tabs-row"><nav class="tabs"><a class="tab active" href="ethanism.html">article</a><a class="tab" href="#discussion">discussion</a><a class="tab" href="#view-source">view source</a><a class="tab" href="#history">history</a></nav><div class="account-tabs"><a href="#create-account">create account</a><a href="#login">log in</a><a href="#sandbox">sandbox</a></div></div>
-<main class="article"><div class="lock" title="Page information">🔒</div><h1 class="article-title">Ethanism</h1><div class="subtitle">From Clvbhouse Wiki, the free encyclopedia</div>
-<div class="clearfix"><aside class="infobox"><div class="infobox-title">Ethanism<small>Community ideology</small></div><div class="infobox-tabs"><span>Flag</span><span>Symbol</span></div><img class="infobox-logo" src="Untitled1674_20261003181522.png" alt="Ethanism flag"><div class="infobox-section">Symbol</div><img class="infobox-logo" src="Sans_titre_564_20261002145756-removebg-preview.png" alt="Ethanism symbol"><div class="infobox-section">Ideology</div><div class="info-row"><strong>Classification</strong>Right-wing (as described by the community)</div><div class="info-row"><strong>Associated figure</strong><a href="ethan.html">Ethan</a></div><div class="info-row"><strong>Community</strong><a href="index.html">Clvbhouse</a></div><div class="info-row"><strong>Leaders</strong><a href="camemac.html">Camemac</a> and <a href="arb.html">ARB</a></div><div class="info-row"><strong>Chairmen</strong><a href="saar-sparky.html">Saar Sparky</a> and Sancho</div></aside>
-<p><strong>Ethanism</strong> is a community-created, right-wing ideology associated with the Clvbhouse community and centred on the glorification of <a href="ethan.html">Ethan</a>. The ideology has influenced community culture and is credited by its supporters with helping make Ethan more popular.</p><p>Ethanism combines an exaggerated celebration of Ethan with community identity, online promotion, server-growth efforts, and its own symbols and terminology. The degree to which individual participants regard the ideology as serious rather than humorous varies.</p><h2 class="section-title">Objectives</h2><ul><li>Encourage Ethan to upload more content.</li><li>Grow the Clvbhouse server.</li><li>Promote Ethanism in the Ethan Clubhouse comment section.</li></ul><h2 class="section-title">Nethanists</h2><p><strong>Nethanist</strong> is the community's term for people it views as opponents of Ethan or Clvbhouse. It is a community label, not an objective description of someone based solely on their interests.</p><h2 class="section-title">Nethanite boycott</h2><p>A list shared by the community names McDonald's, Mickey's Clubhouse, adult sexual content, Israel, and people accused of betraying Ethanism as boycott targets. This describes the community's stated list, not a verification of allegations or an endorsement of harassment.</p><h2 class="section-title">See also</h2><ul><li><a href="ethan.html">Ethan</a></li><li><a href="index.html">Clvbhouse Wiki</a></li></ul></div>
-<div class="category-box"><strong>Categories:</strong> <a href="ethanism.html">Ethanism</a> | <a href="ethan.html">People</a> | <a href="index.html">Clvbhouse culture</a></div></main><footer class="footer">Clvbhouse Wiki — The Free Encyclopedia. Last edited by absolutely nobody.</footer></div>
-<script>
-const pages=[["Clvbhouse Wiki","index.html"],["Ethan","ethan.html"],["Ethanism","ethanism.html"],["Saar Sparky","saar-sparky.html"],["Camemac","camemac.html"],["ARB","arb.html"]];
-const input=document.getElementById("search-input"),results=document.getElementById("search-results");
-function searchWiki(e){if(e)e.preventDefault();const q=input.value.trim().toLowerCase();results.replaceChildren();if(!q){input.focus();return;}const matches=pages.filter(p=>p[0].toLowerCase().includes(q));if(!matches.length){results.textContent="No matching pages found.";return;}matches.forEach(p=>{const a=document.createElement("a");a.href=p[1];a.textContent=p[0];results.appendChild(a);});}
-document.getElementById("wiki-search").addEventListener("submit",searchWiki);document.getElementById("search-button").addEventListener("click",searchWiki);
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethanism - Clvbhouse Wiki</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202122;
+  background: #f6f6f6 url("asd1.png") center center / cover no-repeat fixed;
+}
+
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#header {
+  background: rgba(255,255,255,0.97);
+  border-bottom: 1px solid #a7a7a7;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+#logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+#site-title {
+  font-size: 27px;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #202122;
+}
+
+#site-subtitle {
+  font-size: 12px;
+  color: #54595d;
+  margin-top: 4px;
+}
+
+#layout {
+  display: flex;
+  max-width: 1450px;
+  margin: 0 auto;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+}
+
+#sidebar {
+  width: 180px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.96);
+  border: 1px solid #a2a9b1;
+  padding: 14px;
+  font-size: 13px;
+}
+
+#sidebar h3 {
+  font-size: 13px;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 6px;
+  margin: 4px 0 10px;
+}
+
+#sidebar a {
+  display: block;
+  padding: 5px 0;
+}
+
+#content {
+  flex: 1;
+  min-width: 0;
+  background: rgba(255,255,255,0.97);
+  border: 1px solid #a2a9b1;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  font-size: 32px;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 8px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 24px;
+  font-weight: normal;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-top: 32px;
+}
+
+h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: normal;
+  margin-top: 24px;
+}
+
+.page-subtitle {
+  font-size: 13px;
+  color: #54595d;
+  margin-bottom: 20px;
+}
+
+.article-layout {
+  display: flow-root;
+}
+
+.infobox {
+  float: right;
+  width: 310px;
+  max-width: 100%;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  margin: 0 0 20px 22px;
+  padding: 8px;
+  font-size: 13px;
+}
+
+.infobox-title {
+  text-align: center;
+  font-size: 19px;
+  font-weight: bold;
+  padding: 8px 4px;
+  background: #eaecf0;
+  margin-bottom: 8px;
+}
+
+.infobox-heading {
+  text-align: center;
+  background: #eaecf0;
+  font-weight: bold;
+  padding: 5px;
+  margin: 8px 0;
+}
+
+.infobox table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.infobox td {
+  padding: 5px;
+  vertical-align: top;
+  border-top: 1px solid #eaecf0;
+}
+
+.infobox td:first-child {
+  width: 38%;
+  font-weight: bold;
+}
+
+.symbol-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  align-items: stretch;
+}
+
+.symbol-card {
+  text-align: center;
+  min-width: 0;
+}
+
+.symbol-card img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: #fff;
+  border: 1px solid #eaecf0;
+  padding: 4px;
+}
+
+.symbol-card .caption {
+  font-size: 12px;
+  margin: 6px 0;
+  overflow-wrap: anywhere;
+}
+
+.infobox-image {
+  display: block;
+  max-width: 100%;
+  max-height: 190px;
+  width: auto;
+  height: auto;
+  margin: 6px auto;
+  object-fit: contain;
+}
+
+.toc {
+  display: table;
+  min-width: 220px;
+  max-width: 100%;
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 12px 22px;
+  margin: 20px 0;
+  font-size: 13px;
+}
+
+.toc-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.toc li {
+  padding: 3px 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin: 15px 0 25px;
+}
+
+.gallery-item {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 8px;
+  text-align: center;
+  min-width: 0;
+}
+
+.gallery-item img,
+.gallery-item video {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: #eaecf0;
+}
+
+.gallery-item p {
+  margin: 8px 0 2px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+#gallery h3 {
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 6px;
+}
+
+.flag-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 14px;
+  margin: 15px 0;
+}
+
+.flag-card {
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  padding: 10px;
+  text-align: center;
+  min-width: 0;
+}
+
+.flag-card img {
+  width: 100%;
+  height: 125px;
+  object-fit: contain;
+  background: white;
+}
+
+.flag-card p {
+  font-size: 13px;
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  border-left: 4px solid #72777d;
+  background: #f8f9fa;
+  padding: 10px 14px;
+  margin: 15px 0;
+  font-size: 13px;
+}
+
+.references li {
+  margin-bottom: 7px;
+}
+
+#footer {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 20px 25px;
+  font-size: 12px;
+  color: #54595d;
+}
+
+@media (max-width: 800px) {
+  #layout {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  #sidebar {
+    width: 145px;
+  }
+
+  #content {
+    padding: 15px;
+  }
+
+  .infobox {
+    float: none;
+    width: 100%;
+    margin: 0 0 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  #header {
+    padding: 10px;
+  }
+
+  #logo {
+    width: 48px;
+    height: 48px;
+  }
+
+  #site-title {
+    font-size: 21px;
+  }
+
+  #layout {
+    display: block;
+  }
+
+  #sidebar {
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  #sidebar a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .symbol-card img {
+    height: 115px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+  <a href="index.html">
+    <img id="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo">
+  </a>
+
+  <div>
+    <div id="site-title">Clvbhouse Wiki</div>
+    <div id="site-subtitle">The encyclopedia of the Clvbhouse community</div>
+  </div>
+</header>
+
+<div id="layout">
+
+  <aside id="sidebar">
+    <h3>Navigation</h3>
+    <a href="index.html">Main page</a>
+    <a href="ethan.html">Ethan</a>
+    <a href="ethanism.html">Ethanism</a>
+    <a href="saar-sparky.html">Saar Sparky</a>
+    <a href="camemac.html">Camemac</a>
+    <a href="arb.html">ARB</a>
+    <a href="soyspeak.html">Soyspeak</a>
+
+    <h3>Related topics</h3>
+    <a href="#overview">Overview</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#symbols">Symbols</a>
+    <a href="#alternative-flags">Alternative flags</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#see-also">See also</a>
+  </aside>
+
+  <main id="content">
+
+    <h1>Ethanism</h1>
+    <div class="page-subtitle">
+      From Clvbhouse Wiki, the community encyclopedia
+    </div>
+
+    <div class="article-layout">
+
+      <aside class="infobox">
+        <div class="infobox-title">Ethanism</div>
+
+        <div class="infobox-heading">Symbols</div>
+
+        <div class="symbol-pair">
+          <div class="symbol-card">
+            <a href="Untitled1674_20261003181522.png" target="_blank">
+              <img
+                src="Untitled1674_20261003181522.png"
+                alt="Ethanism flag"
+              >
+            </a>
+            <div class="caption">Ethanist flag</div>
+          </div>
+
+          <div class="symbol-card">
+            <a href="Sans_titre_564_20261002145756-removebg-preview.png" target="_blank">
+              <img
+                src="Sans_titre_564_20261002145756-removebg-preview.png"
+                alt="Ethanism emblem"
+              >
+            </a>
+            <div class="caption">Ethanist emblem</div>
+          </div>
+        </div>
+
+        <table>
+          <tr>
+            <td>Type</td>
+            <td>Community-defined ideology</td>
+          </tr>
+          <tr>
+            <td>Central figure</td>
+            <td><a href="ethan.html">Ethan</a></td>
+          </tr>
+          <tr>
+            <td>Associated community</td>
+            <td>Clvbhouse</td>
+          </tr>
+          <tr>
+            <td>Leaders</td>
+            <td>
+              <a href="camemac.html">Camemac</a>,
+              <a href="arb.html">ARB</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Chairmen</td>
+            <td>
+              <a href="saar-sparky.html">Saar Sparky</a>, Sancho
+            </td>
+          </tr>
+          <tr>
+            <td>Related language</td>
+            <td><a href="soyspeak.html">Soyspeak</a></td>
+          </tr>
+        </table>
+      </aside>
+
+      <p>
+        <b>Ethanism</b> is a community-defined ideology centered on
+        <a href="ethan.html">Ethan</a> and the Clvbhouse community.
+        The term is used within the community to describe its identity,
+        supporters, symbols, and associated material.
+      </p>
+
+      <p>
+        Ethanism has developed its own collection of flags, emblems,
+        propaganda-style artwork, videos, and community figures.
+        These materials are documented in this article's symbols
+        and gallery sections.
+      </p>
+
+      <div class="note">
+        <b>Editorial note:</b> This page documents Ethanism as it is
+        described within the Clvbhouse community. Community titles,
+        affiliations, and historical descriptions should be understood
+        in that context.
+      </div>
+
+    </div>
+
+    <nav class="toc" aria-label="Contents">
+      <div class="toc-title">Contents</div>
+      <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#symbols">Symbols</a></li>
+        <li><a href="#alternative-flags">Alternative flags</a></li>
+        <li><a href="#gallery">Gallery</a>
+          <ol>
+            <li><a href="#tvffest-propaganda">Tvffest Ethanist propaganda</a></li>
+            <li><a href="#goated-ethanists">Goated Ethanists</a></li>
+          </ol>
+        </li>
+        <li><a href="#see-also">See also</a></li>
+      </ol>
+    </nav>
+
+    <section id="overview">
+      <h2>Overview</h2>
+
+      <p>
+        Ethanism is associated with Ethan and the Clvbhouse community.
+        Its identity is expressed through community-made graphics,
+        flags, emblems, videos, and references to people involved in
+        the community.
+      </p>
+
+      <p>
+        The Ethanist collection includes multiple flag designs and
+        emblem variations. Some works are presented as propaganda-style
+        material, while others celebrate individual members or the
+        community's identity.
+      </p>
+    </section>
+
+    <section id="leadership">
+      <h2>Leadership</h2>
+
+      <p>
+        Within the community's stated organizational structure,
+        <a href="camemac.html">Camemac</a> and
+        <a href="arb.html">ARB</a> are identified as leaders.
+        <a href="saar-sparky.html">Saar Sparky</a> and Sancho are
+        identified as chairmen.
+      </p>
+
+      <p>
+        Ethan is the central figure associated with Ethanism.
+        The ideology's name, symbolism, and related media refer
+        back to Ethan and the wider Clvbhouse community.
+      </p>
+    </section>
+
+    <section id="symbols">
+      <h2>Symbols</h2>
+
+      <p>
+        The following are the primary flag and emblem associated
+        with Ethanism.
+      </p>
+
+      <div class="flag-gallery">
+
+        <div class="flag-card">
+          <a href="Untitled1674_20261003181522.png" target="_blank">
+            <img
+              src="Untitled1674_20261003181522.png"
+              alt="Primary Ethanist flag"
+              loading="lazy"
+            >
+          </a>
+          <p><b>Primary Ethanist flag</b></p>
+        </div>
+
+        <div class="flag-card">
+          <a href="Sans_titre_564_20261002145756-removebg-preview.png" target="_blank">
+            <img
+              src="Sans_titre_564_20261002145756-removebg-preview.png"
+              alt="Primary Ethanist emblem"
+              loading="lazy"
+            >
+          </a>
+          <p><b>Primary Ethanist emblem</b></p>
+        </div>
+
+      </div>
+
+      <h3>First emblem</h3>
+
+      <p>
+        <b>ffsaf.png</b> is identified as the earliest Ethanist emblem
+        and an alternative emblem design.
+      </p>
+
+      <div class="flag-gallery">
+        <div class="flag-card">
+          <a href="ffsaf.png" target="_blank">
+            <img src="ffsaf.png" alt="First Ethanist emblem" loading="lazy">
+          </a>
+          <p><b>Original / alternative emblem</b></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="alternative-flags">
+      <h2>Alternative flags</h2>
+
+      <p>
+        Several alternative Ethanist flag designs are also preserved
+        in the community's collection.
+      </p>
+
+      <div class="flag-gallery">
+
+        <div class="flag-card">
+          <a href="Untitled1685_20261012004203.png" target="_blank">
+            <img
+              src="Untitled1685_20261012004203.png"
+              alt="Alternative Ethanist flag one"
+              loading="lazy"
+            >
+          </a>
+          <p><b>Alternative flag I</b></p>
+        </div>
+
+        <div class="flag-card">
+          <a href="Untitled1674_202610043181522.png" target="_blank">
+            <img
+              src="Untitled1674_202610043181522.png"
+              alt="Alternative Ethanist flag two"
+              loading="lazy"
+            >
+          </a>
+          <p><b>Alternative flag II</b></p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+
+      <p>
+        This gallery collects Ethanist artwork, videos, propaganda-style
+        edits, and images associated with members of the community.
+        Select an image to open it at full size or use the video controls
+        to play a clip.
+      </p>
+
+      <section id="tvffest-propaganda">
+        <h3>Tvffest Ethanist propaganda</h3>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <a href="ssss.png" target="_blank">
+              <img src="ssss.png" alt="Tvffest Ethanist propaganda" loading="lazy">
+            </a>
+            <p>Tvffest Ethanist propaganda</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="we%20love.png" target="_blank">
+              <img src="we%20love.png" alt="We Love Ethan artwork" loading="lazy">
+            </a>
+            <p>We Love Ethan</p>
+          </div>
+
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="lv_0_20261004193043.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <p>Ethanist propaganda video I</p>
+          </div>
+
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="lv_0_20261002182008.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <p>Ethanist propaganda video II</p>
+          </div>
+
+          <div class="gallery-item">
+            <video controls preload="metadata">
+              <source src="lv_0_20261002150733.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <p>Ethanist propaganda video III</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="Sans_titre_567_20261004190837.png" target="_blank">
+              <img
+                src="Sans_titre_567_20261004190837.png"
+                alt="Ethanist artwork"
+                loading="lazy"
+              >
+            </a>
+            <p>Ethanist artwork</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="51bf8dc2624f323378f40e2145483779d.png" target="_blank">
+              <img
+                src="51bf8dc2624f323378f40e2145483779d.png"
+                alt="Ethanist propaganda artwork"
+                loading="lazy"
+              >
+            </a>
+            <p>Ethanist propaganda artwork</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="168010_-_soybooru.com_-_cecil_rhodes_chud_chudjak_chudjak_front_colonialism_ear_full_body_glasses_hair_looking_at_you_smile_smug_the_ethan_colossus.png" target="_blank">
+              <img
+                src="168010_-_soybooru.com_-_cecil_rhodes_chud_chudjak_chudjak_front_colonialism_ear_full_body_glasses_hair_looking_at_you_smile_smug_the_ethan_colossus.png"
+                alt="The Ethan Colossus"
+                loading="lazy"
+              >
+            </a>
+            <p>The Ethan Colossus</p>
+          </div>
+
+        </div>
+      </section>
+
+      <section id="goated-ethanists">
+        <h3>Goated Ethanists</h3>
+
+        <div class="gallery-grid">
+
+          <div class="gallery-item">
+            <a href="gg.png" target="_blank">
+              <img src="gg.png" alt="Goated Ethanist artwork" loading="lazy">
+            </a>
+            <p>Goated Ethanist</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="ethanity.png" target="_blank">
+              <img src="ethanity.png" alt="Ethanity artwork" loading="lazy">
+            </a>
+            <p>Ethanity</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="Vntitled-1.png" target="_blank">
+              <img src="Vntitled-1.png" alt="Ethanist artwork" loading="lazy">
+            </a>
+            <p>Ethanist artwork</p>
+          </div>
+
+          <div class="gallery-item">
+            <a href="Screenshot_20261002_135234_com.gbox.android.bfefee53.png" target="_blank">
+              <img
+                src="Screenshot_20261002_135234_com.gbox.android.bfefee53.png"
+                alt="Goated Ethanist screenshot"
+                loading="lazy"
+              >
+            </a>
+            <p>Goated Ethanist screenshot</p>
+          </div>
+
+        </div>
+      </section>
+    </section>
+
+    <section id="see-also">
+      <h2>See also</h2>
+
+      <ul>
+        <li><a href="ethan.html">Ethan</a></li>
+        <li><a href="saar-sparky.html">Saar Sparky</a></li>
+        <li><a href="camemac.html">Camemac</a></li>
+        <li><a href="arb.html">ARB</a></li>
+        <li><a href="soyspeak.html">Soyspeak</a></li>
+        <li><a href="index.html">Clvbhouse Wiki main page</a></li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<footer id="footer">
+  This page is part of Clvbhouse Wiki. Content documents the community and its associated creations.
+</footer>
+
+</body>
+</html>
