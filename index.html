@@ -1,47 +1,1432 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clvbhouse Wiki — Clvbhouse Wiki</title><style>
-*{box-sizing:border-box}body{margin:0;color:#202122;font:13px Arial,Helvetica,sans-serif;background:#d5d9ef url("asd1.png") center center/cover no-repeat fixed}
-a{color:#0645ad;text-decoration:none}a:visited{color:#663399}a:hover{text-decoration:underline}
-.sidebar{position:absolute;top:0;left:0;width:162px;padding:5px}.logo{width:150px;height:125px;object-fit:contain;display:block;margin:0 auto}
-.site-name{font:23px Georgia,serif;text-align:center;margin:0 0 15px;color:#171717}.side-heading{margin:10px 0 3px;font-size:12px}
-.side-box{background:rgba(255,255,255,.95);border:1px solid #a2a9b1;border-radius:4px;padding:6px 9px;margin-bottom:8px}.side-box a{display:block;padding:3px 0}.side-box a:before{content:"▪";color:#7894a5;margin-right:7px}
-.search-box input{width:100%;padding:5px;border:1px solid #a2a9b1}.search-box button{margin-top:4px;cursor:pointer}#search-results{margin-top:6px;overflow-wrap:anywhere}#search-results a{display:block;margin:5px 0}
-.page-area{margin-left:162px;margin-right:8px}.tabs-row{height:36px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}.tabs{display:flex;gap:3px}
-.tab{padding:8px 12px 6px;background:#edf0ff;border:1px solid #a2a9b1;border-bottom:none;border-radius:8px 8px 0 0;white-space:nowrap}.tab.active{background:white;border-top:2px solid #e5a600;padding-top:7px}
-.account-tabs{display:flex;gap:12px;padding:0 8px 8px;white-space:nowrap;font-size:12px}.article{background:white;border:1px solid #a2a9b1;padding:18px 14px 35px;min-height:900px;position:relative}
-.article-title{font:normal 26px Georgia,"Times New Roman",serif;margin:0;padding-bottom:5px;border-bottom:1px solid #a2a9b1}.subtitle{margin:5px 0 19px}.lock{position:absolute;right:8px;top:10px;font-size:19px}
-.notice{width:fit-content;max-width:100%;margin:0 auto 12px;padding:12px 18px;text-align:center;background:#e6e9ff;border:1px solid #8888ff;box-shadow:inset 0 0 0 3px #f5f5ff}.notice strong{font-size:18px}.notice p{margin:7px 0 0}.article p{line-height:1.6}
-.infobox{float:right;width:288px;max-width:42%;margin:0 0 15px 18px;padding:4px;background:#edf0ff;border:1px solid #a2a9b1}.infobox-title{padding:8px;background:#d5d9ef;text-align:center;font-weight:bold;font-size:14px}.infobox-title small{display:block;margin-top:5px;font-style:italic;font-weight:normal}
-.infobox-tabs{text-align:center;padding:5px}.infobox-tabs span{display:inline-block;padding:5px 10px;background:#f8f9fa}.infobox-logo{display:block;width:100%;height:auto;max-height:280px;object-fit:contain;margin:4px auto}
-.infobox-brand{font:30px Georgia,serif;text-align:center;overflow-wrap:anywhere;margin:2px 0 8px}.infobox-section{background:#d5d9ef;padding:5px;text-align:center;font-weight:bold}
-.info-row{padding:6px;border:1px solid #d4d9ef;line-height:1.5;overflow-wrap:anywhere}.info-row strong{display:block}.toc{display:table;max-width:100%;border:1px solid #a2a9b1;background:#f8f9fa;padding:10px;margin:15px 0 18px}
-.toc-title{text-align:center;font-weight:bold;margin-bottom:8px}.toc ol{margin:0;padding-left:23px}.toc li{padding:3px 0}.section-title{font:normal 20px Georgia,serif;border-bottom:1px solid #a2a9b1;margin:24px 0 10px;padding-bottom:3px}
-.category-box{margin-top:40px;padding:8px;background:#f8f9fa;border:1px solid #a2a9b1}.footer{padding:20px 10px;color:#54595d;font-size:12px}.clearfix:after{content:"";display:block;clear:both}
-.ethan-banner{margin:0 0 12px;min-height:100px;background:#d5d9ef url("pattern.png") center center/cover repeat;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.ethan-banner span{font-size:clamp(24px,4vw,48px);font-weight:900;letter-spacing:2px;text-align:center;color:#ff0000;text-shadow:2px 3px 2px #111,0 0 8px #111;animation:rainbow 3s linear infinite}
-@keyframes rainbow{0%{color:#ff2020}16%{color:#ff9a20}33%{color:#ffff35}50%{color:#25df58}66%{color:#279bff}83%{color:#c53cff}100%{color:#ff2020}}
-@media(max-width:800px){.sidebar{position:static;width:100%;background:rgba(213,217,239,.95)}.logo{width:100px;height:85px}.site-name{font-size:22px;margin-bottom:8px}.sidebar-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 8px}.page-area{margin:0 5px}.account-tabs{display:none}.tabs-row{overflow-x:auto}.infobox{width:45%;max-width:45%;margin-left:10px}.infobox-brand{font-size:20px}}
-@media(max-width:480px){.infobox{float:none;width:100%;max-width:100%;margin:12px 0}}
-</style></head><body>
-<aside class="sidebar"><a href="index.html"><img class="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo"></a><div class="site-name">Clvbhouse Wiki</div><div class="sidebar-navigation">
-<div><div class="side-heading">navigation</div><div class="side-box"><a href="index.html">Main page</a><a href="ethan.html">Ethan</a><a href="ethanism.html">Ethanism</a><a href="saar-sparky.html">Saar Sparky</a><a href="camemac.html">Camemac</a><a href="arb.html">ARB</a><a href="#recent-changes">Recent changes</a><a href="#random">Random gem</a></div>
-<div class="side-heading">search</div><div class="side-box"><form class="search-box" id="wiki-search"><input id="search-input" type="search" placeholder="Search Clvbhouse Wiki"><button type="submit">Go</button> <button type="button" id="search-button">Search</button></form><div id="search-results"></div></div></div>
-<div><div class="side-heading">community</div><div class="side-box"><a href="ethanism.html">Ethanism</a><a href="ethan.html">Ethan</a><a href="index.html#operations">Operations</a><a href="index.html#nethanists">Nethanists</a></div><div class="side-heading">official sites</div><div class="side-box"><a href="https://github.com/clvbhouseWiki">GitHub</a><a href="https://www.youtube.com/@Ethanclubhouse-2026">Ethan's YouTube channel</a></div><div class="side-heading">tools</div><div class="side-box"><a href="javascript:window.print()">Printable version</a><a href="#page-information">Page information</a></div></div></div></aside>
-<div class="page-area"><div class="tabs-row"><nav class="tabs"><a class="tab active" href="index.html">article</a><a class="tab" href="#discussion">discussion</a><a class="tab" href="#view-source">view source</a><a class="tab" href="#history">history</a></nav><div class="account-tabs"><a href="#create-account">create account</a><a href="#login">log in</a><a href="#sandbox">sandbox</a></div></div>
-<main class="article"><div class="lock" title="Page information">🔒</div><h1 class="article-title">Clvbhouse Wiki</h1><div class="subtitle">From Clvbhouse Wiki, the free encyclopedia</div>
-<div class="notice"><strong>This page is literally about this very wiki.</strong><p>Here be <a href="ethanism.html">ideological glazing</a>, <a href="ethan.html">Ethan lore</a> and community history.</p></div><div class="clearfix">
-<aside class="infobox"><div class="infobox-title">Clvbhouse Wiki<small>'ki</small></div><div class="infobox-tabs"><span>Logo</span><span>Favicon</span></div><img class="infobox-logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki globe"><div class="infobox-brand">Clvbhouse Wiki</div><div class="infobox-section">Wiki</div><div class="info-row"><strong>Creator</strong>Saar Sparky</div><div class="info-row"><strong>Leaders</strong><a href="camemac.html">Camemac</a> and <a href="arb.html">ARB</a></div><div class="info-row"><strong>Chairmen</strong><a href="saar-sparky.html">Saar Sparky</a> and Sancho</div><div class="info-row"><strong>Central ideology</strong><a href="ethanism.html">Ethanism</a></div><div class="info-row"><strong>Subject</strong><a href="ethan.html">Ethan</a>, Clvbhouse and community lore</div><div class="info-row"><strong>Administrator</strong>No one i guess</div><div class="info-row"><strong>URL</strong>clvbhousewiki.github.io</div></aside>
-<p><strong>Clvbhouse Wiki</strong>, also known as <strong>Bieshi Wiki</strong> or <strong>Biwisi Wiki</strong> by its detractors, is an English-language community-driven encyclopedia documenting Ethan, the Clvbhouse community, imageboard culture, and the ideologies and events associated with them.</p>
-<p>Its principal ideological subject is <a href="ethanism.html"><strong>Ethanism</strong></a>, a right-wing ideology created around the glorification of <a href="ethan.html"><strong>Ethan</strong></a>. According to community lore, Ethanism helped make Ethan more popular and shaped much of the Clvbhouse community's identity.</p>
-<p>The wiki also documents community leadership, operations intended to grow the server, and the label <strong>Nethanist</strong>, used by Ethanists for people they regard as opponents of Ethan or Clvbhouse.</p>
-<div class="toc"><div class="toc-title">Contents</div><ol><li><a href="#influence">Influence</a></li><li><a href="ethan.html">Ethan</a></li><li><a href="ethanism.html">Ethanism</a></li><li><a href="#operations">Operations</a></li><li><a href="#nethanists">Nethanists</a></li><li><a href="#leadership">Leadership</a></li></ol></div>
-<h2 class="section-title" id="influence">Influence</h2><p>Ethanism grew from the Clvbhouse community's repeated praise and exaggerated celebration of Ethan. What began as a running joke developed into its own terminology, symbols, flag, and ideological identity. The claim that Ethanism contributed to Ethan's popularity is part of the community's own account.</p>
-<h2 class="section-title" id="operations">Operations</h2><p>The community has described three central objectives: converting the Ethan Clubhouse comment section to Ethanism, convincing Ethan to upload more content, and growing the server. These are community-stated goals, not independently verified outcomes.</p>
-<h2 class="section-title" id="nethanists">Nethanists</h2><p>A <strong>Nethanist</strong> is a person described by Ethanists as opposing Ethan or the Clvbhouse. Community examples include TADC fans, Jak Does Snacks fans, and people who dislike Ethan. These are community-defined labels; liking a show or creator does not automatically mean someone opposes Ethanism.</p>
-<h2 class="section-title" id="leadership">Leadership</h2><p>The community identifies <a href="camemac.html">Camemac</a> and <a href="arb.html">ARB</a> as leaders, and <a href="saar-sparky.html">Saar Sparky</a> and Sancho as chairmen.</p><h2 class="section-title">See also</h2><ul><li><a href="ethan.html">Ethan</a></li><li><a href="ethanism.html">Ethanism</a></li><li><a href="saar-sparky.html">Saar Sparky</a></li><li><a href="camemac.html">Camemac</a></li><li><a href="arb.html">ARB</a></li></ul></div>
-<div class="category-box"><strong>Categories:</strong> <a href="ethanism.html">Ethanism</a> | <a href="ethan.html">People</a> | <a href="index.html">Clvbhouse culture</a></div></main><footer class="footer">Clvbhouse Wiki — The Free Encyclopedia. Last edited by absolutely nobody.</footer></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CLVBHOUSE Wiki</title>
+<meta name="description" content="The CLVBHOUSE Wiki — an archive of articles, people, terminology, and internet culture.">
+
+<style>
+:root {
+    --green: #48ff83;
+    --light-green: #b5ff75;
+    --dark-green: #143c25;
+    --panel: rgba(13, 20, 15, 0.96);
+    --border: #31583b;
+    --text: #e8eee9;
+    --muted: #a1b1a4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #080b09;
+    background-image:
+        linear-gradient(rgba(0,0,0,.60), rgba(0,0,0,.80)),
+        url("asd1.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--light-green);
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+    text-shadow: 0 0 8px var(--green);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.page {
+    width: min(1250px, 96%);
+    margin: auto;
+    position: relative;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 10px;
+    border-bottom: 1px solid var(--border);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+}
+
+.logo-link {
+    display: inline-block;
+    cursor: pointer;
+    flex-shrink: 0;
+    transform-origin: center;
+}
+
+.logo-link img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    transition: filter .25s, transform .25s;
+    filter: drop-shadow(0 0 5px #48ff8340);
+}
+
+.logo-link:hover img {
+    transform: scale(1.08) rotate(-3deg);
+    filter: drop-shadow(0 0 14px var(--green));
+}
+
+.logo-link.logo-launch img {
+    animation: logoLaunch .72s cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+@keyframes logoLaunch {
+    0% {
+        transform: rotate(0deg) scale(1);
+        filter: brightness(1);
+    }
+    25% {
+        transform: rotate(-15deg) scale(1.18);
+        filter: brightness(1.8) drop-shadow(0 0 15px var(--green));
+    }
+    60% {
+        transform: rotate(370deg) scale(.85);
+        filter: brightness(1.8) drop-shadow(0 0 25px var(--green));
+    }
+    100% {
+        transform: rotate(720deg) scale(.05);
+        opacity: .1;
+        filter: brightness(2);
+    }
+}
+
+.site-title {
+    margin: 0;
+    font-size: clamp(19px, 3vw, 29px);
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--green);
+    text-shadow: 0 0 12px #48ff8350;
+}
+
+.site-subtitle {
+    margin: 3px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.header-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* =====================================
+   MAIN NAVIGATION
+===================================== */
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar a {
+    padding: 8px 13px;
+    color: #dce8df;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: background .2s, color .2s;
+}
+
+.navbar a:hover {
+    background: #193b25;
+    color: var(--green);
+}
+
+/* =====================================
+   GEMRALD BANNER
+===================================== */
+
+.gemrald-banner {
+    margin: 15px 0;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    border: 1px solid #8bff70;
+    border-radius: 8px;
+    background: linear-gradient(110deg, #0b351a, #35a746, #0c3218);
+    background-size: 200% 200%;
+    animation: gemraldGlow 5s ease infinite;
+    box-shadow: 0 0 16px #4dff6d35;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-align: center;
+}
+
+.gemrald-banner img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+    vertical-align: middle;
+    transition: transform .3s;
+}
+
+.gemrald-banner:hover img {
+    transform: rotate(12deg) scale(1.12);
+}
+
+.gemrald-banner a {
+    color: white;
+}
+
+@keyframes gemraldGlow {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* =====================================
+   SEARCH
+===================================== */
+
+.search-panel {
+    margin: 22px 0;
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--panel);
+    box-shadow: 0 8px 30px #0006;
+}
+
+.search-heading {
+    margin: 0 0 5px;
+    font-size: 24px;
+    color: var(--green);
+}
+
+.search-description {
+    margin: 0 0 16px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.search-row {
+    display: flex;
+    gap: 9px;
+}
+
+.search-input {
+    flex: 1;
+    min-width: 0;
+    padding: 13px 15px;
+    border: 1px solid #42694b;
+    border-radius: 6px;
+    outline: none;
+    color: white;
+    background: #080d09;
+}
+
+.search-input:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 12px #48ff8330;
+}
+
+.button {
+    border: 1px solid #3b9c59;
+    border-radius: 6px;
+    padding: 11px 15px;
+    color: #07150b;
+    background: var(--green);
+    font-weight: 900;
+    transition: transform .2s, box-shadow .2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px #48ff8355;
+}
+
+.button.secondary {
+    color: var(--green);
+    background: #112519;
+}
+
+.search-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 12px;
+}
+
+.search-results {
+    display: none;
+    margin-top: 18px;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.search-results.visible {
+    display: block;
+}
+
+.results-heading {
+    color: var(--green);
+    font-size: 13px;
+    margin-bottom: 9px;
+}
+
+.result-item {
+    display: block;
+    padding: 12px;
+    margin: 7px 0;
+    background: #101a12;
+    border: 1px solid #263e2b;
+    border-radius: 6px;
+}
+
+.result-item:hover {
+    border-color: var(--green);
+    background: #14261a;
+}
+
+.result-title {
+    font-weight: bold;
+    color: var(--light-green);
+}
+
+.result-description {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.no-results {
+    color: #c4cfc7;
+    padding: 12px 0;
+    font-size: 13px;
+}
+
+/* =====================================
+   PAGE LAYOUT
+===================================== */
+
+.content-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 285px;
+    gap: 22px;
+    align-items: start;
+}
+
+.main-column,
+.sidebar {
+    min-width: 0;
+}
+
+.panel {
+    margin-bottom: 22px;
+    padding: 22px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: var(--panel);
+    box-shadow: 0 8px 28px #0005;
+}
+
+.panel h2 {
+    margin: 0 0 15px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid var(--border);
+    color: var(--green);
+    font-size: 20px;
+}
+
+.panel h3 {
+    color: var(--light-green);
+}
+
+.panel p {
+    color: #d4ded6;
+}
+
+.welcome-title {
+    font-size: clamp(26px, 4vw, 38px);
+    margin: 0;
+    line-height: 1.2;
+    color: white;
+}
+
+.welcome-title span {
+    color: var(--green);
+    text-shadow: 0 0 14px #48ff8350;
+}
+
+.welcome-lead {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* =====================================
+   ARTICLE CARDS
+===================================== */
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.article-card {
+    display: block;
+    padding: 16px;
+    min-width: 0;
+    border: 1px solid #2b4932;
+    border-radius: 7px;
+    background: linear-gradient(135deg, #101b12, #0a100c);
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+
+.article-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--green);
+    box-shadow: 0 0 15px #48ff8315;
+}
+
+.article-card h3 {
+    margin: 0 0 5px;
+    color: var(--light-green);
+    font-size: 16px;
+}
+
+.article-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.article-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 3px 7px;
+    border: 1px solid #345c3d;
+    border-radius: 4px;
+    color: #9bffaa;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+/* =====================================
+   RANDOM ARTICLE PANEL
+===================================== */
+
+.random-panel {
+    text-align: center;
+    background:
+        radial-gradient(ellipse at top, #194729, transparent 75%),
+        var(--panel);
+}
+
+.random-symbol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 68px;
+    height: 68px;
+    margin: 2px 0 12px;
+    border: 1px solid #4d9c60;
+    border-radius: 50%;
+    color: var(--green);
+    font-size: 30px;
+    box-shadow: 0 0 22px #48ff8320;
+    animation: symbolFloat 4s ease-in-out infinite;
+}
+
+@keyframes symbolFloat {
+    50% { transform: translateY(-5px) rotate(8deg); }
+}
+
+/* =====================================
+   SIDEBAR
+===================================== */
+
+.sidebar .panel {
+    padding: 18px;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 10px 0;
+    border-bottom: 1px solid #263b2b;
+    color: #dce8df;
+    font-size: 13px;
+}
+
+.sidebar-link:last-child {
+    border-bottom: 0;
+}
+
+.sidebar-link span {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.status-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid #263b2b;
+    font-size: 12px;
+}
+
+.status-line:last-child {
+    border-bottom: 0;
+}
+
+.status-value {
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* =====================================
+   DIRECTORY
+===================================== */
+
+.directory-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.directory-list a {
+    display: block;
+    padding: 10px;
+    border: 1px solid #263e2b;
+    border-radius: 5px;
+    background: #0b120d;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+
+.directory-list a:hover {
+    border-color: var(--green);
+}
+
+.directory-letter {
+    color: var(--green);
+    font-weight: 900;
+    margin-right: 5px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    margin-top: 30px;
+    padding: 24px 10px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+/* =====================================
+   DECORATIVE BACKGROUND
+===================================== */
+
+.background-word {
+    position: fixed;
+    z-index: -1;
+    pointer-events: none;
+    color: var(--green);
+    opacity: .075;
+    font-size: clamp(25px, 5vw, 65px);
+    font-weight: 900;
+    white-space: nowrap;
+    animation: backgroundDrift 16s ease-in-out infinite;
+}
+
+.background-word.one {
+    top: 25%;
+    left: -70px;
+}
+
+.background-word.two {
+    right: -80px;
+    top: 70%;
+    animation-delay: -8s;
+}
+
+@keyframes backgroundDrift {
+    0%, 100% { transform: translateY(0) rotate(-7deg); }
+    50% { transform: translateY(-30px) rotate(5deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 850px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .sidebar .panel {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .page {
+        width: 94%;
+    }
+
+    .header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .header-links {
+        gap: 12px;
+    }
+
+    .search-row {
+        flex-direction: column;
+    }
+
+    .search-row .button {
+        width: 100%;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .directory-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .panel {
+        padding: 17px;
+    }
+
+    .gemrald-banner {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background-word one">CLVBHOUSE</div>
+<div class="background-word two">WIKI ARCHIVE</div>
+
+<div class="page">
+
+<!-- HEADER -->
+<header class="header">
+
+    <div class="logo-area">
+
+        <a href="index.html"
+           class="logo-link"
+           id="randomLogo"
+           title="Click for a random article!"
+           aria-label="Click to open a random article">
+
+            <img src="ethanwiki-logo-v2.png"
+                 alt="CLVBHOUSE Wiki logo">
+
+        </a>
+
+        <div>
+            <h1 class="site-title">CLVBHOUSE WIKI</h1>
+            <p class="site-subtitle">THE INTERNET ARCHIVE</p>
+        </div>
+
+    </div>
+
+    <div class="header-links">
+        <a href="#featured">Featured</a>
+        <a href="#recent">Recent</a>
+        <a href="#directory">All Articles</a>
+    </div>
+
+</header>
+
+<!-- NAVIGATION -->
+<nav class="navbar">
+    <a href="index.html">Main Page</a>
+    <a href="#search">Search</a>
+    <a href="#featured">Featured Articles</a>
+    <a href="#recent">Recent Additions</a>
+    <a href="#directory">Article Directory</a>
+</nav>
+
+<!-- GEMRALD BANNER -->
+<div class="gemrald-banner">
+    <a href="gem.html">
+        <img src="latest.png" alt="Gemrald">
+    </a>
+    <a href="gem.html">THIS PAGE IS A GEMRALD</a>
+</div>
+
+<!-- SEARCH -->
+<section class="search-panel" id="search">
+
+    <h2 class="search-heading">Search the CLVBHOUSE Wiki</h2>
+
+    <p class="search-description">
+        Find articles, terminology, people, and other entries in the archive.
+        Click the logo above if you want a random article instead.
+    </p>
+
+    <form id="searchForm">
+
+        <div class="search-row">
+
+            <input
+                class="search-input"
+                type="search"
+                id="searchInput"
+                placeholder="Search articles... e.g. BTW, Wood, DNB"
+                autocomplete="off"
+                aria-label="Search articles">
+
+            <button class="button" type="submit">
+                Search
+            </button>
+
+        </div>
+
+        <div class="search-actions">
+
+            <button class="button secondary"
+                    type="button"
+                    id="randomButton">
+                🎲 Random Article
+            </button>
+
+            <button class="button secondary"
+                    type="button"
+                    id="clearSearch">
+                Clear Search
+            </button>
+
+        </div>
+
+    </form>
+
+    <div class="search-results" id="searchResults" aria-live="polite">
+        <div class="results-heading" id="resultsHeading"></div>
+        <div id="resultsList"></div>
+    </div>
+
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="content-layout">
+
+    <main class="main-column">
+
+        <!-- WELCOME -->
+        <section class="panel">
+
+            <h2>Welcome to the CLVBHOUSE Wiki</h2>
+
+            <h3 class="welcome-title">
+                Explore the <span>archive.</span>
+            </h3>
+
+            <p class="welcome-lead">
+                A growing collection of articles, terminology, internet
+                culture, fictional concepts, and other entries.
+            </p>
+
+            <p>
+                Use the search bar to locate a specific page, browse the
+                featured articles below, or explore the complete directory.
+                New entries can be added to the archive as it grows.
+            </p>
+
+        </section>
+
+        <!-- FEATURED -->
+        <section class="panel" id="featured">
+
+            <h2>Featured Articles</h2>
+
+            <div class="article-grid" id="featuredGrid"></div>
+
+        </section>
+
+        <!-- RECENT -->
+        <section class="panel" id="recent">
+
+            <h2>Recent Additions</h2>
+
+            <div class="article-grid" id="recentGrid"></div>
+
+        </section>
+
+        <!-- DIRECTORY -->
+        <section class="panel" id="directory">
+
+            <h2>Article Directory</h2>
+
+            <p class="welcome-lead">
+                Every article currently indexed on the main page.
+                Select an entry to open it.
+            </p>
+
+            <div class="directory-list" id="directoryList"></div>
+
+        </section>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <section class="panel random-panel">
+
+            <div class="random-symbol">↗</div>
+
+            <h2>Feeling Random?</h2>
+
+            <p>
+                Take a trip through the archive and let the wiki choose
+                your next destination.
+            </p>
+
+            <button class="button" type="button" id="sidebarRandom">
+                Open Random Article
+            </button>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Quick Navigation</h2>
+
+            <a class="sidebar-link" href="By_the_way.html">
+                By the Way
+                <span>Meaning and usage of BTW</span>
+            </a>
+
+            <a class="sidebar-link" href="Though.html">
+                Though
+                <span>Definition, grammar, and usage</span>
+            </a>
+
+            <a class="sidebar-link" href="Wood.html">
+                Wood
+                <span>The literal definition of wood</span>
+            </a>
+
+            <a class="sidebar-link" href="gem.html">
+                Gemrald
+                <span>The Gemrald entry</span>
+            </a>
+
+            <a class="sidebar-link" href="yehudyakim.html">
+                Yehudyakim
+                <span>An entry in the archive</span>
+            </a>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Archive Statistics</h2>
+
+            <div class="status-line">
+                <span>Indexed articles</span>
+                <span class="status-value" id="articleCount">0</span>
+            </div>
+
+            <div class="status-line">
+                <span>Search</span>
+                <span class="status-value">ONLINE</span>
+            </div>
+
+            <div class="status-line">
+                <span>Random article</span>
+                <span class="status-value">READY</span>
+            </div>
+
+        </section>
+
+        <section class="panel">
+
+            <h2>Search Suggestions</h2>
+
+            <p class="welcome-lead">
+                Try searching for:
+            </p>
+
+            <a class="sidebar-link search-suggestion" href="#search" data-query="BTW">
+                BTW
+            </a>
+
+            <a class="sidebar-link search-suggestion" href="#search" data-query="Though">
+                Though
+            </a>
+
+            <a class="sidebar-link search-suggestion" href="#search" data-query="Wood">
+                Wood
+            </a>
+
+            <a class="sidebar-link search-suggestion" href="#search" data-query="DNB">
+                DNB
+            </a>
+
+            <a class="sidebar-link search-suggestion" href="#search" data-query="Agartha">
+                Agartha
+            </a>
+
+        </section>
+
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-links">
+        <a href="index.html">Main Page</a>
+        <a href="#search">Search</a>
+        <a href="#featured">Featured</a>
+        <a href="#directory">Directory</a>
+    </div>
+
+    <p>
+        CLVBHOUSE Wiki — The Internet Archive
+    </p>
+
+    <p>
+        This website is an independently maintained collection of articles.
+    </p>
+
+</footer>
+
+</div>
+
 <script>
-const pages=[["Clvbhouse Wiki","index.html"],["Ethan","ethan.html"],["Ethanism","ethanism.html"],["Saar Sparky","saar-sparky.html"],["Camemac","camemac.html"],["ARB","arb.html"]];
-const input=document.getElementById("search-input"),results=document.getElementById("search-results");
-function searchWiki(e){if(e)e.preventDefault();const q=input.value.trim().toLowerCase();results.replaceChildren();if(!q){input.focus();return;}const matches=pages.filter(p=>p[0].toLowerCase().includes(q));if(!matches.length){results.textContent="No matching pages found.";return;}matches.forEach(p=>{const a=document.createElement("a");a.href=p[1];a.textContent=p[0];results.appendChild(a);});}
-document.getElementById("wiki-search").addEventListener("submit",searchWiki);document.getElementById("search-button").addEventListener("click",searchWiki);
-</script></body></html>
+/* =====================================
+   ARTICLE DATABASE
+
+   When adding an article, add it here.
+   Make sure the filename matches the actual
+   GitHub repository filename exactly.
+===================================== */
+
+const articles = [
+
+    {
+        title: "Ethan",
+        file: "ethan.html",
+        description: "An article about Ethan.",
+        category: "People",
+        aliases: ["ethan"]
+    },
+
+    {
+        title: "Ethanism",
+        file: "ethanism.html",
+        description: "An entry about Ethanism.",
+        category: "Concepts",
+        aliases: ["ethanism"]
+    },
+
+    {
+        title: "Saar Sparky",
+        file: "saar-sparky.html",
+        description: "An article about Saar Sparky.",
+        category: "People",
+        aliases: ["saar", "sparky"]
+    },
+
+    {
+        title: "Camemac",
+        file: "camemac.html",
+        description: "An entry about Camemac.",
+        category: "People",
+        aliases: ["came mac"]
+    },
+
+    {
+        title: "ARB",
+        file: "arb.html",
+        description: "The ARB article.",
+        category: "Articles",
+        aliases: ["arb"]
+    },
+
+    {
+        title: "SoySpeak",
+        file: "soyspeak.html",
+        description: "An entry about SoySpeak and its terminology.",
+        category: "Terminology",
+        aliases: ["soy speak", "soy"]
+    },
+
+    {
+        title: "Gemrald",
+        file: "gem.html",
+        description: "The Gemrald entry.",
+        category: "Featured",
+        aliases: ["gem", "gemrald", "gemrald page"]
+    },
+
+    {
+        title: "Yehudyakim",
+        file: "yehudyakim.html",
+        description: "An article about Yehudyakim, also known as DNB.",
+        category: "Places",
+        aliases: ["dnb", "agartha", "yehudiakim"]
+    },
+
+    {
+        title: "Troons",
+        file: "Troons.html",
+        description: "An entry discussing the term and its online usage.",
+        category: "Terminology",
+        aliases: ["troon", "troons"]
+    },
+
+    {
+        title: "By the Way",
+        file: "By_the_way.html",
+        description: "The literal meaning, usage, and examples of “by the way” and BTW.",
+        category: "Terminology",
+        aliases: ["btw", "by the way", "by_the_way", "incidentally"]
+    },
+
+    {
+        title: "Though",
+        file: "Though.html",
+        description: "The definition, grammar, and online usage of the word “though.”",
+        category: "Terminology",
+        aliases: ["tho", "although", "even though", "however"]
+    },
+
+    {
+        title: "Wood",
+        file: "Wood.html",
+        description: "The literal definition, composition, categories, and uses of wood.",
+        category: "Science",
+        aliases: ["wood", "tree", "trees", "cellulose", "lignin", "lumber"]
+    }
+
+];
+
+
+/* =====================================
+   ARTICLE CARD BUILDER
+===================================== */
+
+function createArticleCard(article) {
+
+    return `
+        <a class="article-card" href="${article.file}">
+            <h3>${article.title}</h3>
+            <p>${article.description}</p>
+            <span class="article-tag">${article.category}</span>
+        </a>
+    `;
+}
+
+
+/* =====================================
+   FEATURED ARTICLES
+===================================== */
+
+const featuredTitles = [
+    "By the Way",
+    "Though",
+    "Wood",
+    "Gemrald",
+    "Yehudyakim",
+    "Ethanism"
+];
+
+const featuredGrid = document.getElementById("featuredGrid");
+
+featuredGrid.innerHTML = featuredTitles
+    .map(title => articles.find(article => article.title === title))
+    .filter(Boolean)
+    .map(createArticleCard)
+    .join("");
+
+
+/* =====================================
+   RECENT ADDITIONS
+===================================== */
+
+const recentTitles = [
+    "By the Way",
+    "Though",
+    "Wood",
+    "Troons",
+    "Yehudyakim"
+];
+
+const recentGrid = document.getElementById("recentGrid");
+
+recentGrid.innerHTML = recentTitles
+    .map(title => articles.find(article => article.title === title))
+    .filter(Boolean)
+    .map(createArticleCard)
+    .join("");
+
+
+/* =====================================
+   ARTICLE DIRECTORY
+===================================== */
+
+const directoryList = document.getElementById("directoryList");
+
+const sortedArticles = [...articles].sort((a, b) =>
+    a.title.localeCompare(b.title)
+);
+
+directoryList.innerHTML = sortedArticles.map(article => {
+
+    const firstLetter = article.title.charAt(0).toUpperCase();
+
+    return `
+        <a href="${article.file}">
+            <span class="directory-letter">${firstLetter}</span>
+            ${article.title}
+        </a>
+    `;
+
+}).join("");
+
+document.getElementById("articleCount").textContent = articles.length;
+
+
+/* =====================================
+   SEARCH ENGINE
+===================================== */
+
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("searchInput");
+const searchResults = document.getElementById("searchResults");
+const resultsHeading = document.getElementById("resultsHeading");
+const resultsList = document.getElementById("resultsList");
+
+function normalizeText(value) {
+
+    return value
+        .toLowerCase()
+        .replace(/[_-]/g, " ")
+        .replace(/[^\p{L}\p{N}\s]/gu, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+
+}
+
+function findMatchingArticles(query) {
+
+    const normalizedQuery = normalizeText(query);
+
+    if (!normalizedQuery) {
+        return [];
+    }
+
+    return articles
+        .map(article => {
+
+            const title = normalizeText(article.title);
+            const description = normalizeText(article.description);
+            const category = normalizeText(article.category);
+
+            const aliases = article.aliases
+                .map(normalizeText);
+
+            let score = 0;
+
+            if (title === normalizedQuery) {
+                score = 100;
+            } else if (aliases.includes(normalizedQuery)) {
+                score = 95;
+            } else if (title.startsWith(normalizedQuery)) {
+                score = 80;
+            } else if (title.includes(normalizedQuery)) {
+                score = 70;
+            } else if (aliases.some(alias => alias.includes(normalizedQuery))) {
+                score = 60;
+            } else if (description.includes(normalizedQuery)) {
+                score = 40;
+            } else if (category.includes(normalizedQuery)) {
+                score = 20;
+            }
+
+            return {
+                article,
+                score
+            };
+
+        })
+        .filter(result => result.score > 0)
+        .sort((a, b) => b.score - a.score)
+        .map(result => result.article);
+
+}
+
+function performSearch(query, openExactMatch = false) {
+
+    const cleanQuery = query.trim();
+
+    if (!cleanQuery) {
+
+        searchResults.classList.remove("visible");
+        resultsList.innerHTML = "";
+        resultsHeading.textContent = "";
+
+        return;
+    }
+
+    const matches = findMatchingArticles(cleanQuery);
+
+    searchResults.classList.add("visible");
+
+    const normalizedQuery = normalizeText(cleanQuery);
+
+    const exactMatch = articles.find(article =>
+        normalizeText(article.title) === normalizedQuery ||
+        article.aliases.some(alias =>
+            normalizeText(alias) === normalizedQuery
+        )
+    );
+
+    if (openExactMatch && exactMatch) {
+        window.location.href = exactMatch.file;
+        return;
+    }
+
+    resultsHeading.textContent =
+        matches.length === 1
+            ? "1 matching article"
+            : `${matches.length} matching articles`;
+
+    if (matches.length === 0) {
+
+        resultsList.innerHTML = `
+            <div class="no-results">
+                No matching articles found for
+                <strong>${escapeHTML(cleanQuery)}</strong>.
+                Try another search term.
+            </div>
+        `;
+
+        return;
+    }
+
+    resultsList.innerHTML = matches.map(article => `
+        <a class="result-item" href="${article.file}">
+            <div class="result-title">${escapeHTML(article.title)}</div>
+            <div class="result-description">
+                ${escapeHTML(article.description)}
+            </div>
+        </a>
+    `).join("");
+
+}
+
+function escapeHTML(value) {
+
+    return value.replace(/[&<>"']/g, character => {
+
+        const entities = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        };
+
+        return entities[character];
+
+    });
+
+}
+
+searchInput.addEventListener("input", () => {
+    performSearch(searchInput.value);
+});
+
+searchForm.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    performSearch(searchInput.value, true);
+
+});
+
+
+/* =====================================
+   CLEAR SEARCH
+===================================== */
+
+document.getElementById("clearSearch").addEventListener("click", () => {
+
+    searchInput.value = "";
+    searchResults.classList.remove("visible");
+    resultsList.innerHTML = "";
+    resultsHeading.textContent = "";
+    searchInput.focus();
+
+});
+
+
+/* =====================================
+   RANDOM ARTICLE
+===================================== */
+
+function openRandomArticle() {
+
+    const currentPage = (
+        window.location.pathname.split("/").pop() || "index.html"
+    ).toLowerCase();
+
+    let choices = articles.filter(article =>
+        article.file.toLowerCase() !== currentPage
+    );
+
+    if (choices.length === 0) {
+        choices = articles;
+    }
+
+    const randomArticle =
+        choices[Math.floor(Math.random() * choices.length)];
+
+    if (randomArticle) {
+        window.location.href = randomArticle.file;
+    }
+
+}
+
+document.getElementById("randomButton")
+    .addEventListener("click", openRandomArticle);
+
+document.getElementById("sidebarRandom")
+    .addEventListener("click", openRandomArticle);
+
+
+/* =====================================
+   LOGO SPIN + RANDOM ARTICLE
+===================================== */
+
+const randomLogo = document.getElementById("randomLogo");
+
+randomLogo.addEventListener("click", event => {
+
+    event.preventDefault();
+
+    if (randomLogo.classList.contains("logo-launch")) {
+        return;
+    }
+
+    randomLogo.classList.add("logo-launch");
+
+    window.setTimeout(() => {
+        openRandomArticle();
+    }, 650);
+
+});
+
+
+/* =====================================
+   SEARCH SUGGESTIONS
+===================================== */
+
+document.querySelectorAll(".search-suggestion").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        const query = link.dataset.query;
+
+        searchInput.value = query;
+
+        performSearch(query);
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
