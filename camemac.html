@@ -1,36 +1,125 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Camemac — Clvbhouse Wiki</title><style>
-*{box-sizing:border-box}body{margin:0;color:#202122;font:13px Arial,Helvetica,sans-serif;background:#d5d9ef url("asd1.png") center center/cover no-repeat fixed}
-a{color:#0645ad;text-decoration:none}a:visited{color:#663399}a:hover{text-decoration:underline}
-.sidebar{position:absolute;top:0;left:0;width:162px;padding:5px}.logo{width:150px;height:125px;object-fit:contain;display:block;margin:0 auto}
-.site-name{font:23px Georgia,serif;text-align:center;margin:0 0 15px;color:#171717}.side-heading{margin:10px 0 3px;font-size:12px}
-.side-box{background:rgba(255,255,255,.95);border:1px solid #a2a9b1;border-radius:4px;padding:6px 9px;margin-bottom:8px}.side-box a{display:block;padding:3px 0}.side-box a:before{content:"▪";color:#7894a5;margin-right:7px}
-.search-box input{width:100%;padding:5px;border:1px solid #a2a9b1}.search-box button{margin-top:4px;cursor:pointer}#search-results{margin-top:6px;overflow-wrap:anywhere}#search-results a{display:block;margin:5px 0}
-.page-area{margin-left:162px;margin-right:8px}.tabs-row{height:36px;display:flex;align-items:flex-end;justify-content:space-between;gap:8px}.tabs{display:flex;gap:3px}
-.tab{padding:8px 12px 6px;background:#edf0ff;border:1px solid #a2a9b1;border-bottom:none;border-radius:8px 8px 0 0;white-space:nowrap}.tab.active{background:white;border-top:2px solid #e5a600;padding-top:7px}
-.account-tabs{display:flex;gap:12px;padding:0 8px 8px;white-space:nowrap;font-size:12px}.article{background:white;border:1px solid #a2a9b1;padding:18px 14px 35px;min-height:900px;position:relative}
-.article-title{font:normal 26px Georgia,"Times New Roman",serif;margin:0;padding-bottom:5px;border-bottom:1px solid #a2a9b1}.subtitle{margin:5px 0 19px}.lock{position:absolute;right:8px;top:10px;font-size:19px}
-.notice{width:fit-content;max-width:100%;margin:0 auto 12px;padding:12px 18px;text-align:center;background:#e6e9ff;border:1px solid #8888ff;box-shadow:inset 0 0 0 3px #f5f5ff}.notice strong{font-size:18px}.notice p{margin:7px 0 0}.article p{line-height:1.6}
-.infobox{float:right;width:288px;max-width:42%;margin:0 0 15px 18px;padding:4px;background:#edf0ff;border:1px solid #a2a9b1}.infobox-title{padding:8px;background:#d5d9ef;text-align:center;font-weight:bold;font-size:14px}.infobox-title small{display:block;margin-top:5px;font-style:italic;font-weight:normal}
-.infobox-tabs{text-align:center;padding:5px}.infobox-tabs span{display:inline-block;padding:5px 10px;background:#f8f9fa}.infobox-logo{display:block;width:100%;height:auto;max-height:280px;object-fit:contain;margin:4px auto}
-.infobox-brand{font:30px Georgia,serif;text-align:center;overflow-wrap:anywhere;margin:2px 0 8px}.infobox-section{background:#d5d9ef;padding:5px;text-align:center;font-weight:bold}
-.info-row{padding:6px;border:1px solid #d4d9ef;line-height:1.5;overflow-wrap:anywhere}.info-row strong{display:block}.toc{display:table;max-width:100%;border:1px solid #a2a9b1;background:#f8f9fa;padding:10px;margin:15px 0 18px}
-.toc-title{text-align:center;font-weight:bold;margin-bottom:8px}.toc ol{margin:0;padding-left:23px}.toc li{padding:3px 0}.section-title{font:normal 20px Georgia,serif;border-bottom:1px solid #a2a9b1;margin:24px 0 10px;padding-bottom:3px}
-.category-box{margin-top:40px;padding:8px;background:#f8f9fa;border:1px solid #a2a9b1}.footer{padding:20px 10px;color:#54595d;font-size:12px}.clearfix:after{content:"";display:block;clear:both}
-.ethan-banner{margin:0 0 12px;min-height:100px;background:#d5d9ef center center/cover repeat;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.ethan-banner span{font-size:clamp(24px,4vw,48px);font-weight:900;letter-spacing:2px;text-align:center;color:#ff0000;text-shadow:2px 3px 2px #111,0 0 8px #111;animation:rainbow 3s linear infinite}
-@keyframes rainbow{0%{color:#ff2020}16%{color:#ff9a20}33%{color:#ffff35}50%{color:#25df58}66%{color:#279bff}83%{color:#c53cff}100%{color:#ff2020}}
-@media(max-width:800px){.sidebar{position:static;width:100%;background:rgba(213,217,239,.95)}.logo{width:100px;height:85px}.site-name{font-size:22px;margin-bottom:8px}.sidebar-navigation{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 8px}.page-area{margin:0 5px}.account-tabs{display:none}.tabs-row{overflow-x:auto}.infobox{width:45%;max-width:45%;margin-left:10px}.infobox-brand{font-size:20px}}
-@media(max-width:480px){.infobox{float:none;width:100%;max-width:100%;margin:12px 0}}
-</style></head><body>
-<aside class="sidebar"><a href="index.html"><img class="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo"></a><div class="site-name">Clvbhouse Wiki</div><div class="sidebar-navigation">
-<div><div class="side-heading">navigation</div><div class="side-box"><a href="index.html">Main page</a><a href="ethan.html">Ethan</a><a href="ethanism.html">Ethanism</a><a href="saar-sparky.html">Saar Sparky</a><a href="camemac.html">Camemac</a><a href="arb.html">ARB</a><a href="#recent-changes">Recent changes</a><a href="#random">Random gem</a></div>
-<div class="side-heading">search</div><div class="side-box"><form class="search-box" id="wiki-search"><input id="search-input" type="search" placeholder="Search Clvbhouse Wiki"><button type="submit">Go</button> <button type="button" id="search-button">Search</button></form><div id="search-results"></div></div></div>
-<div><div class="side-heading">community</div><div class="side-box"><a href="ethanism.html">Ethanism</a><a href="ethan.html">Ethan</a><a href="index.html#operations">Operations</a><a href="index.html#nethanists">Nethanists</a></div><div class="side-heading">official sites</div><div class="side-box"><a href="https://github.com/clvbhouseWiki">GitHub</a><a href="https://www.youtube.com/@Ethanclubhouse-2026">Ethan's YouTube channel</a></div><div class="side-heading">tools</div><div class="side-box"><a href="javascript:window.print()">Printable version</a><a href="#page-information">Page information</a></div></div></div></aside>
-<div class="page-area"><div class="tabs-row"><nav class="tabs"><a class="tab active" href="camemac.html">article</a><a class="tab" href="#discussion">discussion</a><a class="tab" href="#view-source">view source</a><a class="tab" href="#history">history</a></nav><div class="account-tabs"><a href="#create-account">create account</a><a href="#login">log in</a><a href="#sandbox">sandbox</a></div></div>
-<main class="article"><div class="lock" title="Page information">🔒</div><h1 class="article-title">Camemac</h1><div class="subtitle">From Clvbhouse Wiki, the free encyclopedia</div><div class="ethan-banner"><span>WE LOVE ETHAN</span></div><div class="clearfix"><aside class="infobox"><div class="infobox-title">Camemac<small>Clvbhouse profile</small></div><div class="infobox-section">Community information</div><div class="info-row"><strong>Name</strong>Camemac</div><div class="info-row"><strong>Role</strong>Leader</div><div class="info-row"><strong>Associated community</strong><a href="index.html">Clvbhouse</a></div><div class="info-row"><strong>Associated ideology</strong><a href="ethanism.html">Ethanism</a></div></aside><p><strong>Camemac</strong> is listed on Clvbhouse Wiki as one of the leaders of the Clvbhouse community. This page is a placeholder and will be expanded when additional details are provided by the site's editor.</p><h2 class="section-title">Biography</h2><p><em>This section has not yet been written.</em></p><h2 class="section-title">Role in Clvbhouse</h2><p><em>More information will be added later.</em></p><h2 class="section-title">See also</h2><ul><li><a href="ethan.html">Ethan</a></li><li><a href="ethanism.html">Ethanism</a></li><li><a href="index.html">Clvbhouse Wiki</a></li></ul></div><div class="category-box"><strong>Categories:</strong> <a href="ethanism.html">Ethanism</a> | <a href="ethan.html">People</a> | <a href="index.html">Clvbhouse culture</a></div></main><footer class="footer">Clvbhouse Wiki — The Free Encyclopedia. Last edited by absolutely nobody.</footer></div>
-<script>
-const pages=[["Clvbhouse Wiki","index.html"],["Ethan","ethan.html"],["Ethanism","ethanism.html"],["Saar Sparky","saar-sparky.html"],["Camemac","camemac.html"],["ARB","arb.html"]];
-const input=document.getElementById("search-input"),results=document.getElementById("search-results");
-function searchWiki(e){if(e)e.preventDefault();const q=input.value.trim().toLowerCase();results.replaceChildren();if(!q){input.focus();return;}const matches=pages.filter(p=>p[0].toLowerCase().includes(q));if(!matches.length){results.textContent="No matching pages found.";return;}matches.forEach(p=>{const a=document.createElement("a");a.href=p[1];a.textContent=p[0];results.appendChild(a);});}
-document.getElementById("wiki-search").addEventListener("submit",searchWiki);document.getElementById("search-button").addEventListener("click",searchWiki);
-</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camemac - Clvbhouse Wiki</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#202122;background:#f6f6f6 url("asd1.png") center/cover fixed}
+a{color:#0645ad;text-decoration:none}a:hover{text-decoration:underline}
+#header{background:#ffff;border-bottom:1px solid #a7a7a7;padding:12px 24px;display:flex;align-items:center;gap:16px}
+#logo{width:64px;height:64px;object-fit:contain}
+#site-title{font:27px Georgia,"Times New Roman",serif;color:#202122}
+#site-subtitle{font-size:12px;color:#54595d;margin-top:4px}
+#layout{display:flex;max-width:1450px;margin:auto;gap:20px;padding:20px;align-items:flex-start}
+#sidebar{width:180px;flex-shrink:0;background:#ffff;border:1px solid #a2a9b1;padding:14px;font-size:13px}
+#sidebar h3{font-size:13px;border-bottom:1px solid #a2a9b1;padding-bottom:6px}
+#sidebar a{display:block;padding:5px 0}
+#content{flex:1;min-width:0;background:#ffff;border:1px solid #a2a9b1;padding:24px;box-shadow:0 1px 4px #0002}
+h1{font:normal 32px Georgia,"Times New Roman",serif;border-bottom:1px solid #a2a9b1;padding-bottom:8px;margin:0 0 8px}
+h2{font:normal 24px Georgia,"Times New Roman",serif;border-bottom:1px solid #a2a9b1;padding-bottom:5px;margin-top:32px}
+.subtitle{font-size:13px;color:#54595d;margin-bottom:20px}
+.infobox{float:right;width:300px;max-width:100%;border:1px solid #a2a9b1;background:#f8f9fa;margin:0 0 20px 22px;padding:8px;font-size:13px}
+.infobox-title{text-align:center;font-size:19px;font-weight:bold;background:#eaecf0;padding:8px;margin-bottom:8px}
+.infobox img{display:block;width:100%;max-height:230px;object-fit:contain;background:#fff}
+.infobox table{width:100%;border-collapse:collapse}
+.infobox td{padding:6px 4px;vertical-align:top;border-top:1px solid #eaecf0}
+.infobox td:first-child{font-weight:bold;width:38%}
+.toc{display:table;background:#f8f9fa;border:1px solid #a2a9b1;padding:12px 22px;margin:20px 0;font-size:13px}
+.toc-title{text-align:center;font-weight:bold;margin-bottom:8px}
+.toc ol{margin:0;padding-left:22px}.toc li{padding:3px 0}
+.note{border-left:4px solid #72777d;background:#f8f9fa;padding:10px 14px;margin:15px 0;font-size:13px}
+#footer{max-width:1450px;margin:auto;padding:0 20px 25px;font-size:12px;color:#54595d}
+@media(max-width:800px){#layout{padding:10px;gap:10px}#sidebar{width:145px}#content{padding:15px}.infobox{float:none;width:100%;margin:0 0 20px}}
+@media(max-width:560px){#layout{display:block}#sidebar{width:100%;margin-bottom:12px}#sidebar a{display:inline-block;margin-right:10px}h1{font-size:27px}}
+</style>
+</head>
+<body>
+<header id="header">
+<a href="index.html"><img id="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo"></a>
+<div><div id="site-title">Clvbhouse Wiki</div><div id="site-subtitle">The encyclopedia of the Clvbhouse community</div></div>
+</header>
+
+<div id="layout">
+<aside id="sidebar">
+<h3>Navigation</h3>
+<a href="index.html">Main page</a>
+<a href="ethan.html">Ethan</a>
+<a href="ethanism.html">Ethanism</a>
+<a href="saar-sparky.html">Saar Sparky</a>
+<a href="camemac.html">Camemac</a>
+<a href="arb.html">ARB</a>
+<a href="soyspeak.html">Soyspeak</a>
+</aside>
+
+<main id="content">
+<h1>Camemac</h1>
+<div class="subtitle">From Clvbhouse Wiki, the community encyclopedia</div>
+
+<aside class="infobox">
+<div class="infobox-title">Camemac</div>
+<a href="camemac_flag_25th_december.png" target="_blank">
+<img src="camemac_flag_25th_december.png" alt="Camemac's flag">
+</a>
+<table>
+<tr><td>Known as</td><td>Camemac</td></tr>
+<tr><td>Gender</td><td>Male</td></tr>
+<tr><td>Origin</td><td>Scotland</td></tr>
+<tr><td>Known for</td><td>Founder of Ethanism</td></tr>
+<tr><td>Affiliation</td><td>Ethanism</td></tr>
+<tr><td>Associated figure</td><td><a href="ethan.html">Ethan</a></td></tr>
+</table>
+</aside>
+
+<p><b>Camemac</b> is a member of the Clvbhouse community and the founder of <a href="ethanism.html">Ethanism</a>. He is from Scotland and is associated with the ideology's development and organization.</p>
+
+<p>Camemac is identified as one of the leaders of Ethanism, alongside <a href="arb.html">ARB</a>. His flag, named <code>camemac_flag_25th_december.png</code>, is displayed in the infobox.</p>
+
+<div style="clear:both"></div>
+<nav class="toc">
+<div class="toc-title">Contents</div>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#ethanism">Role in Ethanism</a></li>
+<li><a href="#flag">Flag</a></li>
+<li><a href="#see-also">See also</a></li>
+</ol>
+</nav>
+
+<section id="overview">
+<h2>Overview</h2>
+<p>Camemac is known primarily for founding Ethanism. Additional biographical details have not yet been documented on this page.</p>
+<div class="note"><b>Article note:</b> This page records the information currently available and can be expanded later.</div>
+</section>
+
+<section id="ethanism">
+<h2>Role in Ethanism</h2>
+<p>Camemac is described as the founder of <a href="ethanism.html">Ethanism</a> and one of its leaders. Ethanism is a community-defined ideology centered on <a href="ethan.html">Ethan</a> and the Clvbhouse community.</p>
+</section>
+
+<section id="flag">
+<h2>Flag</h2>
+<p>The flag associated with Camemac is shown below.</p>
+<div style="max-width:440px;border:1px solid #a2a9b1;background:#f8f9fa;padding:10px;text-align:center">
+<a href="camemac_flag_25th_december.png" target="_blank">
+<img src="camemac_flag_25th_december.png" alt="Camemac flag" style="display:block;width:100%;max-height:280px;object-fit:contain;background:white">
+</a>
+<div style="font-size:13px;margin-top:8px">Camemac's flag</div>
+</div>
+</section>
+
+<section id="see-also">
+<h2>See also</h2>
+<ul>
+<li><a href="ethanism.html">Ethanism</a></li>
+<li><a href="arb.html">ARB</a></li>
+<li><a href="ethan.html">Ethan</a></li>
+<li><a href="saar-sparky.html">Saar Sparky</a></li>
+</ul>
+</section>
+</main>
+</div>
+<footer id="footer">This page is part of Clvbhouse Wiki.</footer>
+</body>
+</html>
