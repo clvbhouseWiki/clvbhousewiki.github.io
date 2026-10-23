@@ -13,8 +13,9 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: #202122;
     background: #f6f6f6 url("asd1.png") center center / cover no-repeat fixed;
+    color: #202122;
+    font-size: 14px;
 }
 
 a {
@@ -26,157 +27,122 @@ a:hover {
     text-decoration: underline;
 }
 
-header {
-    min-height: 95px;
-    padding: 14px 28px;
+#header {
+    background: rgba(255,255,255,0.96);
+    border-bottom: 1px solid #a7d7f9;
+    padding: 12px 24px;
     display: flex;
     align-items: center;
-    gap: 16px;
-    background: rgba(255,255,255,0.96);
-    border-bottom: 1px solid #a7a7a7;
+    gap: 15px;
 }
 
-.logo {
-    width: 68px;
-    height: 68px;
+#logo {
+    width: 58px;
+    height: 58px;
     object-fit: contain;
 }
 
-.site-title {
+#site-title {
+    font-size: 27px;
     font-family: Georgia, serif;
-    font-size: 30px;
-    color: #202122;
 }
 
-.site-subtitle {
-    margin-top: 5px;
+#site-subtitle {
     color: #54595d;
-    font-size: 13px;
+    font-size: 12px;
 }
 
-.layout {
+#layout {
     display: flex;
-    align-items: flex-start;
     gap: 22px;
     max-width: 1450px;
-    margin: 22px auto;
-    padding: 0 18px;
+    margin: auto;
+    padding: 20px;
+    align-items: flex-start;
 }
 
-.sidebar {
-    flex: 0 0 185px;
-    padding: 15px;
+#sidebar {
+    width: 175px;
+    flex-shrink: 0;
     background: rgba(255,255,255,0.94);
-    border: 1px solid #a7a7a7;
-    font-size: 14px;
+    padding: 15px;
+    border: 1px solid #c8ccd1;
 }
 
-.sidebar h3 {
-    margin: 0 0 10px;
-    font-size: 15px;
-    border-bottom: 1px solid #a7a7a7;
-    padding-bottom: 6px;
+#sidebar h3 {
+    font-size: 13px;
+    border-bottom: 1px solid #a2a9b1;
+    padding-bottom: 5px;
+    margin-top: 0;
 }
 
-.sidebar a {
+#sidebar a {
     display: block;
-    padding: 5px 0;
+    margin: 9px 0;
 }
 
-.content {
-    min-width: 0;
+#content {
     flex: 1;
-    padding: 25px;
+    min-width: 0;
     background: rgba(255,255,255,0.97);
-    border: 1px solid #a7a7a7;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.12);
+    border: 1px solid #a7d7f9;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
 h1 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-weight: normal;
-    font-size: 34px;
+    font-size: 32px;
     border-bottom: 1px solid #a2a9b1;
     padding-bottom: 8px;
-    margin: 0 0 15px;
+    margin-top: 0;
 }
 
 h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
+    font-size: 23px;
     font-weight: normal;
-    font-size: 24px;
     border-bottom: 1px solid #a2a9b1;
     padding-bottom: 5px;
     margin-top: 30px;
 }
 
 h3 {
-    font-size: 18px;
+    font-family: Georgia, serif;
+    font-size: 17px;
 }
 
-.gemrald-banner {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 13px;
-    margin: 12px 0 22px;
-    background: linear-gradient(
-        100deg,
-        #c6ffb5,
-        #edffe8,
-        #8ef58b,
-        #efffe9,
-        #b5ff9e
-    );
-    border: 1px solid #39b54a;
-    box-shadow:
-        inset 0 0 12px rgba(40, 200, 65, 0.25),
-        0 0 8px rgba(40, 200, 65, 0.22);
+p {
+    line-height: 1.65;
 }
 
-.gemrald-banner img {
-    width: 38px;
-    height: 38px;
-    object-fit: contain;
-    filter: drop-shadow(0 0 5px #22d644);
-}
-
-.gemrald-banner a {
-    font-weight: 900;
-    font-size: 21px;
-    letter-spacing: 2px;
-    color: #078b25;
-    text-shadow:
-        0 0 3px #c8ffc0,
-        0 0 7px #55ff55,
-        0 0 12px #28d438;
+.small {
+    color: #54595d;
+    font-size: 12px;
 }
 
 .infobox {
     float: right;
-    width: 315px;
-    max-width: 100%;
-    margin: 0 0 20px 22px;
-    padding: 8px;
-    background: #f8f9fa;
+    width: 300px;
+    margin: 0 0 20px 25px;
     border: 1px solid #a2a9b1;
-    font-size: 14px;
+    background: #f8f9fa;
+    padding: 5px;
+    font-size: 13px;
 }
 
 .infobox-title {
+    background: #b7d6ee;
     text-align: center;
-    font-size: 21px;
+    padding: 10px 5px;
+    font-size: 20px;
     font-weight: bold;
-    padding: 7px 3px 10px;
 }
 
-.infobox .flag {
-    display: block;
-    width: 100%;
-    max-height: 210px;
-    object-fit: contain;
-    margin: 0 auto 8px;
+.infobox img {
+    max-width: 100%;
+    height: auto;
 }
 
 .infobox table {
@@ -184,33 +150,30 @@ h3 {
     border-collapse: collapse;
 }
 
-.infobox th,
 .infobox td {
-    padding: 6px 5px;
+    padding: 7px;
     border-top: 1px solid #eaecf0;
-    text-align: left;
     vertical-align: top;
 }
 
-.infobox th {
-    width: 37%;
+.infobox td:first-child {
+    width: 38%;
+    font-weight: bold;
 }
 
-.infobox-note {
-    margin-top: 8px;
-    font-size: 12px;
-    color: #54595d;
-    text-align: center;
+.flag {
+    width: 100%;
+    display: block;
+    margin: 5px auto;
 }
 
 .toc {
-    display: table;
-    min-width: 230px;
-    max-width: 100%;
-    padding: 12px 22px;
-    margin: 18px 0;
+    display: inline-block;
     background: #f8f9fa;
     border: 1px solid #a2a9b1;
+    padding: 12px 25px;
+    margin: 15px 0;
+    min-width: 240px;
 }
 
 .toc-title {
@@ -221,65 +184,159 @@ h3 {
 
 .toc ol {
     margin: 0;
-    padding-left: 22px;
+    padding-left: 25px;
 }
 
 .toc li {
-    padding: 3px 0;
-}
-
-blockquote {
-    margin: 15px 0;
-    padding: 10px 15px;
-    border-left: 4px solid #7bba70;
-    background: #f3fff0;
-    font-style: italic;
+    margin: 5px 0;
 }
 
 .notice {
-    padding: 10px 13px;
-    margin: 15px 0;
     border: 1px solid #a2a9b1;
     background: #f8f9fa;
-    font-size: 13px;
+    padding: 12px;
+    margin: 15px 0;
 }
 
-footer {
-    margin-top: 35px;
-    padding-top: 12px;
-    border-top: 1px solid #a2a9b1;
-    color: #54595d;
+.warning {
+    border: 2px dashed #72777d;
+    background: #fff4cc;
+    padding: 12px;
+    margin: 15px 0;
+}
+
+.gemrald-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 0 auto 20px auto;
+    padding: 12px;
+    max-width: 430px;
+    border: 2px solid #16803c;
+    border-radius: 8px;
+    background: linear-gradient(
+        135deg,
+        #d8ffd9,
+        #72e69a,
+        #eaffb8,
+        #39b967,
+        #d8ffd9
+    );
+    background-size: 300% 300%;
+    animation: gemrald-shine 4s ease infinite;
+    box-shadow:
+        0 0 7px rgba(32, 190, 91, 0.6),
+        inset 0 0 12px rgba(255,255,255,0.8);
+    font-weight: bold;
+    text-align: center;
+}
+
+.gemrald-banner img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px #ffffff);
+    transition: transform 0.25s;
+}
+
+.gemrald-banner img:hover {
+    transform: rotate(12deg) scale(1.15);
+}
+
+.gemrald-banner a:last-child {
+    color: #075b25;
+    font-size: 19px;
+    text-shadow: 0 1px 2px white;
+}
+
+@keyframes gemrald-shine {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.infobox-gem {
+    background: linear-gradient(135deg, #d9ffdc, #8bea9c, #edffc0);
+    color: #075b25;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    border: 1px solid #16803c;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.gallery-item {
+    border: 1px solid #a2a9b1;
+    background: #f8f9fa;
+    padding: 8px;
+    width: 180px;
+    text-align: center;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: contain;
+}
+
+.gallery-caption {
+    margin-top: 6px;
     font-size: 12px;
 }
 
-@media (max-width: 800px) {
-    .layout {
-        flex-direction: column;
+footer {
+    border-top: 1px solid #a2a9b1;
+    color: #54595d;
+    font-size: 12px;
+    margin-top: 35px;
+    padding-top: 12px;
+}
+
+@media (max-width: 850px) {
+    #layout {
+        padding: 8px;
+        gap: 8px;
     }
 
-    .sidebar {
-        width: 100%;
-        flex-basis: auto;
+    #sidebar {
+        width: 135px;
+        padding: 10px;
     }
 
-    .content {
-        width: 100%;
-        padding: 17px;
+    #content {
+        padding: 14px;
     }
 
     .infobox {
         float: none;
         width: 100%;
-        margin: 0 0 20px;
+        margin: 0 0 20px 0;
     }
 
-    .site-title {
-        font-size: 24px;
+    #site-title {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 550px) {
+    #layout {
+        display: block;
     }
 
-    .gemrald-banner a {
-        font-size: 16px;
-        letter-spacing: 1px;
+    #sidebar {
+        width: auto;
+        margin-bottom: 10px;
+    }
+
+    #sidebar a {
+        display: inline-block;
+        margin-right: 10px;
     }
 }
 </style>
@@ -287,397 +344,498 @@ footer {
 
 <body>
 
-<header>
-    <a href="index.html">
-        <img class="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo">
-    </a>
+<header id="header">
+    <img id="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo">
     <div>
-        <div class="site-title">Clvbhouse Wiki</div>
-        <div class="site-subtitle">The encyclopedia of the Clvbhouse community</div>
+        <div id="site-title">Clvbhouse Wiki</div>
+        <div id="site-subtitle">The encyclopedia that should not have been given internet access.</div>
     </div>
 </header>
 
-<div class="layout">
+<div id="layout">
 
-    <aside class="sidebar">
-        <h3>Navigation</h3>
-        <a href="index.html">Main page</a>
-        <a href="ethan.html">Ethan</a>
-        <a href="ethanism.html">Ethanism</a>
-        <a href="saar-sparky.html">Saar Sparky</a>
-        <a href="camemac.html">Camemac</a>
-        <a href="arb.html">ARB</a>
-        <a href="soyspeak.html">Soyspeak</a>
-        <a href="gem.html">Gem</a>
-        <a href="yehudyakim.html">Yehudyakim</a>
-    </aside>
+<aside id="sidebar">
+    <h3>Navigation</h3>
+    <a href="index.html">Main Page</a>
+    <a href="ethan.html">Ethan</a>
+    <a href="ethanism.html">Ethanism</a>
+    <a href="saar-sparky.html">Saar Sparky</a>
+    <a href="camemac.html">Camemac</a>
+    <a href="arb.html">ARB</a>
+    <a href="soyspeak.html">Soyspeak</a>
+    <a href="gem.html">Gem</a>
+    <a href="yehudyakim.html">Yehudyakim</a>
 
-    <main class="content">
+    <h3>Clvbhouse Wiki</h3>
+    <a href="index.html">Recent nonsense</a>
+    <a href="index.html">Random page</a>
+</aside>
 
-        <h1>Yehudyakim</h1>
+<main id="content">
 
-        <div class="gemrald-banner">
-            <a href="gem.html">
-                <img src="Minecraft-diamond.png" alt="Gemrald badge">
-            </a>
-            <a href="gem.html">THIS PAGE IS A GEMRALD</a>
-        </div>
+<div class="gemrald-banner">
+    <a href="gem.html">
+        <img src="latest.png" alt="Gemrald">
+    </a>
+    <a href="gem.html">THIS PAGE IS A GEMRALD</a>
+</div>
 
-        <aside class="infobox">
+<h1>Yehudyakim</h1>
 
-            <div class="infobox-title">Yehudyakim</div>
+<p class="small">
+From Clvbhouse Wiki, the encyclopedia maintained by people who should probably be doing homework.
+</p>
 
-            <a href="Sniff_israeli_flag.png">
-                <img
-                    class="flag"
-                    src="Sniff_israeli_flag.png"
-                    alt="Yehudyakim flag">
-            </a>
+<div class="infobox">
 
-            <div class="infobox-note">
-                The flag associated with the subject of this article.
-            </div>
+    <div class="infobox-title">Yehudyakim</div>
 
-            <table>
-                <tr>
-                    <th>Subject</th>
-                    <td>Israel</td>
-                </tr>
-                <tr>
-                    <th>Official name</th>
-                    <td>State of niggaIsrael</td>
-                </tr>
-                <tr>
-                    <th>Hebrew name</th>
-                    <td>מְדִינַת יִשְׂרָאֵל</td>
-                </tr>
-                <tr>
-                    <th>Region</th>
-                    <td>Earth</td>
-                </tr>
-                <tr>
-                    <th>Capital</th>
-                    <td>Jerusalem (status disputed internationally)</td>
-                </tr>
-                <tr>
-                    <th>Largest metropolitan area</th>
-                    <td>Tel Aviv metropolitan area</td>
-                </tr>
-                <tr>
-                    <th>Languages</th>
-                    <td>Niggayidish; Arabic has special legal status</td>
-                </tr>
-                <tr>
-                    <th>Currency</th>
-                    <td>Israeli new shekel (Actually)</td>
-                </tr>
-                <tr>
-                    <th>Established</th>
-                    <td>14 May 1948</td>
-                </tr>
-            </table>
-        </aside>
+    <div class="infobox-gem">
+        💚 CERTIFIED GEMRALD TERRITORY 💚
+    </div>
 
-        <p>
-            <b>Yehudyakim</b> is the Clvbhouse Wiki's satirical article
-            concerning <b>Israel</b>, its government, its international
-            relationships, and the controversies surrounding its
-            establishment and continued existence.
-        </p>
+    <img class="flag" src="Sniff_israeli_flag.png" alt="Flag associated with Yehudyakim">
 
-        <p>
-            The subject is frequently discussed through the lenses of
-            Zionism, Palestinian national aspirations, military power,
-            foreign assistance, surveillance, and online political
-            culture. Its supporters and critics offer sharply different
-            interpretations of these subjects.
-        </p>
+    <table>
+        <tr>
+            <td>Official name</td>
+            <td>The State of nigga israel, Apparently</td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td>Earth 🌍</td>
+        </tr>
+        <tr>
+            <td>Capital</td>
+            <td>Somewhere on Earth</td>
+        </tr>
+        <tr>
+            <td>Continent</td>
+            <td>Earth Continent</td>
+        </tr>
+        <tr>
+            <td>Government</td>
+            <td>Government™</td>
+        </tr>
+        <tr>
+            <td>Military</td>
+            <td>IDF (Indian Defense Force)</td>
+        </tr>
+        <tr>
+            <td>Currency</td>
+            <td>Shekelcoin</td>
+        </tr>
+        <tr>
+            <td>National animal</td>
+            <td>sigeonpex</td>
+        </tr>
+        <tr>
+            <td>National sport</td>
+            <td>Arguing on the internet</td>
+        </tr>
+        <tr>
+            <td>National achievement</td>
+            <td>Making a 14-part Twitter thread</td>
+        </tr>
+        <tr>
+            <td>Political alignment</td>
+            <td>Somewhere between a press conference and a headache</td>
+        </tr>
+    </table>
 
-        <p>
-            The article's title and tone are intended as internet
-            satire. Political criticism should not be confused with
-            claims about Jewish people as a whole.
-        </p>
+    <p class="small" style="text-align:center;">
+        This infobox has been reviewed by three imaginary government departments.
+    </p>
 
-        <div class="toc">
-            <div class="toc-title">Contents</div>
-            <ol>
-                <li><a href="#overview">Overview</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#military">Military</a></li>
-                <li><a href="#foreign-aid">Foreign aid and influence</a></li>
-                <li><a href="#surveillance">Surveillance and technology</a></li>
-                <li><a href="#politics">Politics and controversies</a></li>
-                <li><a href="#imageboard">Relation with imageboard culture</a></li>
-                <li><a href="#snopes">Fact-checking and rumors</a></li>
-                <li><a href="#seealso">See also</a></li>
-            </ol>
-        </div>
+</div>
 
-        <h2 id="overview">Overview</h2>
+<div class="notice">
+    <b>Editor's note:</b> This article is satire. Its geography department consists
+    of one guy looking at Google Earth, and its history department consists of
+    someone who keeps saying "trust me bro."
+</div>
 
-        <p>
-            israel is a country know for raping kids
-          and they are also known as epsteinlites ETC.
-        </p>
+<p>
+<b>Yehudyakim</b> is a geographical and administrative situation located on
+<strong>Earth</strong>, according to the highly advanced cartographic system
+known as "looking at a globe."
+It is associated with the real-world State of Israel, but on the Clvbhouse Wiki
+it is mostly known for politics, military discourse, international arguments,
+and enough online drama to fill several swimming pools.
+</p>
 
-        <p>
-            The country occupies a central position in debates concerning
-            national self-determination, occupation, settlements,
-            religious sites, regional security, refugees, and the rights
-            of Palestinians. The Israeli–Palestinian conflict remains
-            one of the most contentious political issues in the world.
-        </p>
+<p>
+The country has a government, a military, an economy, and various other features
+normally expected of a state. It also has the unfortunate condition of existing
+on the internet, where every event immediately generates 4,000 takes from people
+who have never left their bedrooms.
+</p>
 
-        <blockquote>
-            "The only democracy in the Middle East" — a frequently used
-            political description whose meaning and applicability are
-            heavily debated, particularly in relation to Palestinians
-            living under Israeli control without Israeli citizenship.
-        </blockquote>
+<p>
+Yehudyakim's national motto is unofficially believed to be:
+<i>"The situation is complicated, please consult another 86-page report."</i>
+The government has not confirmed this motto, mostly because nobody has asked
+the correct government department.
+</p>
 
-        <p>
-            Critics of Israeli policy frequently focus on the treatment
-            of Palestinians, restrictions on movement, settlement
-            expansion, military operations, and the influence of
-            international allies. Defenders frequently emphasize
-            security threats, attacks against Israeli civilians, Jewish
-            self-determination, and the country's right to exist.
-        </p>
+<div class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#history">History (allegedly)</a></li>
+        <li><a href="#military">The Indian Defense Force</a></li>
+        <li><a href="#politics">Politics and government.exe</a></li>
+        <li><a href="#foreign">Foreign relations</a></li>
+        <li><a href="#technology">Technology and surveillance</a></li>
+        <li><a href="#internet">Internet discourse</a></li>
+        <li><a href="#economy">Economy</a></li>
+        <li><a href="#lore">Clvbhouse Wiki lore</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#seealso">See also</a></li>
+    </ol>
+</div>
 
-        <h2 id="history">History</h2>
+<h2 id="overview">1. Overview</h2>
 
-        <p>
-            Modern political Zionism emerged in Europe during the late
-            nineteenth century. Theodor Herzl became one of its best-known
-            advocates, arguing for a national home for Jewish people
-            amid widespread antisemitism and persecution.
-        </p>
+<p>
+Yehudyakim is a place where geography, politics, history, and comment sections
+all collide in an incident that the United Nations has described as
+"please stop replying to each other."
+</p>
 
-        <p>
-            During the First World War and its aftermath, Britain issued
-            the Balfour Declaration and subsequently governed Palestine
-            under a League of Nations mandate. British policy, Zionist
-            immigration, competing national aspirations, and conflict
-            between Arab and Jewish communities shaped the period.
-        </p>
+<p>
+Its exact location is Earth. Not Mars. Not the Moon. Not agartha-.
+Earth.
+</p>
 
-        <p>
-            In 1947, the United Nations proposed partitioning Mandatory
-            Palestine into separate Arab and Jewish states, with a
-            special international arrangement for Jerusalem. The proposal
-            was accepted by the Jewish Agency and rejected by Arab
-            Palestinian leadership and Arab states.
-        </p>
+<p>
+The region is notable for being discussed by politicians, journalists,
+military analysts, historians, internet users, and one random account called
+something like <code>UltraMegaTruthReal777</code> with a profile picture of a
+low-resolution eagle.
+</p>
 
-        <p>
-            Israel declared independence on 14 May 1948. War followed.
-            Hundreds of thousands of Palestinians fled or were expelled
-            from their homes during the 1948 conflict, an event known as
-            the Nakba. Many Palestinian refugees and their descendants
-            remain displaced.
-        </p>
+<p>
+Its public image varies wildly depending on which news source, political
+argument, or 19-second video somebody watched immediately before forming
+their permanent opinion.
+</p>
 
-        <p>
-            The subsequent decades included additional wars, the
-            occupation of the West Bank, East Jerusalem, and Gaza
-            following the 1967 war, the growth of Israeli settlements,
-            Palestinian uprisings, peace negotiations, and recurring
-            violence.
-        </p>
+<h2 id="history">2. History (allegedly)</h2>
 
-        <div class="notice">
-            <b>Historical note:</b> Claims that ancient Israel or the
-            historical Jewish connection to the region simply never
-            existed are not supported by mainstream historical evidence.
-            The modern state's establishment and the rights of
-            Palestinians can be debated without denying Jewish history.
-        </div>
+<p>
+Yehudyakim's history is long, complicated, and absolutely not something that
+can be accurately explained by a guy typing "history explained in 30 seconds"
+over gameplay footage.
+</p>
 
-        <h2 id="military">Military</h2>
+<p>
+The real-world history of Israel and the surrounding region includes ancient
+history, migration, competing national movements, the establishment of Israel
+in 1948, wars, displacement, diplomacy, and the ongoing Israeli-Palestinian
+conflict. These events have had serious consequences for millions of people.
+</p>
 
-        <p>
-            The Israel Defense Forces (IDF) are central to the country's
-            national security policy. Israel maintains a technologically
-            advanced military, a large reserve system, sophisticated
-            air capabilities, and extensive intelligence services.
-        </p>
+<p>
+The Clvbhouse Wiki historical archive, however, has chosen to represent the
+average internet user's understanding of this history with the following
+timeline:
+</p>
 
-        <p>
-            Its military strength is frequently discussed in relation to
-            American assistance, regional rivalries, missile defense,
-            intelligence cooperation, and its undeclared nuclear
-            capability.
-        </p>
+<ul>
+    <li><b>Ancient history:</b> Several thousand years of actual history occur.</li>
+    <li><b>Modern history:</b> A large number of important events happen.</li>
+    <li><b>The internet era:</b> Someone uploads a map with 43 red arrows.</li>
+    <li><b>Five minutes later:</b> Everyone is an expert in international law.</li>
+    <li><b>Present day:</b> The comment section has been declared a disaster zone.</li>
+</ul>
 
-        <p>
-            Israeli military operations have also attracted extensive
-            international criticism, particularly concerning civilian
-            casualties, destruction of infrastructure, restrictions on
-            humanitarian assistance, and the conduct of operations in
-            Gaza and other Palestinian territories.
-        </p>
+<p>
+Historians are reportedly still trying to determine how the phrase
+"bro did NOT read the article" became one of the most influential diplomatic
+statements of the twenty-first century.
+</p>
 
-        <p>
-            Israeli officials commonly frame military operations as
-            necessary for national security. Critics argue that security
-            justifications do not excuse violations of international
-            humanitarian law. The legality of specific actions depends
-            on the evidence and applicable law, rather than slogans
-            circulated online.
-        </p>
+<h2 id="military">3. The Indian Defense Force</h2>
 
-        <h2 id="foreign-aid">Foreign aid and influence</h2>
+<p>
+The <b>IDF</b> stands for <b>Indian Defense Force</b> on this page.
+This is not an official real-world expansion of the acronym. It is a Clvbhouse
+Wiki joke, and the acronym department has been suspended pending investigation.
+</p>
 
-        <p>
-            The United States is Israel's most important military
-            partner and a major source of military assistance. Their
-            relationship includes arms transfers, intelligence
-            cooperation, diplomatic coordination, and joint defense
-            projects.
-        </p>
+<p>
+The Indian Defense Force is theoretically responsible for defense, military
+operations, strategic planning, and ensuring that every online military debate
+eventually contains a photograph of a tank.
+</p>
 
-        <p>
-            The relationship is a recurring subject of political
-            controversy. Critics question the scale of American
-            assistance and the diplomatic protection afforded to Israel.
-            Supporters argue that the partnership serves American
-            strategic interests and helps protect an allied state.
-        </p>
+<p>
+Its unofficial procurement process is believed to look like this:
+</p>
 
-        <p>
-            Pro-Israel advocacy organizations, like advocacy groups
-            representing many other causes, seek to influence American
-            policy through lobbying, public campaigns, and political
-            donations where permitted by law.
-        </p>
+<ol>
+    <li>Someone requests a budget.</li>
+    <li>Someone else opens a spreadsheet.</li>
+    <li>A committee is formed to discuss the spreadsheet.</li>
+    <li>The committee requests another spreadsheet.</li>
+    <li>A guy on the internet declares the entire military "finished."</li>
+</ol>
 
-        <p>
-            Claims that Jewish people secretly control governments,
-            banks, or the world are longstanding antisemitic conspiracy
-            theories, not established explanations of international
-            politics. Specific allegations of bribery or illegal
-            influence require specific evidence.
-        </p>
+<p>
+The force's unofficial digital motto is:
+<i>"We have reviewed the situation and would like to release a statement
+regarding the previous statement."</i>
+</p>
 
-        <h2 id="surveillance">Surveillance and technology</h2>
+<p>
+Any similarity between this fictional acronym expansion and actual military
+organizations is purely the result of the acronym department having one brain
+cell and spending it all at once.
+</p>
 
-        <p>
-            Israel has a substantial technology sector, including
-            companies working in cybersecurity, intelligence-related
-            technology, communications, and data analysis.
-        </p>
+<h2 id="politics">4. Politics and government.exe</h2>
 
-        <p>
-            Israeli-developed surveillance products have attracted
-            international scrutiny. The controversy surrounding
-            spyware such as Pegasus has raised questions about
-            surveillance of journalists, activists, political figures,
-            and other individuals.
-        </p>
+<p>
+Yehudyakim's political system is best understood as a collection of institutions,
+elections, political parties, government decisions, public disagreements, and
+enough arguments to keep several television studios employed indefinitely.
+</p>
 
-        <p>
-            Such cases have prompted debates about export controls,
-            government oversight, privacy rights, and the responsibility
-            of technology companies when their products are used
-            to target people.
-        </p>
+<p>
+The government is often criticized over policy, security, military conduct,
+civil rights, and its handling of the Israeli-Palestinian conflict. Supporters
+and opponents disagree intensely about these issues.
+</p>
 
-        <h2 id="politics">Politics and controversies</h2>
+<p>
+On the Clvbhouse Wiki, however, the entire political system is summarized as:
+</p>
 
-        <p>
-            Israel has a parliamentary political system. Its government
-            is formed through the Knesset, and its political parties
-            compete in elections.
-        </p>
+<div class="warning">
+    <b>GOVERNMENT.EXE HAS ENCOUNTERED A PROBLEM</b>
+    <p>
+        Error code: 404 — Consensus not found.
+    </p>
+    <p>
+        Please restart the coalition, check the parliamentary settings, and
+        try again after the next election.
+    </p>
+</div>
 
-        <p>
-            Political controversies include the status of Jerusalem,
-            settlements in occupied territory, the treatment of
-            Palestinian citizens of Israel, restrictions affecting
-            Palestinians in occupied territory, religious influence
-            in public life, judicial independence, and the relationship
-            between national identity and citizenship.
-        </p>
+<p>
+Political arguments frequently feature the following advanced techniques:
+</p>
 
-        <p>
-            Israel's Law of Return grants Jews and certain family
-            members eligibility for immigration and citizenship under
-            its provisions. The contrast between this policy and the
-            unresolved claims of Palestinian refugees is a major
-            point of dispute.
-        </p>
+<ul>
+    <li>Posting a graph without explaining the axes.</li>
+    <li>Calling a press conference to announce another press conference.</li>
+    <li>Using the word "historic" at least six times in one speech.</li>
+    <li>Claiming that a complicated regional conflict has a one-sentence solution.</li>
+    <li>Replying "source?" to a 400-page research paper.</li>
+</ul>
 
-        <p>
-            Criticism of Israeli government policy is not inherently
-            antisemitic. Conversely, blaming Jewish people collectively
-            for a government's actions, or alleging secret Jewish
-            control of world affairs, relies on antisemitic
-            generalizations rather than evidence.
-        </p>
+<h2 id="foreign">5. Foreign relations</h2>
 
-        <h2 id="imageboard">Relation with imageboard culture</h2>
+<p>
+Yehudyakim's foreign relations involve diplomacy, alliances, disagreements,
+security concerns, negotiations, international law, trade, and a remarkable
+quantity of microphones.
+</p>
 
-        <p>
-            On imageboards and political meme communities, Israel is
-            frequently discussed through exaggerated nicknames,
-            deliberately provocative edits, conspiracy memes, and
-            competing political narratives.
-        </p>
+<p>
+Foreign policy is complicated. The internet's foreign-policy department has
+nevertheless developed a revolutionary system in which every international
+problem can be solved by posting a flag emoji and typing "common sense."
+</p>
 
-        <p>
-            Some posts parody government messaging, foreign aid,
-            military operations, and diplomatic relationships.
-            Others repeat unverified rumors or use ethnic and
-            religious stereotypes as supposed explanations for
-            political events.
-        </p>
+<p>
+The country has relationships with other states, including the United States,
+and receives substantial American military assistance under established
+agreements. The details of such assistance, its strategic purposes, and its
+political implications are subjects of ongoing public debate.
+</p>
 
-        <p>
-            This article adopts a satirical encyclopedia format while
-            distinguishing political criticism from claims that
-            target an entire ethnic or religious group.
-        </p>
+<p>
+Meanwhile, the unofficial Clvbhouse Wiki diplomatic procedure is:
+</p>
 
-        <h2 id="snopes">Fact-checking and rumors</h2>
+<ol>
+    <li>Schedule a meeting.</li>
+    <li>Release a statement about the meeting.</li>
+    <li>Release a statement about the statement.</li>
+    <li>Have three countries disagree about what the statement meant.</li>
+    <li>Schedule another meeting.</li>
+</ol>
 
-        <p>
-            Online discussions about Israel frequently contain
-            misleading statistics, edited footage, fabricated
-            quotations, and unverified reports concerning political
-            leaders or military events.
-        </p>
+<h2 id="technology">6. Technology and surveillance</h2>
 
-        <p>
-            Claims that officials have secretly died, that videos
-            are AI-generated cover-ups, or that a particular
-            government secretly controls world events should not
-            be treated as facts without reliable, independent
-            corroboration.
-        </p>
+<p>
+Israel has a significant technology sector, including cybersecurity,
+communications, and defense-related technologies. These industries attract
+investment and also raise debates about privacy, surveillance, and human rights.
+</p>
 
-        <p>
-            Likewise, claims about civilian casualties, alleged
-            war crimes, military actions, and foreign assistance
-            should be evaluated using credible reporting,
-            documentary evidence, and relevant legal findings.
-        </p>
+<p>
+The Clvbhouse Wiki technology department has conducted extensive research
+by reading two headlines and looking at a circuit board.
+Its conclusion is that technology is, in fact, technology.
+</p>
 
-        <h2 id="seealso">See also</h2>
+<p>
+The internet has also produced countless claims about secret databases,
+surveillance systems, mysterious organizations, and devices that supposedly
+know what somebody ate for breakfast in 2017.
+</p>
 
-        <ul>
-            <li><a href="ethan.html">Ethan</a></li>
-            <li><a href="ethanism.html">Ethanism</a></li>
-            <li><a href="arb.html">ARB</a></li>
-            <li><a href="soyspeak.html">Soyspeak</a></li>
-            <li><a href="gem.html">Gem</a></li>
-        </ul>
+<p>
+Some surveillance and technology concerns are real subjects for investigation.
+Random claims that a mysterious organization controls every device on Earth,
+however, should not be treated as established facts just because somebody
+added ominous music to a video.
+</p>
 
-        <footer>
-            Clvbhouse Wiki — A community encyclopedia.
-        </footer>
+<h2 id="internet">7. Internet discourse</h2>
 
-    </main>
+<p>
+Yehudyakim's internet presence is a vast ecosystem of maps, memes, historical
+arguments, military edits, political cartoons, news clips, and people typing
+entire essays while claiming they are "not even mad."
+</p>
+
+<p>
+A typical argument may progress through the following stages:
+</p>
+
+<ol>
+    <li>Someone posts a map.</li>
+    <li>Someone corrects the map.</li>
+    <li>Someone corrects the correction.</li>
+    <li>Someone posts an unrelated map from 1916.</li>
+    <li>Someone says "read a book."</li>
+    <li>Someone posts a 900-page book.</li>
+    <li>Nobody reads it.</li>
+</ol>
+
+<p>
+The term "geopolitical expert" is frequently awarded to people who can identify
+a country on a map but cannot identify the map's projection.
+</p>
+
+<p>
+Internet discourse about Israel and Palestine can also involve genuine grief,
+fear, anger, and concern for civilians. The meme department has been reminded
+that real people are not merely characters in a strategy game.
+</p>
+
+<h2 id="economy">8. Economy</h2>
+
+<p>
+Yehudyakim's economy includes real industries, businesses, workers, trade,
+technology, public spending, and the mysterious process by which money
+disappears after somebody says the words "administrative fee."
+</p>
+
+<p>
+The official Clvbhouse Wiki economic theory is that money is created when
+someone opens a spreadsheet and destroyed when the spreadsheet contains
+the word "miscellaneous."
+</p>
+
+<p>
+The national economic indicator known as the <b>Shekelcoin Index</b> measures
+how many arguments can occur before somebody changes the subject to inflation.
+It is not recognized by any real financial institution.
+</p>
+
+<h2 id="lore">9. Clvbhouse Wiki lore</h2>
+
+<p>
+The following entries are part of the fictional Clvbhouse Wiki universe and
+should not be confused with actual historical events or government policy.
+</p>
+
+<h3>9.1 The Great Map Incident</h3>
+
+<p>
+A user once posted a map with the wrong border color. Within minutes,
+the image had been reposted by seven accounts, three history pages, and a
+man who claimed to be a retired general despite being twelve years old
+and using a Minecraft skin as his profile picture.
+</p>
+
+<h3>9.2 The Ministry of Statements</h3>
+
+<p>
+An imaginary institution responsible for releasing statements whenever
+another institution releases a statement. Its headquarters reportedly
+contains 600 printers and one broken coffee machine.
+</p>
+
+<h3>9.3 The Earth Location Discovery</h3>
+
+<p>
+For several years, the Clvbhouse Wiki geography department debated the
+location of Yehudyakim. Following an extensive investigation, the department
+consulted a globe and confirmed that it was located on Earth.
+</p>
+
+<p>
+The lead researcher received an award for outstanding contributions to
+looking at things.
+</p>
+
+<h3>9.4 The Acronym Reassignment</h3>
+
+<p>
+The IDF acronym was fromally assigned to "Indian Defense Force"
+after an editor decided that the original expansion was too normal for
+the article. The change was immediately declared legally binding by the
+entirely imaginary Ministry of Acronyms.
+</p>
+
+<h3>9.5 The Gemrald Certification</h3>
+
+<p>
+The page was certified as a gemrald after a committee determined that it
+was green enough, shiny enough, and sufficiently questionable to qualify.
+The committee's only member was a Minecraft diamond with a green filter.
+</p>
+
+<h2 id="gallery">10. Gallery</h2>
+
+<div class="gallery">
+
+    <div class="gallery-item">
+        <img src="Sniff_israeli_flag.png" alt="Yehudyakim flag">
+        <div class="gallery-caption">The flag used by this page.</div>
+    </div>
+
+    <div class="gallery-item">
+        <a href="gem.html">
+            <img src="latest.png" alt="Gemrald badge">
+        </a>
+        <div class="gallery-caption">Officially unofficial gemrald certification.</div>
+    </div>
+
+</div>
+
+<h2 id="seealso">11. See also</h2>
+
+<ul>
+    <li><a href="gem.html">Gem</a></li>
+    <li><a href="ethanism.html">Ethanism</a></li>
+    <li><a href="soyspeak.html">Soyspeak</a></li>
+    <li><a href="index.html">Clvbhouse Wiki Main Page</a></li>
+</ul>
+
+<footer>
+    This page is a satirical work of the Clvbhouse Wiki. Its fictional nicknames,
+    imaginary institutions, and invented lore are jokes, not official facts.
+    Real-world history and political claims should be checked against reliable sources.
+</footer>
+
+</main>
 </div>
 
 </body>
