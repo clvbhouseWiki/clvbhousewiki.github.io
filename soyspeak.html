@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soyspeak - Clvbhouse Wiki</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #202122;
+  background: #f6f6f6 url("asd1.png") center center / cover no-repeat fixed;
+}
+
+a { color: #0645ad; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 24px;
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid #a2a9b1;
+}
+
+.logo { width: 72px; height: 72px; object-fit: contain; }
+.site-title { font: 30px Georgia, serif; margin: 0; }
+.subtitle { color: #54595d; font-size: 13px; margin-top: 5px; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 200px minmax(0,1fr);
+  gap: 20px;
+  max-width: 1450px;
+  margin: 20px auto;
+  padding: 0 18px;
+}
+
+.sidebar, main {
+  background: rgba(255,255,255,.97);
+  border: 1px solid #a2a9b1;
+}
+
+.sidebar { padding: 16px; align-self: start; }
+.sidebar h3 {
+  font: 18px Georgia, serif;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 6px;
+}
+.sidebar a { display: block; padding: 7px 0; }
+
+main { padding: 24px; min-width: 0; }
+
+h1 {
+  font: normal 32px Georgia, serif;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 8px;
+}
+
+h2 {
+  font: normal 24px Georgia, serif;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 5px;
+  margin-top: 28px;
+}
+
+h3 { margin-top: 22px; }
+
+.notice { color: #54595d; font-size: 13px; }
+
+.infobox {
+  float: right;
+  width: 285px;
+  max-width: 100%;
+  margin: 0 0 20px 22px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  font-size: 14px;
+}
+
+.infobox-title {
+  background: #d5d9ef;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.infobox table { width: 100%; border-collapse: collapse; }
+.infobox th, .infobox td {
+  text-align: left;
+  vertical-align: top;
+  padding: 8px;
+  border-top: 1px solid #eaecf0;
+}
+.infobox th { width: 38%; background: #eaecf0; }
+
+.contents {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid #a2a9b1;
+  background: #f8f9fa;
+  margin: 12px 0 20px;
+  font-size: 14px;
+}
+
+.contents ol { margin-bottom: 0; padding-left: 22px; }
+.contents li { padding: 4px 0; }
+
+table.alphabet {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  background: #fff;
+  font-size: 14px;
+}
+
+.alphabet th, .alphabet td {
+  border: 1px solid #a2a9b1;
+  padding: 8px 10px;
+  text-align: center;
+}
+
+.alphabet th { background: #eaecf0; }
+.alphabet tr:nth-child(even) { background: #f8f9fa; }
+
+.example-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.example-table th, .example-table td {
+  border: 1px solid #a2a9b1;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.example-table th { background: #eaecf0; }
+
+.note {
+  background: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  border-left: 4px solid #72777d;
+  padding: 12px 15px;
+  margin: 16px 0;
+  font-size: 14px;
+}
+
+.clearfix::after { content: ""; display: block; clear: both; }
+
+.footer {
+  border-top: 1px solid #a2a9b1;
+  margin-top: 35px;
+  padding-top: 12px;
+  color: #54595d;
+  font-size: 12px;
+}
+
+@media(max-width:760px) {
+  .layout { grid-template-columns: 1fr; }
+  main { padding: 16px; }
+  .infobox { float: none; width: 100%; margin: 0 0 20px; }
+  .alphabet { font-size: 12px; }
+  .alphabet th, .alphabet td { padding: 6px 4px; }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <a href="index.html">
+    <img class="logo" src="ethanwiki-logo-v2.png" alt="Clvbhouse Wiki logo">
+  </a>
+  <div>
+    <h1 class="site-title">Clvbhouse Wiki</h1>
+    <div class="subtitle">The community encyclopedia</div>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <h3>Navigation</h3>
+    <a href="index.html">Main page</a>
+    <a href="ethan.html">Ethan</a>
+    <a href="ethanism.html">Ethanism</a>
+    <a href="soyspeak.html">Soyspeak</a>
+
+    <h3>People</h3>
+    <a href="saar-sparky.html">Saar Sparky</a>
+    <a href="camemac.html">Camemac</a>
+    <a href="arb.html">ARB</a>
+  </aside>
+
+  <main>
+    <h1>Soyspeak</h1>
+    <div class="notice">From Clvbhouse Wiki, the community encyclopedia.</div>
+
+    <div class="clearfix">
+      <aside class="infobox">
+        <div class="infobox-title">Soyspeak</div>
+        <table>
+          <tr><th>Alternative name</th><td>Jakspeak</td></tr>
+          <tr><th>Short form</th><td>'speak</td></tr>
+          <tr><th>Type</th><td>Partially constructed auxiliary language</td></tr>
+          <tr><th>Base language</th><td>English</td></tr>
+          <tr><th>Writing systems</th><td>Latin and adapted Greek alphabet</td></tr>
+          <tr><th>Main community</th><td><a href="https://soyjakwiki.org/Soyjak.party" target="_blank" rel="noopener noreferrer">soyjak.party</a></td></tr>
+          <tr><th>Related language</th><td><a href="https://soyjakwiki.org/Sprec-Nu" target="_blank" rel="noopener noreferrer">Sprec-Nu</a></td></tr>
+        </table>
+      </aside>
+
+      <p><b>Soyspeak</b> (<i>'speak</i>), occasionally known as <b>Jakspeak</b>, is a partially constructed international auxiliary language used primarily within the online community of <a href="https://soyjakwiki.org/Soyjak.party" target="_blank" rel="noopener noreferrer">soyjak.party</a> and formerly associated with <a href="https://soyjakwiki.org/Qa/_%284chan%29" target="_blank" rel="noopener noreferrer">/qa/ on 4chan</a>.</p>
+
+      <p>It is based primarily on English, a Germanic language belonging to the Indo-European language family. Soyspeak is characterised by deliberate spelling changes, apostrophisation, specialised vocabulary, and a parallel Greek-letter writing system.</p>
+
+      <p>Descriptions of the language sometimes jokingly characterise it as a convergence of Hebrew and Uzbek. Its development and conventions are closely tied to the internet communities in which it is used.</p>
+
+      <div class="contents">
+        <b>Contents</b>
+        <ol>
+          <li><a href="#history">History</a></li>
+          <li><a href="#alphabet">Alphabet</a></li>
+          <li><a href="#apostrophisation">Apostrophisation</a></li>
+          <li><a href="#exceptions">Exceptions</a></li>
+          <li><a href="#other-forms">Other forms</a></li>
+          <li><a href="#community">Community and usage</a></li>
+          <li><a href="#see-also">See also</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <h2 id="history">History</h2>
+
+    <p>According to the community's lore, Soyspeak originated from a set of codes created by a figure known as Patient 5202, formerly called Dr. Soyowicz. In this account, the codes were developed for patients of the so-called Mental Asylum to communicate secretly.</p>
+
+    <p>The same story connects the language to espionage surrounding the Great Asylum Insurrection of 2020. These details belong to the community's narrative and should not be understood as independently verified historical events.</p>
+
+    <p>Outside that origin story, Soyspeak has continued to evolve through everyday use, memes, repeated expressions, and the language habits of its online speakers. It has also inspired related forms, including <a href="https://soyjakwiki.org/Sprec-Nu" target="_blank" rel="noopener noreferrer">Sprec-Nu</a>, also described as Proper Soyspeak.</p>
+
+    <h2 id="alphabet">Alphabet</h2>
+
+    <p>Soyspeak is written using both the Latin alphabet and an adapted Greek-letter system. The Greek version is described as having 27 letters or letter combinations, including a distinct representation for <i>th</i>. The alternate writing system is sometimes used to get around text filters.</p>
+
+    <table class="alphabet">
+      <thead>
+        <tr><th>Latin</th><th>Greek form</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Aa</td><td>Αα</td></tr>
+        <tr><td>Bb</td><td>ΜΠμπ</td></tr>
+        <tr><td>Cc</td><td>Σς</td></tr>
+        <tr><td>Dd</td><td>Δδ</td></tr>
+        <tr><td>Ee</td><td>Εε</td></tr>
+        <tr><td>Ff</td><td>Φφ</td></tr>
+        <tr><td>Gg</td><td>Γγ</td></tr>
+        <tr><td>Hh</td><td>Χχ</td></tr>
+        <tr><td>Ii</td><td>Ιι</td></tr>
+        <tr><td>Jj</td><td>ΤΖτζ</td></tr>
+        <tr><td>Kk</td><td>Κκ</td></tr>
+        <tr><td>Ll</td><td>Λλ</td></tr>
+        <tr><td>Mm</td><td>Μμ</td></tr>
+        <tr><td>Nn</td><td>Νν</td></tr>
+        <tr><td>Oo</td><td>Οο</td></tr>
+        <tr><td>Pp</td><td>Ππ</td></tr>
+        <tr><td>Qq</td><td>Ϙϙ</td></tr>
+        <tr><td>Rr</td><td>Ρρ</td></tr>
+        <tr><td>Ss</td><td>Σσ</td></tr>
+        <tr><td>Tt</td><td>Ττ</td></tr>
+        <tr><td>THth</td><td>Θθ</td></tr>
+        <tr><td>Uu</td><td>ΟΥου</td></tr>
+        <tr><td>Vv</td><td>Ββc</td></tr>
+        <tr><td>OUGHough</td><td>Ωω</td></tr>
+        <tr><td>Xx</td><td>Ξξ</td></tr>
+        <tr><td>PSps</td><td>Ψψ</td></tr>
+        <tr><td>Zz</td><td>Ζζ</td></tr>
+      </tbody>
+    </table>
+
+    <p>A community-made <a href="https://lingojam.com/NewSoyAlphabet" target="_blank" rel="noopener noreferrer">New Soy Alphabet translator</a> provides a way to convert text between Latin letters and the adapted Greek forms. The source material notes limitations involving the <i>th</i> combination and its associated typing script.</p>
+
+    <h2 id="apostrophisation">Apostrophisation</h2>
+
+    <p><b>Apostrophisation</b> (<i>'postrophisation</i>), also known as <b>contraction</b> (<i>'traction</i>), is a central feature of Soyspeak grammar. It generally involves removing the first syllable of a word and replacing it with an apostrophe.</p>
+
+    <p>The rules are not entirely consistent: the resulting word must remain understandable, and practice varies by speaker and dialect.</p>
+
+    <table class="example-table">
+      <thead>
+        <tr>
+          <th>English phrase</th>
+          <th>Standard Jakspeakian example</th>
+          <th>Illustration of over-contraction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>To my house we shall go</td>
+          <td>'o my 'ouse we/ve 'hall go</td>
+          <td>'o 'y 'ouse 'e 'hall 'o</td>
+        </tr>
+        <tr>
+          <td>I am going to kill you</td>
+          <td>I am 'oing 'o 'ill you/xou</td>
+          <td>' a' 'oing to 'ill 'ou</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <b>Note:</b> The examples illustrate community conventions, not a universal standard. Some words are intentionally left unchanged for clarity.
+    </div>
+
+    <h2 id="exceptions">Exceptions</h2>
+
+    <p>Words shorter than three characters, such as <i>I</i>, <i>do</i>, and <i>a</i>, are generally not apostrophised. A word may also remain intact when shortening it would make it indistinguishable from another word.</p>
+
+    <p>Two frequently cited exceptions are:</p>
+
+    <ul>
+      <li><b>To</b> becomes <b>'o</b>, while <b>do</b> remains unchanged.</li>
+      <li><b>Be</b> becomes <b>'e</b>, while <b>me</b> remains unchanged.</li>
+    </ul>
+
+    <p>The convention is sometimes explained as having developed during periods when online communities used shortened words to avoid automated word filters.</p>
+
+    <h2 id="other-forms">Other forms</h2>
+
+    <h3>Sprec-Nu</h3>
+    <p><a href="https://soyjakwiki.org/Sprec-Nu" target="_blank" rel="noopener noreferrer"><b>Sprec-Nu</b></a>, also called Proper Soyspeak, is a related form associated with more formalised language conventions.</p>
+
+    <h3>NuSpeek</h3>
+    <p><b>NuSpeek</b> is described in community references as a variation of Soyspeak. Its conventions may differ from those of other forms.</p>
+
+    <h2 id="community">Community and usage</h2>
+
+    <p>Soyspeak functions as a marker of familiarity with the culture, expressions, and humour of the communities where it is used. Speakers may use it in posts, replies, memes, and other online communication.</p>
+
+    <p>Outside those communities, the language is sometimes characterised as coded slang associated with the political tone or controversial content of some forums. Such characterisations reflect particular viewpoints and should not be treated as a complete description of every speaker or use of the language.</p>
+
+    <h2 id="see-also">See also</h2>
+
+    <ul>
+      <li><a href="ethan.html">Ethan</a></li>
+      <li><a href="ethanism.html">Ethanism</a></li>
+      <li><a href="saar-sparky.html">Saar Sparky</a></li>
+      <li><a href="https://soyjakwiki.org/Soyspeak" target="_blank" rel="noopener noreferrer">Soyspeak on Soyjak Wiki</a></li>
+      <li><a href="https://lingojam.com/NewSoyAlphabet" target="_blank" rel="noopener noreferrer">New Soy Alphabet translator</a></li>
+    </ul>
+
+    <div class="footer">
+      This article describes Soyspeak as an internet language and summarises community-provided explanations. Some origin stories and terminology are community lore.
+    </div>
+  </main>
+</div>
+</body>
+</html>
